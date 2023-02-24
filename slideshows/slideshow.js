@@ -321,12 +321,3 @@ var myCarousel = function () {
     start: startAnimation,
   };
 };
-
-var c = new myCarousel();
-
-c.init({
-  id: "c",
-  slidenav: true,
-  animate: true,
-  startAnimated: false,
-});
