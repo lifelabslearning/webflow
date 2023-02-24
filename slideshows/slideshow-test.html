@@ -1,1011 +1,643 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Slideshow Test</title>
-    <style>
-      .no-display,
-      .visuallyhidden {
-        border: 0;
-        clip: rect(0 0 0 0);
-        -webkit-clip-path: inset(50%);
-        clip-path: inset(50%);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-        white-space: nowrap;
-      }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      .no-display.focusable:active,
-      .no-display.focusable:focus,
-      .visuallyhidden.focusable:active,
-      .visuallyhidden.focusable:focus {
-        clip: auto;
-        -webkit-clip-path: none;
-        clip-path: none;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-        white-space: inherit;
-      }
+    body {
+      background-color: #f1f1f1;
+      font-family: Larsseit, sans-serif;
+    }
 
-      .active .slide {
-        display: block !important;
-        visibility: hidden;
-        transition: left 0.6s ease-out;
-      }
+    #regForm {
+      background-color: #ffffff;
+      margin: 100px auto;
+      font-family: Raleway;
+      padding: 40px;
+      width: 70%;
+      min-width: 300px;
+    }
 
-      .active .slide.current {
-        visibility: visible;
-        left: 0;
-      }
+    h1 {
+      text-align: center;
+    }
 
-      .active .slide.next {
-        left: 100%;
-      }
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 17px;
+      font-family: Raleway;
+      border: 1px solid #aaaaaa;
+    }
 
-      .active .slide.prev {
-        left: -100%;
-      }
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
 
-      .active .slide.next.in-transition,
-      .active .slide.prev.in-transition {
-        visibility: visible;
-      }
-      .carousel,
-      .slide {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-      }
-      .carousel {
-        position: relative;
-      }
-      .carousel ul {
-        margin: 0;
-        padding: 0;
-      }
-      .carousel .with-slidenav {
-        padding-bottom: 40px;
-        background-color: #fff;
-      }
-      .slide {
-        height: 400px;
-        background-size: cover;
-        position: relative;
-        margin-bottom: 1em;
-        background-color: #efefef;
-        padding: 0 20px;
-      }
-      .slide h4 {
-        display: inline-block;
-        font-weight: bold;
-        font-size: 1.25em;
-        margin: 0;
-        padding: 0.25em;
-        text-align: right;
-        background-color: rgba(255, 255, 255, 0.8);
-        float: right;
-        border-radius: 0 0 0 0.5em;
-      }
-      .slide p {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0;
-        clear: both;
-        padding: 5px;
-        background-color: rgba(255, 255, 255, 0.8);
-      }
-      .slide a {
-        display: block;
-        text-align: right;
-      }
+    /* Hide all steps by default: */
+    .tab,
+    .tabs,
+    .tab-franklin,
+    .tab-fletcher {
+      display: none;
+    }
 
-      .carousel.active {
-        height: 360px;
-        position: relative;
-      }
+    button {
+      background-color: #04aa6d;
+      color: #ffffff;
+      border: none;
+      font-size: 17px;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 0px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      background-color: #e2225f;
+      font-family: Larsseit, sans-serif;
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+    }
 
-      .active .slide {
-        border: none;
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 200;
-      }
+    .prevBtn {
+      background-color: #333;
+    }
 
-      .slide.current {
-        display: block;
-        z-index: 500;
-      }
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
 
-      .btn-prev,
-      .btn-next {
-        position: absolute;
-        z-index: 700;
-        top: 50%;
-        margin-top: -2.5em;
-        border: 0;
-        background: rgba(255, 255, 255, 0.6);
-        line-height: 1;
-        padding: 10px 5px;
-        transition: padding 0.4s ease-out;
-      }
+    .step.active {
+      opacity: 1;
+    }
 
-      .btn-next:hover,
-      .btn-next:focus,
-      .btn-prev:hover,
-      .btn-prev:focus {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #e2225f;
+    }
 
-      .btn-prev {
-        left: 0;
-        border-radius: 0 0.25em 0.25em 0;
-      }
+    .bubble {
+      height: auto;
+      display: block;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 2px 8px 10px #ddd;
+      position: relative;
+      margin: 0 0 25px;
+      font-size: 1em;
+    }
+    .bubble.alt {
+      margin: 0 0 0 20%;
+    }
+    .bubble .txt {
+      padding: 8px 55px 8px 14px;
+      position: relative;
+    }
+    .bubble .txt .name {
+      font-weight: 600;
+      margin: 0 0 4px;
+      color: #3498db;
+      position: relative;
+    }
+    .bubble .txt .name span {
+      font-weight: normal;
+      color: #b3b3b3;
+    }
+    .bubble .txt .name.alt {
+      color: #2ecc71;
+    }
+    .bubble .txt .message {
+      margin: 0;
+      color: #2b2b2b;
+      position: relative;
+      font-size: 1em !important;
+    }
+    .bubble .bubble-arrow {
+      position: absolute;
+      width: 0;
+      bottom: 42px;
+      left: -16px;
+      height: 0;
+    }
+    .bubble .bubble-arrow.alt {
+      right: -2px;
+      bottom: 40px;
+      left: auto;
+    }
+    .bubble .bubble-arrow:after {
+      content: "";
+      position: absolute;
+      border: 0 solid transparent;
+      border-top: 9px solid #fff;
+      border-radius: 0 20px 0;
+      width: 18px;
+      height: 18px;
+      top: -20px;
+      right: -15px;
+      transform: rotate(145deg);
+    }
+    .bubble .bubble-arrow.alt:after {
+      transform: rotate(45deg) scaleY(-1);
+    }
+    .person-container {
+      position: relative;
+      justify-content: center;
+      display: block;
+    }
+    .person-button {
+      color: #000;
+      position: relative;
+      background-color: transparent;
+      border-radius: 20px;
+      opacity: 1 !important;
+    }
+    .person-button:hover,
+    .person-button:focus {
+      background-color: #fff;
+    }
+    .person-button svg {
+      width: 140px;
+      height: 140px;
+    }
+    .person-button .person-head {
+      position: absolute;
+      top: 27px;
+      left: 95px;
+      height: 40px;
+      width: 40px;
+      background-color: #e2225f;
+      border-radius: 100%;
+    }
 
-      .btn-next {
-        right: 0;
-        border-radius: 0.25em 0 0 0.25em;
-      }
+    .carousel-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-row: auto auto;
+      margin: 5px;
+    }
+    .box {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide {
+      width: 100%;
+      border-radius: 5px;
+      justify-content: center;
+    }
 
-      .carousel.with-slidenav {
-        padding-bottom: 25em;
-        background-color: #fff;
-      }
-
-      .slidenav {
-        position: absolute;
-        bottom: 0.25em;
-        left: 0;
-        right: 0;
-        text-align: center;
-      }
-
-      .slidenav li {
-        display: inline-block;
-        margin: 0 0.5em;
-      }
-
-      .slidenav button {
-        border: 2px solid #036;
-        background-color: #036;
-        line-height: 0.5;
-        height: 2em;
-        min-width: 2em;
-        font-weight: bold;
-        color: #fff;
-      }
-
-      .slidenav button.current {
-        border-radius: 0.5em;
-        background-color: #fff;
-        color: #333;
-      }
-
-      .slidenav button:hover,
-      .slidenav button:focus {
-        border: 2px dotted #fff;
-      }
-
-      .slidenav button.current:hover,
-      .slidenav button.current:focus {
-        border: 2px dotted #036;
-      }
-
+    @media screen and (max-width: 990px) {
       .bubble {
-        height: auto;
-        display: block;
-        background: #fff;
-        border-radius: 4px;
-        box-shadow: 2px 8px 10px #ddd;
-        position: relative;
-        margin: 0 0 25px;
-        font-size: 1em;
+        width: 85% !important;
+        font-size: 0.85em;
       }
       .bubble.alt {
-        margin: 0 0 0 20%;
+        margin-left: 20% !important;
       }
-      .bubble .txt {
-        padding: 8px 55px 8px 14px;
-        position: relative;
-      }
-      .bubble .txt .name {
-        font-weight: 600;
-        margin: 0 0 4px;
-        color: #3498db;
-        position: relative;
-      }
-      .bubble .txt .name span {
-        font-weight: normal;
-        color: #b3b3b3;
-      }
-      .bubble .txt .name.alt {
-        color: #2ecc71;
-      }
-      .bubble .txt .message {
-        margin: 0;
-        color: #2b2b2b;
-        position: relative;
-        font-size: 1em !important;
-      }
-      .bubble .bubble-arrow {
-        position: absolute;
-        width: 0;
-        bottom: 42px;
-        left: -16px;
-        height: 0;
-      }
-      .bubble .bubble-arrow.alt {
-        right: -2px;
-        bottom: 40px;
-        left: auto;
-      }
-      .bubble .bubble-arrow:after {
-        content: "";
-        position: absolute;
-        border: 0 solid transparent;
-        border-top: 9px solid #fff;
-        border-radius: 0 20px 0;
-        width: 18px;
-        height: 18px;
-        top: -20px;
-        right: -15px;
-        transform: rotate(145deg);
-      }
-      .bubble .bubble-arrow.alt:after {
-        transform: rotate(45deg) scaleY(-1);
-      }
-
-      @media screen and (max-width: 990px) {
-        .bubble {
-          width: 85% !important;
-          font-size: 0.85em;
-        }
-        .bubble.alt {
-          margin-left: 20% !important;
-        }
-      }
-    </style>
-  </head>
-  <body style="margin: 0; display: block; position: relative">
-    <div style="position: relative">
-      <div id="a" class="carousel">
-        <ul>
-          <li class="slide">
-            <div>
-              <div style="flex-direction: row; display: flex">
-                <div>
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #e2225f;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-                <div style="flex: 1 1 0%">
-                  <div style="padding-top: 30px">
-                    <div class="bubble" style="width: 65%">
-                      <div class="txt">
-                        <p class="name" style="color: #e2225f">
-                          Franklin (your manager)
-                        </p>
-                        <p class="message" style="font-size: 1em">
-                          Hi, <span data-o-member="FirstName"></span>. I have
-                          some feedback on our meeting with leadership
-                          yesterday. Can I share it with you?
-                        </p>
-                      </div>
-                      <div class="bubble-arrow"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  flex-direction: row;
-                  display: flex;
-                  justify-content: flex-end;
-                "
-              >
-                <div style="flex: 1 1 0%">
-                  <div class="bubble alt" style="width: 30%; margin-left: 70%">
-                    <div class="txt">
-                      <p class="name" style="color: #16b653">You</p>
-                      <p class="message" style="font-size: 1em">Yes</p>
-                    </div>
-                    <div class="bubble-arrow alt"></div>
-                  </div>
-                </div>
-                <div style="flex-direction: row; display: flex">
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #16b653;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide" style="">
-            <div>
-              <div style="flex-direction: row; display: flex">
-                <div>
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #e2225f;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-                <div style="flex: 1 1 0%">
-                  <div style="padding-top: 30px">
-                    <div class="bubble" style="width: 65%">
-                      <div class="txt">
-                        <p class="name" style="color: #e2225f">
-                          Franklin (your manager)
-                        </p>
-                        <p class="message" style="font-size: 1em">
-                          Great! I noticed you passed every time I asked you to
-                          share about the project you’re working on.
-                        </p>
-                      </div>
-                      <div class="bubble-arrow"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  flex-direction: row;
-                  display: flex;
-                  justify-content: flex-end;
-                "
-              >
-                <div style="flex-direction: row; display: flex">
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #16b653;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide" style="">
-            <div>
-              <div style="flex-direction: row; display: flex">
-                <div>
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #e2225f;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-                <div style="flex: 1 1 0%">
-                  <div style="padding-top: 30px">
-                    <div class="bubble" style="width: 65%">
-                      <div class="txt">
-                        <p class="name" style="color: #e2225f">
-                          Franklin (your manager)
-                        </p>
-                        <p class="message" style="font-size: 1em">
-                          Hi, <span data-o-member="FirstName"></span>. I have
-                          some feedback on our meeting with leadership
-                          yesterday. Can I share it with you?
-                        </p>
-                      </div>
-                      <div class="bubble-arrow"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  flex-direction: row;
-                  display: flex;
-                  justify-content: flex-end;
-                "
-              >
-                <div style="flex: 1 1 0%">
-                  <div class="bubble alt" style="width: 30%; margin-left: 70%">
-                    <div class="txt">
-                      <p class="name" style="color: #16b653">You</p>
-                      <p class="message" style="font-size: 1em">Yes</p>
-                    </div>
-                    <div class="bubble-arrow alt"></div>
-                  </div>
-                </div>
-                <div style="flex-direction: row; display: flex">
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #16b653;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide" style="">
-            <div>
-              <div style="flex-direction: row; display: flex">
-                <div>
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #e2225f;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-                <div style="flex: 1 1 0%">
-                  <div style="padding-top: 30px">
-                    <div class="bubble" style="width: 65%">
-                      <div class="txt">
-                        <p class="name" style="color: #e2225f">
-                          Franklin (your manager)
-                        </p>
-                        <p class="message" style="font-size: 1em">
-                          Great! I noticed you passed every time I asked you to
-                          share about the project you’re working on.
-                        </p>
-                      </div>
-                      <div class="bubble-arrow"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  flex-direction: row;
-                  display: flex;
-                  justify-content: flex-end;
-                "
-              >
-                <div style="flex-direction: row; display: flex">
-                  <div style="position: relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#FFF"
-                      viewBox="0 0 24 24"
-                      stroke-width="0.8"
-                      stroke="currentColor"
-                      style="width: 140px; height: 140px"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                      />
-                    </svg>
-                    <div
-                      style="
-                        position: absolute;
-                        top: 15px;
-                        left: 50px;
-                        height: 40px;
-                        width: 40px;
-                        background-color: #16b653;
-                        border-radius: 100%;
-                      "
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+    }
+  </style>
+  <body>
+    <div id="intro">
+      <div>
+        <p style="padding: 20px; text-align: center">
+          Click on each colleague below to see how your impact statement might
+          change based on your relationship with each person.
+        </p>
+        <div
+          style="display: flex; justify-content: space-evenly; margin: 20px 0"
+        >
+          <button
+            id="franklin-manager"
+            onclick="selectCarousel('franklin')"
+            type="button"
+            class="person-button"
+            style="text-align: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#e2225f"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <div class="person-head"></div>
+            <p style="margin-top: 0px">Franklin (your manager)</p>
+          </button>
+          <button
+            id="fletcher-report"
+            onclick="selectCarousel('fletcher')"
+            type="button"
+            class="person-button"
+            style="text-align: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#5a9abd"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <p style="margin-top: 0px">Fletcher (your direct report)</p>
+          </button>
+        </div>
+        <div style="display: flex; justify-content: space-evenly">
+          <button
+            id="fiona-peer"
+            type="button"
+            onclick="selectCarousel('fiona')"
+            class="person-button"
+            style="text-align: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#50adbb"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <p style="margin-top: 0px">Fiona (your peer)</p>
+          </button>
+          <button
+            id="farah-peer"
+            type="button"
+            onclick="selectCarousel('farah')"
+            class="person-button"
+            style="text-align: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fade57"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <p style="margin-top: 0px">Farah (your peer)</p>
+          </button>
+        </div>
       </div>
     </div>
+
+    <div id="carousel-container">
+      <!-- <div class="tab-franklin">
+        <div style="flex-direction: row; display: flex">
+          <div>
+            <div class="person-container" style="position: relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#FFF"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                style="width: 140px; height: 140px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <div
+                style="
+                  position: absolute;
+                  top: 15px;
+                  left: 50px;
+                  height: 40px;
+                  width: 40px;
+                  background-color: #e2225f;
+                  border-radius: 100%;
+                "
+              ></div>
+            </div>
+          </div>
+          <div style="flex: 1 1 0%">
+            <div style="padding-top: 30px">
+              <div class="bubble" style="width: 65%">
+                <div class="txt">
+                  <p class="name" style="color: #e2225f">
+                    Franklin (your manager)
+                  </p>
+                  <p class="message" style="font-size: 1em">
+                    Hi, <span data-o-member="FirstName"></span>. I have some
+                    feedback on our meeting with leadership yesterday. Can I
+                    share it with you?
+                  </p>
+                </div>
+                <div class="bubble-arrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="flex-direction: row; display: flex; justify-content: flex-end"
+        >
+          <div style="flex: 1 1 0%">
+            <div class="bubble alt" style="width: 30%; margin-left: 70%">
+              <div class="txt">
+                <p class="name" style="color: #16b653">You</p>
+                <p class="message" style="font-size: 1em">Yes</p>
+              </div>
+              <div class="bubble-arrow alt"></div>
+            </div>
+          </div>
+          <div style="flex-direction: row; display: flex">
+            <div class="person-container" style="position: relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#FFF"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                style="width: 140px; height: 140px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <div
+                style="
+                  position: absolute;
+                  top: 15px;
+                  left: 50px;
+                  height: 40px;
+                  width: 40px;
+                  background-color: #16b653;
+                  border-radius: 100%;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div id="tabs-franklin" class="tabs">
+        <div class="tab-franklin tab">Franklin 1</div>
+        <div class="tab-franklin tab">Franklin 2</div>
+        <div class="tab-franklin tab">Franklin 3</div>
+        <div class="tab-franklin tab">Franklin 4</div>
+        <div style="overflow: auto">
+          <div style="text-align: center">
+            <button
+              type="button"
+              aria-label="Previous"
+              class="prevBtn"
+              id="prevBtn-franklin"
+              onclick="nextPrev(-1, 'franklin')"
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              id="nextBtn-franklin"
+              aria-label="Next"
+              onclick="nextPrev(1, 'franklin')"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div id="steps-franklin" style="text-align: center; margin-top: 40px">
+          <span class="step finish"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </div>
+
+      <div id="tabs-fletcher" class="tabs">
+        <div class="tab-fletcher tab">Fletcher 1</div>
+        <div class="tab-fletcher tab">Fletcher 2</div>
+        <div class="tab-fletcher tab">Fletcher 3</div>
+        <div class="tab-fletcher tab">Fletcher 4</div>
+        <div style="overflow: auto">
+          <div style="text-align: center">
+            <button
+              type="button"
+              aria-label="Previous"
+              class="prevBtn"
+              id="prevBtn-fletcher"
+              onclick="nextPrev(-1, 'fletcher')"
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              id="nextBtn-fletcher"
+              aria-label="Next"
+              onclick="nextPrev(1, 'fletcher')"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div id="steps-fletcher" style="text-align: center; margin-top: 40px">
+          <span class="step finish"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </div>
+
+      <div id="tabs-fiona" class="tabs">
+        <div class="tab-fiona tab">Fiona 1</div>
+        <div class="tab-fiona tab">Fiona 2</div>
+        <div class="tab-fiona tab">Fiona 3</div>
+        <div class="tab-fiona tab">Fiona 4</div>
+        <div style="overflow: auto">
+          <div style="text-align: center">
+            <button
+              type="button"
+              aria-label="Previous"
+              class="prevBtn"
+              id="prevBtn-fiona"
+              onclick="nextPrev(-1, 'fiona')"
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              id="nextBtn-fiona"
+              aria-label="Next"
+              onclick="nextPrev(1, 'fiona')"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div id="steps-fiona" style="text-align: center; margin-top: 40px">
+          <span class="step finish"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </div>
+
+      <div id="tabs-farah" class="tabs">
+        <div class="tab-farah tab">Farah 1</div>
+        <div class="tab-farah tab">Farah 2</div>
+        <div class="tab-farah tab">Farah 3</div>
+        <div class="tab-farah tab">Farah 4</div>
+        <div style="overflow: auto">
+          <div style="text-align: center">
+            <button
+              type="button"
+              aria-label="Previous"
+              class="prevBtn"
+              id="prevBtn-farah"
+              onclick="nextPrev(-1, 'farah')"
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              id="nextBtn-farah"
+              aria-label="Next"
+              onclick="nextPrev(1, 'farah')"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div id="steps-farah" style="text-align: center; margin-top: 40px">
+          <span class="step finish"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentTab = 0; // Current tab is set to be the first tab (0)
+      //showTab(currentTab, "franklin"); // Display the current tab
+
+      function toggleIntro() {
+        // document.getElementById("intro").style.display = "none";
+      }
+
+      function selectCarousel(id) {
+        document.getElementById("intro").style.display = "none";
+        document.getElementById("carousel-container").style.display = "block";
+        const all_containers = document.getElementsByClassName("tabs");
+        for (i = 0; i < all_containers.length; i++) {
+          if (all_containers[i].id == "tabs-" + id) {
+            all_containers[i].style.display = "block";
+          } else {
+            all_containers[i].style.display = "none";
+          }
+        }
+        const all_tabs = document.getElementsByClassName("tab");
+        for (x = 0; x < all_tabs.length; x++) {
+          const tab = all_tabs[x];
+          tab.style.display = "none";
+        }
+        currentTab = 0;
+        showTab(0, id);
+      }
+
+      function showTab(tabIndex, id) {
+        // This function will display the specified tab of the form...
+        const container = document.getElementById("tabs-" + id);
+        const tabs = container.getElementsByClassName("tab-" + id);
+        console.log(tabs);
+
+        tabs[tabIndex].style.display = "block";
+
+        if (tabIndex == 0) {
+          document.getElementById("prevBtn-" + id).style.display = "none";
+        } else {
+          document.getElementById("prevBtn-" + id).style.display = "inline";
+        }
+        if (tabIndex == tabs.length - 1) {
+          document.getElementById("nextBtn-" + id).innerHTML = "Finish";
+        } else {
+          document.getElementById("nextBtn-" + id).innerHTML = "Next";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(tabIndex, id);
+      }
+
+      function nextPrev(increment, id) {
+        const container = document.getElementById("tabs-" + id);
+        const tabs = container.getElementsByClassName("tab-" + id);
+
+        // Hide the current tab:
+        tabs[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + increment;
+        // Update steps UI
+        const steps = document.getElementById("steps-" + id);
+        // if you have reached the end of the form...
+        if (currentTab == tabs.length) {
+          document.getElementById("intro").style.display = "block";
+          document.getElementById("carousel-container").style.display = "none";
+          // ...do something
+          return false;
+        }
+        steps.getElementsByClassName("step")[currentTab].className += " finish";
+
+        // Otherwise, display the correct tab:
+        showTab(currentTab, id);
+      }
+
+      //   function validateForm() {
+      //     // document.getElementsByClassName("step")[currentTab].className +=
+      //     //   " finish";
+      //     return true; // return the valid status
+      //   }
+
+      function fixStepIndicator(stepIndex, id) {
+        // This function removes the "active" class of all steps...
+        const steps = document
+          .getElementById("steps-" + id)
+          .getElementsByClassName("step");
+        for (let i = 0; i < steps.length; i++) {
+          steps[i].className = steps[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class on the current step:
+        steps[stepIndex].className += " active";
+      }
+    </script>
   </body>
-  <script>
-    !(function () {
-      var w = window,
-        d = w.document;
-
-      if (w.onfocusin === undefined) {
-        d.addEventListener("focus", addPolyfill, true);
-        d.addEventListener("blur", addPolyfill, true);
-        d.addEventListener("focusin", removePolyfill, true);
-        d.addEventListener("focusout", removePolyfill, true);
-      }
-      function addPolyfill(e) {
-        var type = e.type === "focus" ? "focusin" : "focusout";
-        var event = new CustomEvent(type, {
-          bubbles: true,
-          cancelable: false,
-        });
-        event.c1Generated = true;
-        e.target.dispatchEvent(event);
-      }
-      function removePolyfill(e) {
-        if (!e.c1Generated) {
-          // focus after focusin, so chrome will the first time trigger tow times focusin
-          d.removeEventListener("focus", addPolyfill, true);
-          d.removeEventListener("blur", addPolyfill, true);
-          d.removeEventListener("focusin", removePolyfill, true);
-          d.removeEventListener("focusout", removePolyfill, true);
-        }
-        setTimeout(function () {
-          d.removeEventListener("focusin", removePolyfill, true);
-          d.removeEventListener("focusout", removePolyfill, true);
-        });
-      }
-    })();
-
-    var myCarousel = function () {
-      var carousel,
-        slides,
-        index,
-        slidenav,
-        settings,
-        timer,
-        setFocus,
-        animationSuspended;
-
-      function forEachElement(elements, fn) {
-        for (var i = 0; i < elements.length; i++) fn(elements[i], i);
-      }
-
-      function removeClass(el, className) {
-        if (el.classList) {
-          el.classList.remove(className);
-        } else {
-          el.className = el.className.replace(
-            new RegExp(
-              "(^|\\b)" + className.split(" ").join("|") + "(\\b|$)",
-              "gi"
-            ),
-            " "
-          );
-        }
-      }
-
-      function hasClass(el, className) {
-        if (el.classList) {
-          return el.classList.contains(className);
-        } else {
-          return new RegExp("(^| )" + className + "( |$)", "gi").test(
-            el.className
-          );
-        }
-      }
-
-      function init(set) {
-        settings = set;
-        carousel = document.getElementById(settings.id);
-        slides = carousel.querySelectorAll(".slide");
-
-        carousel.className = "active carousel";
-
-        var ctrls = document.createElement("ul");
-
-        ctrls.className = "controls";
-        ctrls.innerHTML =
-          "<li>" +
-          '<button type="button" class="btn-prev" alt="Previous slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="height: 24px; width: 24px"><path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clip-rule="evenodd" /></svg></button>' +
-          "</li>" +
-          "<li>" +
-          '<button type="button" class="btn-next" alt="Next slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="height: 24px; width: 24px"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd" /></svg></button>' +
-          "</li>";
-
-        ctrls.querySelector(".btn-prev").addEventListener("click", function () {
-          prevSlide(true);
-        });
-        ctrls.querySelector(".btn-next").addEventListener("click", function () {
-          nextSlide(true);
-        });
-
-        carousel.appendChild(ctrls);
-
-        if (settings.slidenav || settings.animate) {
-          slidenav = document.createElement("ul");
-
-          slidenav.className = "slidenav";
-
-          if (settings.animate) {
-            var li = document.createElement("li");
-
-            if (settings.startAnimated) {
-              li.innerHTML =
-                '<button data-action="stop"><span class="visuallyhidden">Stop Animation </span>￭</button>';
-            } else {
-              li.innerHTML =
-                '<button data-action="start"><span class="visuallyhidden">Start Animation </span>▶</button>';
-            }
-
-            slidenav.appendChild(li);
-          }
-
-          if (settings.slidenav) {
-            forEachElement(slides, function (el, i) {
-              var li = document.createElement("li");
-              var klass = i === 0 ? 'class="current" ' : "";
-              var kurrent =
-                i === 0
-                  ? ' <span class="visuallyhidden">(Current Item)</span>'
-                  : "";
-
-              li.innerHTML =
-                "<button " +
-                klass +
-                'data-slide="' +
-                i +
-                '"><span class="visuallyhidden">News</span> ' +
-                (i + 1) +
-                kurrent +
-                "</button>";
-              slidenav.appendChild(li);
-            });
-          }
-
-          slidenav.addEventListener(
-            "click",
-            function (event) {
-              var button = event.target;
-              if (button.localName == "button") {
-                if (button.getAttribute("data-slide")) {
-                  stopAnimation();
-                  setSlides(button.getAttribute("data-slide"), true);
-                } else if (button.getAttribute("data-action") == "stop") {
-                  stopAnimation();
-                } else if (button.getAttribute("data-action") == "start") {
-                  startAnimation();
-                }
-              }
-            },
-            true
-          );
-
-          carousel.className = "active carousel with-slidenav";
-          carousel.appendChild(slidenav);
-        }
-
-        var liveregion = document.createElement("div");
-        liveregion.setAttribute("aria-live", "polite");
-        liveregion.setAttribute("aria-atomic", "true");
-        liveregion.setAttribute("class", "liveregion visuallyhidden");
-        carousel.appendChild(liveregion);
-
-        slides[0].parentNode.addEventListener(
-          "transitionend",
-          function (event) {
-            var slide = event.target;
-            removeClass(slide, "in-transition");
-            if (hasClass(slide, "current")) {
-              if (setFocus) {
-                slide.setAttribute("tabindex", "-1");
-                slide.focus();
-                setFocus = false;
-              }
-            }
-          }
-        );
-
-        carousel.addEventListener("mouseenter", suspendAnimation);
-        carousel.addEventListener("mouseleave", function (event) {
-          if (animationSuspended) {
-            startAnimation();
-          }
-        });
-
-        carousel.addEventListener("focusin", function (event) {
-          if (!hasClass(event.target, "slide")) {
-            suspendAnimation();
-          }
-        });
-        carousel.addEventListener("focusout", function (event) {
-          if (!hasClass(event.target, "slide") && animationSuspended) {
-            startAnimation();
-          }
-        });
-
-        index = 0;
-        setSlides(index);
-
-        if (settings.startAnimated) {
-          timer = setTimeout(nextSlide, 5000);
-        }
-      }
-
-      function setSlides(
-        new_current,
-        setFocusHere,
-        transition,
-        announceItemHere
-      ) {
-        setFocus = typeof setFocusHere !== "undefined" ? setFocusHere : false;
-        announceItem =
-          typeof announceItemHere !== "undefined" ? announceItemHere : false;
-        transition = typeof transition !== "undefined" ? transition : "none";
-
-        new_current = parseFloat(new_current);
-
-        var length = slides.length;
-        var new_next = new_current + 1;
-        var new_prev = new_current - 1;
-
-        if (new_next === length) {
-          new_next = 0;
-        } else if (new_prev < 0) {
-          new_prev = length - 1;
-        }
-
-        for (var i = slides.length - 1; i >= 0; i--) {
-          slides[i].className = "slide";
-        }
-
-        slides[new_next].className =
-          "next slide" + (transition == "next" ? " in-transition" : "");
-        slides[new_next].setAttribute("aria-hidden", "true");
-
-        slides[new_prev].className =
-          "prev slide" + (transition == "prev" ? " in-transition" : "");
-        slides[new_prev].setAttribute("aria-hidden", "true");
-
-        slides[new_current].className = "current slide";
-        slides[new_current].removeAttribute("aria-hidden");
-
-        if (announceItem) {
-          carousel.querySelector(".liveregion").textContent =
-            "Item " + (new_current + 1) + " of " + slides.length;
-        }
-
-        if (settings.slidenav) {
-          var buttons = carousel.querySelectorAll(
-            ".slidenav button[data-slide]"
-          );
-          for (var j = buttons.length - 1; j >= 0; j--) {
-            buttons[j].className = "";
-            buttons[j].innerHTML =
-              '<span class="visuallyhidden">News</span> ' + (j + 1);
-          }
-          buttons[new_current].className = "current";
-          buttons[new_current].innerHTML =
-            '<span class="visuallyhidden">News</span> ' +
-            (new_current + 1) +
-            ' <span class="visuallyhidden">(Current Item)</span>';
-        }
-
-        index = new_current;
-      }
-
-      function nextSlide(announceItem) {
-        announceItem =
-          typeof announceItem !== "undefined" ? announceItem : false;
-
-        var length = slides.length,
-          new_current = index + 1;
-
-        if (new_current === length) {
-          new_current = 0;
-        }
-
-        setSlides(new_current, false, "prev", announceItem);
-
-        if (settings.animate) {
-          timer = setTimeout(nextSlide, 5000);
-        }
-      }
-
-      function prevSlide(announceItem) {
-        announceItem =
-          typeof announceItem !== "undefined" ? announceItem : false;
-
-        var length = slides.length,
-          new_current = index - 1;
-
-        if (new_current < 0) {
-          new_current = length - 1;
-        }
-
-        setSlides(new_current, false, "next", announceItem);
-      }
-
-      function stopAnimation() {
-        clearTimeout(timer);
-        settings.animate = false;
-        animationSuspended = false;
-        _this = carousel.querySelector("[data-action]");
-        _this.innerHTML =
-          '<span class="visuallyhidden">Start Animation </span>▶';
-        _this.setAttribute("data-action", "start");
-      }
-
-      function startAnimation() {
-        settings.animate = true;
-        animationSuspended = false;
-        timer = setTimeout(nextSlide, 5000);
-        _this = carousel.querySelector("[data-action]");
-        _this.innerHTML =
-          '<span class="visuallyhidden">Stop Animation </span>￭';
-        _this.setAttribute("data-action", "stop");
-      }
-
-      function suspendAnimation() {
-        if (settings.animate) {
-          clearTimeout(timer);
-          settings.animate = false;
-          animationSuspended = true;
-        }
-      }
-
-      return {
-        init: init,
-        next: nextSlide,
-        prev: prevSlide,
-        goto: setSlides,
-        stop: stopAnimation,
-        start: startAnimation,
-      };
-    };
-
-    const a = new myCarousel();
-
-    a.init({
-      id: "a",
-      slidenav: true,
-      animate: false,
-      startAnimated: false,
-    });
-  </script>
 </html>
