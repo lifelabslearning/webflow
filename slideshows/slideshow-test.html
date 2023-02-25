@@ -6,6 +6,9 @@
     rel="stylesheet"
   />
   <style>
+    * {
+      font-family: Larsseit, sans-serif;
+    }
     /* Hide all steps by default: */
     .tab,
     .tabs,
@@ -14,12 +17,7 @@
       display: none;
     }
 
-    /* button {
-      background-color: #04aa6d;
-      color: #ffffff;
-      border: none;
-      font-size: 17px;
-      cursor: pointer;
+    button {
       display: inline-block;
       margin-right: 0px;
       padding: 0.75rem 1.5rem;
@@ -29,7 +27,8 @@
       color: #fff;
       font-weight: 500;
       text-align: center;
-    } */
+      border: none;
+    }
 
     .prevBtn {
       background-color: #333;
@@ -91,6 +90,14 @@
       color: #2b2b2b;
       position: relative;
       font-size: 1em !important;
+    }
+    .lesson-message {
+      padding: 20px;
+      background-color: #fff;
+      min-height: 200px;
+      border-radius: 20px;
+      margin: 25px;
+      max-width: 70%;
     }
     .bubble .bubble-arrow {
       position: absolute;
@@ -166,6 +173,10 @@
       border-radius: 5px;
       justify-content: center;
     }
+    .bg-gray {
+      background-color: #efefef;
+      border-radius: 20px;
+    }
 
     @media screen and (max-width: 990px) {
       .bubble {
@@ -178,14 +189,14 @@
     }
   </style>
   <body>
-    <div id="intro">
+    <div id="intro" class="bg-gray">
       <div>
-        <p style="padding: 20px; text-align: center">
+        <p style="padding: 40px 20px 0 20px; text-align: center">
           Click on each colleague below to see how your impact statement might
           change based on your relationship with each person.
         </p>
         <div
-          style="display: flex; justify-content: space-evenly; margin: 20px 0"
+          style="display: flex; justify-content: space-evenly; padding: 20px 0"
         >
           <button
             id="franklin-manager"
@@ -232,7 +243,9 @@
             <p style="margin-top: 0px">Fletcher (your direct report)</p>
           </button>
         </div>
-        <div style="display: flex; justify-content: space-evenly">
+        <div
+          style="display: flex; justify-content: space-evenly; padding: 20px 0"
+        >
           <button
             id="fiona-peer"
             type="button"
@@ -281,7 +294,7 @@
       </div>
     </div>
 
-    <div id="carousel-container">
+    <div id="carousel-container" class="bg-gray">
       <div id="tabs-franklin" class="tabs">
         <div class="tab-franklin tab">
           <div>
@@ -290,7 +303,7 @@
                 <div class="person-container" style="position: relative">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="#FFF"
+                    fill="#e2225f"
                     viewBox="0 0 24 24"
                     stroke-width="0.8"
                     stroke="currentColor"
@@ -302,17 +315,6 @@
                       d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                     />
                   </svg>
-                  <div
-                    style="
-                      position: absolute;
-                      top: 15px;
-                      left: 50px;
-                      height: 40px;
-                      width: 40px;
-                      background-color: #e2225f;
-                      border-radius: 100%;
-                    "
-                  ></div>
                 </div>
               </div>
               <div style="flex: 1 1 0%">
@@ -353,7 +355,7 @@
                 <div class="person-container" style="position: relative">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="#FFF"
+                    fill="#16b653"
                     viewBox="0 0 24 24"
                     stroke-width="0.8"
                     stroke="currentColor"
@@ -365,25 +367,250 @@
                       d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                     />
                   </svg>
-                  <div
-                    style="
-                      position: absolute;
-                      top: 15px;
-                      left: 50px;
-                      height: 40px;
-                      width: 40px;
-                      background-color: #16b653;
-                      border-radius: 100%;
-                    "
-                  ></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="tab-franklin tab">Franklin 2</div>
-        <div class="tab-franklin tab">Franklin 3</div>
-        <div class="tab-franklin tab">Franklin 4</div>
+        <div class="tab-franklin tab">
+          <div>
+            <div style="flex-direction: row; display: flex">
+              <div>
+                <div class="person-container" style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#e2225f"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    style="width: 140px; height: 140px"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div style="flex: 1 1 0%">
+                <div style="padding-top: 30px">
+                  <div class="bubble" style="width: 65%">
+                    <div class="txt">
+                      <p class="name" style="color: #e2225f">
+                        Franklin (your manager)
+                      </p>
+                      <p class="message" style="font-size: 1em">
+                        Great! I noticed you passed every time I asked you to
+                        share about the project you’re working on.
+                      </p>
+                    </div>
+                    <div class="bubble-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                flex-direction: row;
+                display: flex;
+                justify-content: flex-end;
+              "
+            >
+              <div style="flex-direction: row; display: flex">
+                <div class="person-container" style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#16b653"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    style="width: 140px; height: 140px"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-franklin tab">
+          <div
+            style="flex-direction: row; display: flex; justify-content: center"
+          >
+            <p class="lesson-message">
+              How does that feedback land with you? Are you motivated to speak
+              up more in the next meeting? Not thrilled by that feedback?
+              Continue to tell Franklin to please try again.
+            </p>
+          </div>
+        </div>
+
+        <div class="tab-franklin tab">
+          <div>
+            <div style="flex-direction: row; display: flex">
+              <div>
+                <div class="person-container" style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#e2225f"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    style="width: 140px; height: 140px"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div style="flex: 1 1 0%">
+                <div style="padding-top: 30px">
+                  <div class="bubble" style="width: 65%">
+                    <div class="txt">
+                      <p class="name" style="color: #e2225f">
+                        Franklin (your manager)
+                      </p>
+                      <p class="message" style="font-size: 1em">
+                        Hi, <span data-o-member="FirstName"></span>. I have some
+                        feedback on our meeting with leadership yesterday. Can I
+                        share it with you?
+                      </p>
+                    </div>
+                    <div class="bubble-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                flex-direction: row;
+                display: flex;
+                justify-content: flex-end;
+              "
+            >
+              <div style="flex: 1 1 0%">
+                <div class="bubble alt" style="width: 30%; margin-left: 70%">
+                  <div class="txt">
+                    <p class="name" style="color: #16b653">You</p>
+                    <p class="message" style="font-size: 1em">Yes</p>
+                  </div>
+                  <div class="bubble-arrow alt"></div>
+                </div>
+              </div>
+              <div style="flex-direction: row; display: flex">
+                <div class="person-container" style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#16b653"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    style="width: 140px; height: 140px"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-franklin tab">
+          <div>
+            <div style="flex-direction: row; display: flex">
+              <div>
+                <div class="person-container" style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#e2225f"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    style="width: 140px; height: 140px"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div style="flex: 1 1 0%">
+                <div style="padding-top: 30px">
+                  <div class="bubble" style="width: 65%">
+                    <div class="txt">
+                      <p class="name" style="color: #e2225f">
+                        Franklin (your manager)
+                      </p>
+                      <p class="message" style="font-size: 1em">
+                        Great! I noticed you passed every time I asked you to
+                        share about the project you’re working on.
+                        <b
+                          >It’s important to speak up because leadership needed
+                          to hear your updates to know we’re on track and I know
+                          you’ve got great ideas about where to go next.</b
+                        >
+                      </p>
+                    </div>
+                    <div class="bubble-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                flex-direction: row;
+                display: flex;
+                justify-content: flex-end;
+              "
+            >
+              <div style="flex-direction: row; display: flex">
+                <div class="person-container" style="position: relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#16b653"
+                    viewBox="0 0 24 24"
+                    stroke-width="0.8"
+                    stroke="currentColor"
+                    style="width: 140px; height: 140px"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-franklin tab">
+          <div
+            style="flex-direction: row; display: flex; justify-content: center"
+          >
+            <p class="lesson-message">
+              How does that feedback land with you? Are you motivated to speak
+              up more in the next meeting?
+            </p>
+          </div>
+        </div>
+
         <div style="overflow: auto">
           <div style="text-align: center">
             <button
@@ -405,8 +632,10 @@
             </button>
           </div>
         </div>
-        <div id="steps-franklin" style="text-align: center; margin-top: 40px">
+        <div id="steps-franklin" style="text-align: center; padding: 20px 0px">
           <span class="step finish"></span>
+          <span class="step"></span>
+          <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
@@ -439,7 +668,7 @@
             </button>
           </div>
         </div>
-        <div id="steps-fletcher" style="text-align: center; margin-top: 40px">
+        <div id="steps-fletcher" style="text-align: center; padding: 20px 0px">
           <span class="step finish"></span>
           <span class="step"></span>
           <span class="step"></span>
@@ -473,7 +702,7 @@
             </button>
           </div>
         </div>
-        <div id="steps-fiona" style="text-align: center; margin-top: 40px">
+        <div id="steps-fiona" style="text-align: center; padding: 20px 0px">
           <span class="step finish"></span>
           <span class="step"></span>
           <span class="step"></span>
@@ -507,7 +736,7 @@
             </button>
           </div>
         </div>
-        <div id="steps-farah" style="text-align: center; margin-top: 40px">
+        <div id="steps-farah" style="text-align: center; padding: 20px 0px">
           <span class="step finish"></span>
           <span class="step"></span>
           <span class="step"></span>
