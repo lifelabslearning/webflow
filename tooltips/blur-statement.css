@@ -7,6 +7,7 @@
 
 /* Main Styles */
 .quote {
+  position: relative;
   border-radius: 0.5rem;
   min-height: 200px;
   background-color: #007aec;
@@ -29,7 +30,7 @@
   color: #1a90ff;
   position: absolute;
   z-index: -1;
-  top: -1%;
+  top: 33%;
   left: 2.5%;
 }
 
