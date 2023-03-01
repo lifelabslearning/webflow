@@ -14,8 +14,7 @@
   color: #fff;
   font-size: clamp(0.5rem, 0.5rem + 2vw, 1rem);
   line-height: 1.5;
-  padding: 5em;
-  padding-top: 3.90625em;
+  padding: 2em 6em;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -44,8 +43,8 @@
 /* Tooltip Styles */
 .tooltip {
   white-space: nowrap;
-  padding: 0.15em 0.15em;
-  margin: -0.15em -0.15em;
+  padding: 0.5em 0.15em;
+  margin: -0.5em -0.15em;
   background-color: #00529f;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
