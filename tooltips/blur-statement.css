@@ -23,10 +23,8 @@
   isolation: isolate;
 }
 .quote::before {
-  content: "“";
+  content: "\201C";
   font-size: 15.625em;
-  font-family: Arial, sans-serif;
-  line-height: 0;
   color: #1a90ff;
   position: absolute;
   z-index: -1;
@@ -46,8 +44,8 @@
 /* Tooltip Styles */
 .tooltip {
   white-space: nowrap;
-  padding: 0.15em 0.3em;
-  margin: -0.15em -0.3em;
+  padding: 0.15em 0.15em;
+  margin: -0.15em -0.15em;
   background-color: #00529f;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
@@ -149,7 +147,7 @@ p#instructions {
     max-height: 200px;
   }
   .tooltip > .quote-body::after {
-    content: "\201C";
+    content: " ";
     width: 0;
     height: 0;
     border-top: 0.5em solid #00305d;
