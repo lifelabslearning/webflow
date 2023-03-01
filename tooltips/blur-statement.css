@@ -43,8 +43,8 @@
 /* Tooltip Styles */
 .tooltip {
   white-space: nowrap;
-  padding: 0.5em 0.15em;
-  margin: -0.5em -0.15em;
+  padding: 0.05em 0.15em;
+  margin: 0.05em -0.15em;
   background-color: #00529f;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
