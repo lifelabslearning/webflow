@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      font-family: Larsseit, sans-serif;
+    }
+
+    /* .toggletip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .toggletip-bubble {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 10em;
+      padding: 0.5rem;
+      background: #000;
+      color: #fff;
+    }
+
+    button.blur-word {
+      border: none;
+      font-size: 1rem;
+      background: transparent;
+      padding: 0;
+      background-color: yellow;
+      cursor: pointer;
+    }
+    button.blur-word:focus {
+      text-shadow: 0 0 3px #000;
+      color: transparent;
+    } */
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Main Styles */
+    .quote {
+      min-height: 200px;
+      /* background-color: #4cb6de; */
+      /* background-color: #2286e3; */
+      background-color: #007aec;
+      color: #fff;
+      font-size: clamp(0.5rem, 0.5rem + 2vw, 1rem);
+      line-height: 1.5;
+      padding: 5em;
+      padding-top: 3.90625em;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      gap: 1em;
+      isolation: isolate;
+    }
+    .quote::before {
+      content: "„";
+      font-size: 15.625em;
+      font-family: Arial, sans-serif;
+      line-height: 0;
+      /* color: #6ac2e3; */
+      color: #1a90ff;
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: 2.5%;
+    }
+
+    /* Quote Body Styles */
+    .quote > * {
+      width: 100%;
+    }
+    .quote > .body {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    /* Tooltip Styles */
+    .tooltip {
+      white-space: nowrap;
+      padding: 0.15em 0.3em;
+      margin: -0.15em -0.3em;
+      /* background-color: #286f8a; */
+      background-color: #00529f;
+      cursor: pointer;
+      transition: background-color 0.2s ease-out;
+      border-radius: 5px;
+    }
+    .tooltip:is(:hover, :focus, :focus-within) {
+      /* background-color: #1d4f62; */
+      background-color: #00305d;
+    }
+    .tooltip:is(:hover, :focus, :focus-within) > .body {
+      visibility: visible;
+      opacity: 1;
+    }
+    .tooltip > .body {
+      white-space: normal;
+      width: min(80vw, 300px);
+      visibility: hidden;
+      opacity: 0;
+      font-size: 0.6em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-20%, -20%);
+      transition: all 0.2s ease-out;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    }
+    .tooltip > .body .container {
+      display: block;
+      max-height: 50vh;
+      overflow: auto;
+    }
+    .tooltip > .body .container > * {
+      display: block;
+      padding: 0.5em 1em;
+    }
+
+    .tooltip > .body .text {
+      color: #fff;
+      /* background-color: #286f8a; */
+      background-color: #00305d;
+      padding: 0.75em 1em;
+      border-radius: 5px;
+    }
+
+    button#blur-button {
+      display: inline-block;
+      margin-right: 0px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      font-family: Larsseit, sans-serif;
+      color: #00529f;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    button#blur-button:hover {
+      opacity: 0.9;
+    }
+
+    p#blur-visible {
+      display: none;
+    }
+
+    p#instructions {
+      display: none;
+      font-size: 1rem;
+      margin: 0.55rem 0;
+    }
+
+    /* Media Queries */
+    @media (hover: none) and (pointer: coarse) {
+      .tooltip > .body::before {
+        content: "Click/tap anywere outside to disappear";
+        font-size: 0.5em;
+        line-height: 1;
+        text-align: center;
+        display: block;
+        padding: 1em;
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+    @media (min-width: 400px) {
+      .frame {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+      }
+
+      .tooltip {
+        position: relative;
+      }
+      .tooltip > .body {
+        top: initial;
+        bottom: calc(100% + 2em);
+        left: calc(50% + min(90vw, 300px) / -2);
+        transform: unset;
+        max-height: 200px;
+      }
+      .tooltip > .body::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 0.5em solid #00305d;
+        border-right: 0.5em solid transparent;
+        border-bottom: none;
+        border-left: 0.5em solid transparent;
+        position: absolute;
+        top: initial;
+        right: initial;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .tooltip > .body > .container {
+        max-height: 200px;
+      }
+      .tooltip:is(:hover, :focus, :focus-within) > .body {
+        bottom: calc(100% + 0.75em);
+      }
+    }
+  </style>
+  <body>
+    <!-- <p id="plain-statement">Blur words are...helper text yada yada yada...</p>
+    <p id="plain-statement">
+      "Your report isn't strategic enough, I'd like to see more data and less
+      commentary."
+    </p>
+    <p id="highlighted-statement">
+      "<span class="blur-word">Your</span>
+      <span class="blur-word">report</span> <span class="blur-word">isn't</span>
+      <span class="word" data-toggletip>strategic</span>
+      enough, I'd like to see more data and less
+      <span class="word" data-toggletip>commentary</span>."
+    </p>
+    <p id="blur-word-helper">Click on blur words to learn more.</p>
+    <button type="button">Highlight blur words</button> -->
+
+    <!-- <div class="frame"> -->
+
+    <div class="quote">
+      <p id="blur-hidden" class="body" aria-label="Quote text">
+        I know quite certainly that I myself have no special talent; curiosity,
+        obsession and dogged endurance, combined with self-criticism have
+        brought me to my ideas.
+      </p>
+      <p id="blur-visible" class="body" aria-label="Quote text">
+        I know quite certainly that I myself have no special talent; curiosity,
+        <span
+          class="tooltip"
+          tabindex="0"
+          aria-label="Text or word with tooltip"
+          >obsession<span class="body"
+            ><span class="container"
+              ><span class="text" aria-label="Text or word description"
+                >A persistent preoccupation with an often unreasonable idea or
+                feeling.</span
+              ></span
+            ></span
+          ></span
+        >&nbsp;and dogged endurance, combined with
+        <span
+          class="tooltip"
+          tabindex="0"
+          aria-label="Text or word with tooltip"
+          >self-criticism<span class="body"
+            ><span class="container"
+              ><span class="text" aria-label="Text or word description"
+                >Criticism of oneself or one's actions.</span
+              ></span
+            ></span
+          ></span
+        >&nbsp;have brought me to my ideas.
+      </p>
+      <div style="padding-top: 2rem">
+        <button
+          type="button"
+          id="blur-button"
+          aria-label="Show blur words"
+          onclick="showBlurWords()"
+        >
+          Show blur words
+        </button>
+        <p id="instructions">
+          Select a blur word to learn more
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            style="height: 1.2rem"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+            />
+          </svg>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const showBlurWords = () => {
+        document.getElementById("blur-visible").style.display = "block";
+        document.getElementById("instructions").style.display = "block";
+        document.getElementById("blur-button").style.display = "none";
+        document.getElementById("blur-hidden").style.display = "none";
+      };
+      (function () {
+        const blurWords = {
+          strategic: {
+            text: "strategic",
+            tip: "Strategic is a blur word because...",
+          },
+          commentary: {
+            text: "commentary",
+            tip: "Commentary is a blur word because...",
+          },
+        };
+        // Get all the toggletip buttons
+        var toggletipTexts = document.querySelectorAll("[data-toggletip]");
+
+        // Iterate over them
+        Array.prototype.forEach.call(toggletipTexts, function (toggletipText) {
+          // Create the container element
+          var container = document.createElement("span");
+          container.setAttribute("class", "toggletip-container");
+
+          // Put it before the original element in the DOM
+          toggletipText.parentNode.insertBefore(container, toggletipText);
+
+          // Create the button element
+          var toggletip = document.createElement("button");
+          toggletip.classList.add("blur-word");
+          toggletip.setAttribute("type", "button");
+          toggletip.setAttribute("aria-label", "deblur tip");
+          toggletip.setAttribute(
+            "data-toggletip-content",
+            blurWords[toggletipText.innerHTML].tip
+          );
+          toggletip.textContent = toggletipText.innerHTML;
+
+          // Place the button element in the container
+          container.appendChild(toggletip);
+
+          // Create the live region
+          var liveRegion = document.createElement("span");
+          liveRegion.setAttribute("role", "status");
+
+          // Place the live region in the container
+          container.appendChild(liveRegion);
+
+          // Remove the original element
+          toggletipText.parentNode.removeChild(toggletipText);
+
+          // Build `data-tooltip-content`
+          var message = toggletip.getAttribute("data-toggletip-content");
+          toggletip.setAttribute("data-toggletip-content", message);
+          toggletip.removeAttribute("title");
+
+          // Get the message from the data-content element
+          var message = toggletip.getAttribute("data-toggletip-content");
+
+          // Get the live region element
+          var liveRegion = toggletip.nextElementSibling;
+
+          // Toggle the message
+          toggletip.addEventListener("click", function () {
+            liveRegion.innerHTML = "";
+            window.setTimeout(function () {
+              liveRegion.innerHTML =
+                '<span class="toggletip-bubble">' + message + "</span>";
+            }, 100);
+          });
+
+          // Close on outside click
+          document.addEventListener("click", function (e) {
+            if (toggletip !== e.target) {
+              liveRegion.innerHTML = "";
+            }
+          });
+
+          // Remove toggletip on ESC
+          toggletip.addEventListener("keydown", function (e) {
+            if ((e.keyCode || e.which) === 27) liveRegion.innerHTML = "";
+          });
+
+          // Remove on blur
+          toggletip.addEventListener("blur", function (e) {
+            liveRegion.innerHTML = "";
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
