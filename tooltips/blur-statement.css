@@ -148,7 +148,7 @@ p#instructions {
     max-height: 200px;
   }
   .tooltip > .quote-body::after {
-    content: "";
+    content: "\201C";
     width: 0;
     height: 0;
     border-top: 0.5em solid #00305d;
