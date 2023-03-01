@@ -24,12 +24,12 @@
 }
 .quote::before {
   content: "\201C";
-  font-size: 15.625em;
+  font-size: 12em;
   color: #1a90ff;
   position: absolute;
   z-index: -1;
-  top: 33%;
-  left: 2.5%;
+  top: -55px;
+  left: 8px;
 }
 
 /* Quote Body Styles */
