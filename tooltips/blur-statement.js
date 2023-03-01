@@ -95,18 +95,18 @@ console.log("blur_statement", blur_statement);
 
 blur_statement.innerHTML = `
     <div class="quote">
-      <p id="blur-hidden" class="body" aria-label="Quote text">
+      <p id="blur-hidden" class="quote-body" aria-label="Quote text">
         I know quite certainly that I myself have no special talent; curiosity,
         obsession and dogged endurance, combined with self-criticism have
         brought me to my ideas.
       </p>
-      <p id="blur-visible" class="body" aria-label="Quote text">
+      <p id="blur-visible" class="quote-body" aria-label="Quote text">
         I know quite certainly that I myself have no special talent; curiosity,
         <span
           class="tooltip"
           tabindex="0"
           aria-label="Text or word with tooltip"
-          >obsession<span class="body"
+          >obsession<span class="quote-body"
             ><span class="container"
               ><span class="text" aria-label="Text or word description"
                 >A persistent preoccupation with an often unreasonable idea or
@@ -119,7 +119,7 @@ blur_statement.innerHTML = `
           class="tooltip"
           tabindex="0"
           aria-label="Text or word with tooltip"
-          >self-criticism<span class="body"
+          >self-criticism<span class="quote-body"
             ><span class="container"
               ><span class="text" aria-label="Text or word description"
                 >Criticism of oneself or one's actions.</span
