@@ -60,10 +60,10 @@
 }
 .tooltip > .quote-body {
   white-space: normal;
-  width: min(90vw, 400px);
+  width: min(40vw, 400px);
   visibility: hidden;
   opacity: 0;
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -121,7 +121,7 @@ p#instructions {
 /* Media Queries */
 @media (hover: none) and (pointer: coarse) {
   .tooltip > .quote-body::before {
-    content: "Click/tap anywere outside to disappear";
+    content: "Click/tap anywhere outside to disappear";
     font-size: 0.5em;
     line-height: 1;
     text-align: center;
@@ -142,7 +142,8 @@ p#instructions {
   }
   .tooltip > .quote-body {
     top: calc(100% + 0.5rem);
-    left: calc(50% + min(90vw, 400px) / -2);
+    left: calc(50% + min(50vw, 400px) / -2);
+    width: min(50vw, 400px);
     transform: unset;
     max-height: 200px;
   }
@@ -162,6 +163,7 @@ p#instructions {
   }
   .tooltip > .quote-body > .container {
     max-height: 350px;
+    font-size: 0.9rem;
   }
   .tooltip:is(:hover, :focus, :focus-within) > .quote-body {
     bottom: calc(100% + 0.75em);
