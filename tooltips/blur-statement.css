@@ -34,7 +34,7 @@
   width: 100%;
 }
 .quote > .quote-body {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 0;
 }
 
@@ -65,12 +65,11 @@
   opacity: 0;
   font-size: 0.7em;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-20%, -20%);
+
   transition: all 0.2s ease-out;
   z-index: 2;
 }
+
 .tooltip > .quote-body .container {
   display: block;
   max-height: 50vh;
@@ -185,8 +184,8 @@ p.instructions {
   }
   .tooltip > .quote-body {
     top: calc(100% + 0.5rem);
-    left: calc(50% + min(50vw, 400px) / -2);
-    width: min(50vw, 400px);
+    left: calc(50% + min(50vw, 300px) / -2);
+    width: min(50vw, 300px);
     transform: unset;
     max-height: 200px;
   }
