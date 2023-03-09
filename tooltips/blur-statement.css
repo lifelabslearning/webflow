@@ -44,12 +44,12 @@
 /* Tooltip Styles */
 .tooltip {
   white-space: nowrap;
-  padding: 0.15em 0.3em;
-  margin: -0.15em -0.3em;
+  padding: 0.25em;
+  margin: -0.25em;
   background-color: #00529f;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 .tooltip:is(:hover, :focus, :focus-within) {
   background-color: #00305d;
