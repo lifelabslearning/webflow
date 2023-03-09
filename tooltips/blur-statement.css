@@ -19,6 +19,7 @@
   align-content: center;
   gap: 1em;
   isolation: isolate;
+  border-radius: 0.5rem;
 }
 .quote::before {
   content: "„";
@@ -131,12 +132,6 @@ p#instructions {
   }
 }
 @media (min-width: 400px) {
-  .frame {
-    width: 400px;
-    height: 400px;
-    margin-left: -200px;
-  }
-
   .tooltip {
     position: relative;
   }
