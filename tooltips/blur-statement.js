@@ -100,7 +100,7 @@ blur_statement.innerHTML = `
       <div>
         <button
           type="button"
-          class="blur-button"
+          class="blur-button button w-button"
           aria-label="Show blur words"
           onclick="showBlurWords('quote-1')"
         >
