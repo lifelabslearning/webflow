@@ -136,7 +136,7 @@ blur_statement.innerHTML = `
                 >Which message? All messages? A particular topic? The lack of
                 specificity means the recipient not only doesn't know where the
                 problem is, they are also likely to get defensive. <br /><br />
-                <b>To Deblur:</b> “Your messages” &#8594; “Your email updates on
+                <b>To Deblur:</b> "Your messages" &#8594; "Your email updates on
                 Project X"
               </span></span
             ></span
@@ -154,7 +154,7 @@ blur_statement.innerHTML = `
                 people?<br />
                 <br /><b>To Deblur:</b> Being clear here will make it more
                 likely the other person will make a fix that solves the issue.
-                “confusing” &#8594; “do not have a clear next step.</span
+                "confusing" &#8594; "do not have a clear next step."</span
               ></span
             ></span
           ></span
@@ -166,11 +166,11 @@ blur_statement.innerHTML = `
           >direct."<span class="quote-body"
             ><span class="container"
               ><span class="text" aria-label="Text or word description"
-                >Concepts like “direct” and “indirect” are subjective person to
+                >Concepts like "direct" and "indirect" are subjective person to
                 person and culture to culture.<br /><br />
                 <b>To Deblur:</b> If there's something specific you'd like to
-                see, name it. “more direct” &#8594; “you'd include the action
-                and the person you'd like to own the next step.</span
+                see, name it. "more direct" &#8594; "you'd include the action
+                and the person you'd like to own the next step."</span
               ></span
             ></span
           ></span
