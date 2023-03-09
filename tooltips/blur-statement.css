@@ -7,14 +7,13 @@
 
 /* Main Styles */
 .quote {
-  position: relative;
-  border-radius: 0.5rem;
   min-height: 200px;
   background-color: #007aec;
   color: #fff;
   font-size: clamp(0.5rem, 0.5rem + 2vw, 1rem);
   line-height: 1.5;
-  padding: 2em 6em;
+  padding: 5em;
+  padding-top: 3.90625em;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -22,13 +21,15 @@
   isolation: isolate;
 }
 .quote::before {
-  content: "\201C";
-  font-size: 12em;
+  content: "„";
+  font-size: 15.625em;
+  font-family: Arial, sans-serif;
+  line-height: 0;
   color: #1a90ff;
   position: absolute;
   z-index: -1;
-  top: -55px;
-  left: 8px;
+  top: -1%;
+  left: 2.5%;
 }
 
 /* Quote Body Styles */
@@ -43,12 +44,12 @@
 /* Tooltip Styles */
 .tooltip {
   white-space: nowrap;
-  padding: 0.05em 0.15em;
-  margin: 0.05em -0.15em;
+  padding: 0.15em 0.3em;
+  margin: -0.15em -0.3em;
   background-color: #00529f;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 .tooltip:is(:hover, :focus, :focus-within) {
   background-color: #00305d;
@@ -59,16 +60,17 @@
 }
 .tooltip > .quote-body {
   white-space: normal;
-  width: min(80vw, 300px);
+  width: min(90vw, 400px);
   visibility: hidden;
   opacity: 0;
-  font-size: 0.6em;
+  font-size: 0.8em;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-20%, -20%);
   transition: all 0.2s ease-out;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
 .tooltip > .quote-body .container {
   display: block;
@@ -84,14 +86,14 @@
   color: #fff;
   background-color: #00305d;
   padding: 0.75em 1em;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 button#blur-button {
   display: inline-block;
   margin-right: 0px;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   background-color: #fff;
   font-family: Larsseit, sans-serif;
   color: #00529f;
@@ -113,7 +115,7 @@ p#blur-visible {
 p#instructions {
   display: none;
   font-size: 1rem;
-  margin: 1rem 0 0.5rem 0;
+  margin: 0.55rem 0;
 }
 
 /* Media Queries */
@@ -139,14 +141,13 @@ p#instructions {
     position: relative;
   }
   .tooltip > .quote-body {
-    top: initial;
-    bottom: calc(100% + 2em);
-    left: calc(50% + min(90vw, 300px) / -2);
+    top: calc(100% + 0.5rem);
+    left: calc(50% + min(90vw, 400px) / -2);
     transform: unset;
     max-height: 200px;
   }
-  .tooltip > .quote-body::after {
-    content: " ";
+  .tooltip > .quote-body::before {
+    content: "";
     width: 0;
     height: 0;
     border-top: 0.5em solid #00305d;
@@ -154,13 +155,13 @@ p#instructions {
     border-bottom: none;
     border-left: 0.5em solid transparent;
     position: absolute;
-    top: initial;
+    top: -6px;
     right: initial;
     left: 50%;
-    transform: translateX(-50%);
+    transform: rotate(180deg);
   }
   .tooltip > .quote-body > .container {
-    max-height: 200px;
+    max-height: 350px;
   }
   .tooltip:is(:hover, :focus, :focus-within) > .quote-body {
     bottom: calc(100% + 0.75em);
