@@ -10,7 +10,7 @@
   min-height: 200px;
   font-size: clamp(0.5rem, 0.5rem + 2vw, 1rem);
   line-height: 1.5;
-  padding: 5em;
+  padding: 3.5rem;
   padding-top: 3.90625em;
   display: flex;
   flex-wrap: wrap;
