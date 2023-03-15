@@ -57,238 +57,245 @@ const bunny_3 = document.getElementById("bunny_3");
 const bunny_4 = document.getElementById("bunny_4");
 
 bunny_0.innerHTML = `
-  <div class="bunny-container">
-  <div class="bunny-feedback">
-    <img
-      style="
-        max-width: 250px;
-        display: flex;
-        margin-left: -40px;
-        margin-right: 20px;
-      "
-      src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f56170003bac142f1_bunny_3.svg"
-      alt="Messy drawing of a bunny rabbit"
-    />
+<div class="bunny-container">
+<div class="bunny-feedback">
+  <img
+    style="
+      max-width: 270px;
+      display: flex;
+      margin-left: -40px;
+      margin-right: -240px;
+    "
+    src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f56170003bac142f1_bunny_3.svg"
+    alt="Messy drawing of a bunny rabbit"
+  />
 
-    <div style="display: flex; align-items: center">
-      <p style="display: flex"><b>"That bunny is messy."</b></p>
-    </div>
+  <div style="display: flex; align-items: center">
+    <p class="feedback" style="display: flex">"That bunny is messy."</p>
   </div>
+</div>
 
-  <fieldset id="0" class="radio-group">
-    <p class="quiz-question">What type of feedback is this?</p>
-    <div class="card-row">
-      <input
-        onclick="displayRadioValue('0')"
-        type="radio"
-        id="radioClub-0"
-        name="0"
-        value="club"
-      />
-      <label for="radioClub-0"><span>&#9827;</span>Club</label>
-      <input
-        onclick="displayRadioValue('0')"
-        type="radio"
-        id="radioHeart-0"
-        name="0"
-        value="heart"
-      />
-      <label for="radioHeart-0"><span>&#9829;</span>Heart</label>
-      <input
-        onclick="displayRadioValue('0')"
-        type="radio"
-        id="radioSpade-0"
-        name="0"
-        value="spade"
-      />
-      <label for="radioSpade-0"><span>&#9824;</span>Spade</label>
+<fieldset id="0" class="radio-group">
+  <p class="quiz-question">What type of feedback is this?</p>
+  <div class="card-row">
+    <input
+      onclick="displayRadioValue('0')"
+      type="radio"
+      id="radioClub-0"
+      name="0"
+      value="club"
+    />
+    <label for="radioClub-0"><span>&#9827;</span>Club</label>
+    <input
+      onclick="displayRadioValue('0')"
+      type="radio"
+      id="radioHeart-0"
+      name="0"
+      value="heart"
+    />
+    <label for="radioHeart-0"><span>&#9829;</span>Heart</label>
+    <input
+      onclick="displayRadioValue('0')"
+      type="radio"
+      id="radioSpade-0"
+      name="0"
+      value="spade"
+    />
+    <label for="radioSpade-0"><span>&#9824;</span>Spade</label>
 
-      <input
-        onclick="displayRadioValue('0')"
-        type="radio"
-        id="radioDiamond-0"
-        name="0"
-        value="diamond"
-      />
-      <label for="radioDiamond-0"><span>&#9830;</span>Diamond</label>
-    </div>
-  </fieldset>
-  <div class="result" id="result-0"></div>
+    <input
+      onclick="displayRadioValue('0')"
+      type="radio"
+      id="radioDiamond-0"
+      name="0"
+      value="diamond"
+    />
+    <label for="radioDiamond-0"><span>&#9830;</span>Diamond</label>
+  </div>
+</fieldset>
+<div class="result" id="result-0"></div>
 </div>
   `;
 
 bunny_1.innerHTML = `
-  <div class="bunny-container">
-  <div class="bunny-feedback">
-    <img
-      style="max-width: 500px; display: flex; margin: -70px -90px -160px -160px"
-      src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23fbeb22e916bd5d6bc_bunny_1.svg"
-      alt="Detailed drawing of a bunny rabbit"
-    />
+<div class="bunny-container">
+<div class="bunny-feedback">
+  <img
+    style="
+      max-width: 650px;
+      display: flex;
+      margin: -200px -470px -200px -190px;
+    "
+    src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23fbeb22e916bd5d6bc_bunny_1.svg"
+    alt="Detailed drawing of a bunny rabbit"
+  />
 
-    <div style="display: flex; align-items: center">
-      <p style="display: flex">
-        <b>"The long ears make it very clear that this is a bunny."</b>
-      </p>
-    </div>
+  <div
+    style="
+      display: flex;
+      align-items: center;
+      width: 330px;
+      text-align: center;
+    "
+  >
+    <p class="feedback" style="display: flex">
+      "The long ears make it very clear that this is a bunny."
+    </p>
   </div>
+</div>
 
-  <fieldset id="1" class="radio-group">
-    <p class="quiz-question">What type of feedback is this?</p>
-    <div class="card-row">
-      <input
-        onclick="displayRadioValue('1')"
-        type="radio"
-        id="radioClub-1"
-        name="1"
-        value="club"
-      />
-      <label for="radioClub-1"><span>&#9827;</span>Club</label>
-      <input
-        onclick="displayRadioValue('1')"
-        type="radio"
-        id="radioHeart-1"
-        name="1"
-        value="heart"
-      />
-      <label for="radioHeart-1"><span>&#9829;</span>Heart</label>
-      <input
-        onclick="displayRadioValue('1')"
-        type="radio"
-        id="radioSpade-1"
-        name="1"
-        value="spade"
-      />
-      <label for="radioSpade-1"><span>&#9824;</span>Spade</label>
-      <input
-        onclick="displayRadioValue('1')"
-        type="radio"
-        id="radioDiamond-1"
-        name="1"
-        value="diamond"
-      />
-      <label for="radioDiamond-1"><span>&#9830;</span>Diamond</label>
-    </div>
-  </fieldset>
-  <div class="result" id="result-1"></div>
-</div>  
+<fieldset id="1" class="radio-group">
+  <p class="quiz-question">What type of feedback is this?</p>
+  <div class="card-row">
+    <input
+      onclick="displayRadioValue('1')"
+      type="radio"
+      id="radioClub-1"
+      name="1"
+      value="club"
+    />
+    <label for="radioClub-1"><span>&#9827;</span>Club</label>
+    <input
+      onclick="displayRadioValue('1')"
+      type="radio"
+      id="radioHeart-1"
+      name="1"
+      value="heart"
+    />
+    <label for="radioHeart-1"><span>&#9829;</span>Heart</label>
+    <input
+      onclick="displayRadioValue('1')"
+      type="radio"
+      id="radioSpade-1"
+      name="1"
+      value="spade"
+    />
+    <label for="radioSpade-1"><span>&#9824;</span>Spade</label>
+    <input
+      onclick="displayRadioValue('1')"
+      type="radio"
+      id="radioDiamond-1"
+      name="1"
+      value="diamond"
+    />
+    <label for="radioDiamond-1"><span>&#9830;</span>Diamond</label>
+  </div>
+</fieldset>
+<div class="result" id="result-1"></div>
+</div>
   `;
 
 bunny_2.innerHTML = `
-  <div class="bunny-container">
-  <div class="bunny-feedback">
-    <img
-      style="max-width: 300px; display: flex; margin: 0px"
-      src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f84373f230c616f0d_bunny_2.svg"
-      alt="Detailed drawing of a bunny rabbit"
-    />
+<div class="bunny-container">
+<div class="bunny-feedback">
+  <img
+    style="max-width: 280px; display: flex; margin: 0px -340px 0 60px"
+    src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f84373f230c616f0d_bunny_2.svg"
+    alt="Detailed drawing of a bunny rabbit"
+  />
 
-    <div style="display: flex; align-items: center">
-      <p style="display: flex">
-        <b
-          >"Because I can't see a tail, I'm not sure if this is a bunny or a
-          long-eared dog."</b
-        >
-      </p>
-    </div>
+  <div style="display: flex; align-items: center">
+    <p class="feedback" style="display: flex">
+      "Because I can't see a tail, I'm not sure if this is a bunny or a
+      long-eared dog."
+    </p>
   </div>
-  <fieldset id="2" class="radio-group">
-    <p class="quiz-question">What type of feedback is this?</p>
-    <div class="card-row">
-      <input
-        onclick="displayRadioValue('2')"
-        type="radio"
-        id="radioClub-2"
-        name="2"
-        value="club"
-      />
-      <label for="radioClub-2"><span>&#9827;</span>Club</label>
-      <input
-        onclick="displayRadioValue('2')"
-        type="radio"
-        id="radioHeart-2"
-        name="2"
-        value="heart"
-      />
-      <label for="radioHeart-2"><span>&#9829;</span>Heart</label>
-      <input
-        onclick="displayRadioValue('2')"
-        type="radio"
-        id="radioSpade-2"
-        name="2"
-        value="spade"
-      />
-      <label for="radioSpade-2"><span>&#9824;</span>Spade</label>
-      <input
-        onclick="displayRadioValue('2')"
-        type="radio"
-        id="radioDiamond-2"
-        name="2"
-        value="diamond"
-      />
-      <label for="radioDiamond-2"><span>&#9830;</span>Diamond</label>
-    </div>
-  </fieldset>
-  <div class="result" id="result-2"></div>
+</div>
+<fieldset id="2" class="radio-group">
+  <p class="quiz-question">What type of feedback is this?</p>
+  <div class="card-row">
+    <input
+      onclick="displayRadioValue('2')"
+      type="radio"
+      id="radioClub-2"
+      name="2"
+      value="club"
+    />
+    <label for="radioClub-2"><span>&#9827;</span>Club</label>
+    <input
+      onclick="displayRadioValue('2')"
+      type="radio"
+      id="radioHeart-2"
+      name="2"
+      value="heart"
+    />
+    <label for="radioHeart-2"><span>&#9829;</span>Heart</label>
+    <input
+      onclick="displayRadioValue('2')"
+      type="radio"
+      id="radioSpade-2"
+      name="2"
+      value="spade"
+    />
+    <label for="radioSpade-2"><span>&#9824;</span>Spade</label>
+    <input
+      onclick="displayRadioValue('2')"
+      type="radio"
+      id="radioDiamond-2"
+      name="2"
+      value="diamond"
+    />
+    <label for="radioDiamond-2"><span>&#9830;</span>Diamond</label>
+  </div>
+</fieldset>
+<div class="result" id="result-2"></div>
 </div>
   `;
 
 bunny_3.innerHTML = `
-  <div class="bunny-container">
-  <div class="bunny-feedback">
-    <img
-      style="max-width: 300px; display: flex; margin: 0"
-      src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f2e2b166e170cd71c_bunny_4.svg"
-      alt="Detailed drawing of a bunny rabbit"
-    />
+<div class="bunny-container">
+<div class="bunny-feedback">
+  <img
+    style="max-width: 300px; display: flex; margin: 0 -360px 0 60px"
+    src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f2e2b166e170cd71c_bunny_4.svg"
+    alt="Detailed drawing of a bunny rabbit"
+  />
 
-    <div style="display: flex; align-items: center">
-      <p style="display: flex">
-        <b
-          >"That is the cutest bunny I have ever seen. I can’t think of anything
-          more adorable."</b
-        >
-      </p>
-    </div>
+  <div style="display: flex; align-items: center">
+    <p class="feedback" style="display: flex">
+      "That is the cutest bunny I have ever seen. I can’t think of anything
+      more adorable."
+    </p>
   </div>
-  <fieldset id="3" class="radio-group">
-    <p class="quiz-question">What type of feedback is this?</p>
-    <div class="card-row">
-      <input
-        onclick="displayRadioValue('3')"
-        type="radio"
-        id="radioClub-3"
-        name="3"
-        value="club"
-      />
-      <label for="radioClub-3"><span>&#9827;</span>Club</label>
-      <input
-        onclick="displayRadioValue('3')"
-        type="radio"
-        id="radioHeart-3"
-        name="3"
-        value="heart"
-      />
-      <label for="radioHeart-3"><span>&#9829;</span>Heart</label>
-      <input
-        onclick="displayRadioValue('3')"
-        type="radio"
-        id="radioSpade-3"
-        name="3"
-        value="spade"
-      />
-      <label for="radioSpade-3"><span>&#9824;</span>Spade</label>
-      <input
-        onclick="displayRadioValue('3')"
-        type="radio"
-        id="radioDiamond-3"
-        name="3"
-        value="diamond"
-      />
-      <label for="radioDiamond-3"><span>&#9830;</span>Diamond</label>
-    </div>
-  </fieldset>
-  <div class="result" id="result-3"></div>
+</div>
+<fieldset id="3" class="radio-group">
+  <p class="quiz-question">What type of feedback is this?</p>
+  <div class="card-row">
+    <input
+      onclick="displayRadioValue('3')"
+      type="radio"
+      id="radioClub-3"
+      name="3"
+      value="club"
+    />
+    <label for="radioClub-3"><span>&#9827;</span>Club</label>
+    <input
+      onclick="displayRadioValue('3')"
+      type="radio"
+      id="radioHeart-3"
+      name="3"
+      value="heart"
+    />
+    <label for="radioHeart-3"><span>&#9829;</span>Heart</label>
+    <input
+      onclick="displayRadioValue('3')"
+      type="radio"
+      id="radioSpade-3"
+      name="3"
+      value="spade"
+    />
+    <label for="radioSpade-3"><span>&#9824;</span>Spade</label>
+    <input
+      onclick="displayRadioValue('3')"
+      type="radio"
+      id="radioDiamond-3"
+      name="3"
+      value="diamond"
+    />
+    <label for="radioDiamond-3"><span>&#9830;</span>Diamond</label>
+  </div>
+</fieldset>
+<div class="result" id="result-3"></div>
 </div>
   `;
 
@@ -296,14 +303,20 @@ bunny_4.innerHTML = `
 <div class="bunny-container">
 <div class="bunny-feedback">
   <img
-    style="max-width: 300px; display: flex; margin: 0"
+    style="
+      max-width: 300px;
+      display: flex;
+      margin: 0;
+      opacity: 30% !important;
+      margin: 0 -230px 0 -70px;
+    "
     src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f65cb7273805a5b0d_bunny_5.svg"
     alt="Detailed drawing of a bunny rabbit"
   />
 
   <div style="display: flex; align-items: center">
-    <p style="display: flex">
-      <b>"What <i>is</i> that?"</b>
+    <p class="feedback" style="display: flex">
+      "What&nbsp;<i>is</i>&nbsp;that?"
     </p>
   </div>
 </div>
