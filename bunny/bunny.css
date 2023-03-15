@@ -62,6 +62,7 @@
 }
 .bunny-container .bunny-feedback img {
   opacity: 0.15;
+  z-index: -1;
 }
 .bunny-container {
   border: 1px solid #000;
