@@ -266,7 +266,14 @@
   </style>
   <body>
     <!-- Franklin Manager -->
-    <div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
+    <div
+      style="
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        border: 1px solid;
+        padding: 2rem;
+      "
+    >
       <div
         id="main-prompt-manager"
         class="chat-row callout message"
@@ -438,7 +445,14 @@
 
     <!-- Farah Peer -->
 
-    <div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
+    <div
+      style="
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        border: 1px solid;
+        padding: 2rem;
+      "
+    >
       <div
         id="main-prompt-peer"
         class="chat-row callout message"
@@ -455,14 +469,6 @@
             >
               Speak with Farah
             </button>
-            <!-- <button
-              id="report-button"
-              type="button"
-              class="button w-button callout-button"
-              onclick="play('report','report-1')"
-            >
-              Direct report
-            </button> -->
           </div>
         </div>
       </div>
@@ -620,7 +626,14 @@
 
     <!-- Fiona Direct Report -->
 
-    <div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
+    <div
+      style="
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        border: 1px solid;
+        padding: 2rem;
+      "
+    >
       <div
         id="main-prompt-report"
         class="chat-row callout message"
@@ -810,10 +823,6 @@
         }
         const main_prompt = document.getElementById("main-prompt-" + trigger);
         main_prompt.style.display = "none";
-        // const main_prompt_text = document.getElementById("main-prompt-text-"+trigger);
-        // main_prompt_text.innerHTML =
-        //   "Which feedback conversation would you like to simulate next?";
-
         const el = document.getElementById(id);
         el.style.display = "block";
       };
@@ -823,9 +832,6 @@
         const p = document.getElementById(prompt);
         el.style.display = "block";
         p.style.display = "none";
-        // setTimeout(() => {
-        //   document.getElementById("main-prompt").style.display = "flex";
-        // }, 18000);
       };
     </script>
   </body>
