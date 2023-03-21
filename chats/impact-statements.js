@@ -33,7 +33,7 @@ const impact_peer = document.getElementById("impact_peer");
 const impact_report = document.getElementById("impact_report");
 
 impact_manager.innerHTML = `
-<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
+<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid; padding:2rem;">
       <div
         id="main-prompt-manager"
         class="chat-row callout message"
@@ -205,7 +205,7 @@ impact_manager.innerHTML = `
 `;
 
 impact_peer.innerHTML = `
-<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
+<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid; padding:2rem;">
       <div
         id="main-prompt-peer"
         class="chat-row callout message"
@@ -379,7 +379,7 @@ impact_peer.innerHTML = `
 `;
 
 impact_report.innerHTML = `
-<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
+<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid; padding:2rem;">
       <div
         id="main-prompt-report"
         class="chat-row callout message"
