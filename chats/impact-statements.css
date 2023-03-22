@@ -25,12 +25,12 @@
   z-index: 1;
 }
 
-.chat-row .callout {
-  animation: callout 0.5s ease 0s forwards;
+.chat-row .prompt {
+  animation: prompt 0.5s ease 0s forwards;
   animation-delay: var(--delay);
 }
 
-.chat-row .callout p {
+.chat-row .prompt p {
   font-size: 1.2rem;
   max-width: 600px;
 }
@@ -39,7 +39,7 @@
   font-weight: 700;
 }
 
-.chat-row .callout-button-wrapper {
+.chat-row .prompt-button-wrapper {
   text-align: center;
   margin: 1rem 0;
   display: flex;
@@ -223,7 +223,7 @@
   transform-origin: 100% 100%;
 }
 
-.chat-row.callout {
+.chat-row.prompt {
   transform-origin: bottom;
   margin: 0;
   justify-content: center;
