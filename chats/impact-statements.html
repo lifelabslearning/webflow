@@ -39,12 +39,12 @@
       z-index: 1;
     }
 
-    .chat-row .callout {
-      animation: callout 0.5s ease 0s forwards;
+    .chat-row .prompt {
+      animation: prompt 0.5s ease 0s forwards;
       animation-delay: var(--delay);
     }
 
-    .chat-row .callout p {
+    .chat-row .prompt p {
       font-size: 1.2rem;
       max-width: 600px;
     }
@@ -53,7 +53,7 @@
       font-weight: 700;
     }
 
-    .chat-row .callout-button-wrapper {
+    .chat-row .prompt-button-wrapper {
       text-align: center;
       margin: 1rem 0;
       display: flex;
@@ -237,7 +237,7 @@
       transform-origin: 100% 100%;
     }
 
-    .chat-row.callout {
+    .chat-row.prompt {
       transform-origin: bottom;
       margin: 0;
       justify-content: center;
@@ -276,16 +276,16 @@
     >
       <div
         id="main-prompt-manager"
-        class="chat-row callout message"
+        class="chat-row prompt message"
         style="--delay: 0s"
       >
-        <div class="callout" style="--delay: 0s">
+        <div class="prompt" style="--delay: 0s">
           <p>Let's simulate a feedback conversation with your Manager.</p>
-          <div class="callout-button-wrapper">
+          <div class="prompt-button-wrapper">
             <button
               id="manager-button"
               type="button"
-              class="button w-button callout-button"
+              class="button w-button prompt-button"
               onclick="play('manager', 'manager-1')"
             >
               Speak with Franklin
@@ -343,20 +343,20 @@
 
         <div
           id="try-manager-2"
-          class="chat-row callout message"
+          class="chat-row prompt message"
           style="--delay: 7s"
         >
-          <div class="callout">
+          <div class="prompt">
             <p>
               How does Franklin's feedback land with you?<br /><br />How
               motivated are you to speak up more in the next meeting?<br /><br />Not
               thrilled by their feedback? Let's give Franklin another chance.
             </p>
-            <div class="callout-button-wrapper">
+            <div class="prompt-button-wrapper">
               <button
                 type="button"
                 onclick="tryAgain('try-manager-2', 'manager-2')"
-                class="button w-button callout-button"
+                class="button w-button prompt-button"
               >
                 Try again
               </button>
@@ -432,8 +432,8 @@
             </p>
           </div>
         </div>
-        <div class="chat-row callout message" style="--delay: 14s">
-          <div class="callout" style="--delay: 14s">
+        <div class="chat-row prompt message" style="--delay: 14s">
+          <div class="prompt" style="--delay: 14s">
             <p>
               What's different about Franklin's second attempt?<br /><br />How
               much more motivated are you to speak up in the next meeting?
@@ -455,16 +455,16 @@
     >
       <div
         id="main-prompt-peer"
-        class="chat-row callout message"
+        class="chat-row prompt message"
         style="--delay: 0s"
       >
-        <div class="callout" style="--delay: 0s">
+        <div class="prompt" style="--delay: 0s">
           <p>Let's simulate a feedback conversation with your Peer.</p>
-          <div class="callout-button-wrapper">
+          <div class="prompt-button-wrapper">
             <button
               id="peer-button"
               type="button"
-              class="button w-button callout-button"
+              class="button w-button prompt-button"
               onclick="play('peer', 'peer-1')"
             >
               Speak with Farah
@@ -521,20 +521,20 @@
 
         <div
           id="try-peer-2"
-          class="chat-row callout message"
+          class="chat-row prompt message"
           style="--delay: 7s"
         >
-          <div class="callout">
+          <div class="prompt">
             <p>
               How does Farah's feedback land with you?<br /><br />
               What did you learn from that feedback?<br /><br />
               Eager to learn more? Let's give Farah another try.
             </p>
-            <div class="callout-button-wrapper">
+            <div class="prompt-button-wrapper">
               <button
                 type="button"
                 onclick="tryAgain('try-peer-2', 'peer-2')"
-                class="button w-button callout-button"
+                class="button w-button prompt-button"
               >
                 Try again
               </button>
@@ -608,8 +608,8 @@
             </p>
           </div>
         </div>
-        <div class="chat-row callout message" style="--delay: 14s">
-          <div class="callout" style="--delay: 14s">
+        <div class="chat-row prompt message" style="--delay: 14s">
+          <div class="prompt" style="--delay: 14s">
             <p>
               We're guessing that feedback landed differently. It's because it
               contains an impact statement - a statement that explains why the
@@ -636,16 +636,16 @@
     >
       <div
         id="main-prompt-report"
-        class="chat-row callout message"
+        class="chat-row prompt message"
         style="--delay: 0s"
       >
-        <div class="callout" style="--delay: 0s">
+        <div class="prompt" style="--delay: 0s">
           <p>Let's simulate a feedback conversation with your Direct Report.</p>
-          <div class="callout-button-wrapper">
+          <div class="prompt-button-wrapper">
             <button
               id="report-button"
               type="button"
-              class="button w-button callout-button"
+              class="button w-button prompt-button"
               onclick="play('report','report-1')"
             >
               Speak with Fiona
@@ -702,20 +702,20 @@
 
         <div
           id="try-report-2"
-          class="chat-row callout message"
+          class="chat-row prompt message"
           style="--delay: 7s"
         >
-          <div class="callout">
+          <div class="prompt">
             <p>
               How does Fiona's feedback land with you?<br /><br />
               Are you motivated to be on time?<br /><br />
               If not, let's give Fiona another try.
             </p>
-            <div class="callout-button-wrapper">
+            <div class="prompt-button-wrapper">
               <button
                 type="button"
                 onclick="tryAgain('try-report-2', 'report-2')"
-                class="button w-button callout-button"
+                class="button w-button prompt-button"
               >
                 Try again
               </button>
@@ -789,8 +789,8 @@
             </p>
           </div>
         </div>
-        <div class="chat-row callout message" style="--delay: 14s">
-          <div class="callout" style="--delay: 14s">
+        <div class="chat-row prompt message" style="--delay: 14s">
+          <div class="prompt" style="--delay: 14s">
             <p>
               If this feedback feels different, it's because it contains an
               impact statement that explains why the feedback matters.<br /><br />
