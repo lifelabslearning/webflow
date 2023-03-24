@@ -103,6 +103,8 @@ blur_statement_1.innerHTML = `
       <div>
         <button
           type="button"
+          id="quote-1-button"
+          data-o-person-activity="Blur Words Interaction: quote-1-button"
           class="blur-button button w-button"
           aria-label="Show blur words"
           onclick="showBlurWords('quote-1')"
@@ -200,7 +202,9 @@ blur_statement_2.innerHTML = `
       <button
         type="button"
         class="blur-button button w-button"
-        aria-label="Show blur words"
+        id="quote-2-button"
+        data-o-person-activity="Blur Words Interaction: quote-2-button"
+        aria-label="Deblur this feedback"
         onclick="showBlurWords('quote-2')"
       >
         Deblur this feedback
@@ -287,7 +291,9 @@ blur_statement_3.innerHTML = `
       <button
         type="button"
         class="blur-button button w-button"
-        aria-label="Show blur words"
+        id="quote-3-button"
+          data-o-person-activity="Blur Words Interaction: quote-3-button"
+        aria-label="Deblur this feedback"
         onclick="showBlurWords('quote-3')"
       >
         Deblur this feedback
