@@ -44,7 +44,7 @@ impact_manager.innerHTML = `
           <div class="prompt-button-wrapper">
             <button
               id="manager-button"
-              data-o-person-activity="Impact Statement Interaction: manager-button"
+              data-o-person-activity="Clicked Impact Statement: manager-button"
               type="button"
               aria-label="Speak with Franklin"
               class="button w-button prompt-button"
@@ -119,7 +119,7 @@ impact_manager.innerHTML = `
                 type="button"
                 aria-label="Try again"
                 id="manager-try-again"
-                data-o-person-activity="Impact Statement Interaction: manager-try-again"
+                data-o-person-activity="Clicked Impact Statement: manager-try-again"
                 onclick="tryAgain('try-manager-2', 'manager-2')"
                 class="button w-button prompt-button"
               >
@@ -221,7 +221,7 @@ impact_peer.innerHTML = `
           <div class="prompt-button-wrapper">
             <button
               id="peer-button"
-              data-o-person-activity="Impact Statement Interaction: peer-button"
+              data-o-person-activity="Clicked Impact Statement: peer-button"
               type="button"
               aria-label="Speak with Farah"
               class="button w-button prompt-button"
@@ -295,7 +295,7 @@ impact_peer.innerHTML = `
                 type="button"
                 aria-label="Try again"
                 id="peer-try-again"
-                data-o-person-activity="Impact Statement Interaction: peer-try-again"
+                data-o-person-activity="Clicked Impact Statement: peer-try-again"
                 onclick="tryAgain('try-peer-2', 'peer-2')"
                 class="button w-button prompt-button"
               >
@@ -400,7 +400,7 @@ impact_report.innerHTML = `
           <div class="prompt-button-wrapper">
             <button
               id="report-button"
-            data-o-person-activity="Impact Statement Interaction: report-button"
+            data-o-person-activity="Clicked Impact Statement: report-button"
               type="button"
               aria-label="Speak with Fiona"
               class="button w-button prompt-button"
@@ -474,7 +474,7 @@ impact_report.innerHTML = `
                 type="button"
                 aria-label="Try again"
                 id="report-try-again"
-                data-o-person-activity="Impact Statement Interaction: report-try-again"
+                data-o-person-activity="Clicked Impact Statement: report-try-again"
                 onclick="tryAgain('try-report-2', 'report-2')"
                 class="button w-button prompt-button"
               >

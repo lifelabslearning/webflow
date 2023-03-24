@@ -84,7 +84,7 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioClub-1"
-        data-o-person-activity="Playing Cards Interaction: radioClub-1"
+        data-o-person-activity="Clicked Playing Cards:  radioClub-1"
         name="1"
         value="club"
       />
@@ -93,7 +93,7 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioHeart-1"
-        data-o-person-activity="Playing Cards Interaction: radioHeart-1"
+        data-o-person-activity="Clicked Playing Cards:  radioHeart-1"
         name="1"
         value="heart"
       />
@@ -102,7 +102,7 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioSpade-1"
-        data-o-person-activity="Playing Cards Interaction: radioSpade-1"
+        data-o-person-activity="Clicked Playing Cards:  radioSpade-1"
         name="1"
         value="spade"
       />
@@ -111,7 +111,7 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioDiamond-1"
-        data-o-person-activity="Playing Cards Interaction: radioDiamond-1"
+        data-o-person-activity="Clicked Playing Cards:  radioDiamond-1"
         name="1"
         value="diamond"
       />
@@ -142,7 +142,7 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioClub-0"
-        data-o-person-activity="Playing Cards Interaction: radioClub-0"
+        data-o-person-activity="Clicked Playing Cards:  radioClub-0"
         name="0"
         value="club"
       />
@@ -151,7 +151,7 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioHeart-0"
-        data-o-person-activity="Playing Cards Interaction: radioHeart-0"
+        data-o-person-activity="Clicked Playing Cards:  radioHeart-0"
         name="0"
         value="heart"
       />
@@ -160,7 +160,7 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioSpade-0"
-        data-o-person-activity="Playing Cards Interaction: radioSpade-0"
+        data-o-person-activity="Clicked Playing Cards:  radioSpade-0"
         name="0"
         value="spade"
       />
@@ -170,7 +170,7 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioDiamond-0"
-        data-o-person-activity="Playing Cards Interaction: radioDiamond-0"
+        data-o-person-activity="Clicked Playing Cards:  radioDiamond-0"
         name="0"
         value="diamond"
       />
@@ -204,7 +204,7 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioClub-2"
-        data-o-person-activity="Playing Cards Interaction: radioClub-2"
+        data-o-person-activity="Clicked Playing Cards:  radioClub-2"
         name="2"
         value="club"
       />
@@ -213,7 +213,7 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioHeart-2"
-        data-o-person-activity="Playing Cards Interaction: radioHeart-2"
+        data-o-person-activity="Clicked Playing Cards:  radioHeart-2"
         name="2"
         value="heart"
       />
@@ -222,7 +222,7 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioSpade-2"
-        data-o-person-activity="Playing Cards Interaction: radioSpade-2"
+        data-o-person-activity="Clicked Playing Cards:  radioSpade-2"
         name="2"
         value="spade"
       />
@@ -231,7 +231,7 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioDiamond-2"
-        data-o-person-activity="Playing Cards Interaction: radioDiamond-2"
+        data-o-person-activity="Clicked Playing Cards:  radioDiamond-2"
         name="2"
         value="diamond"
       />
@@ -264,7 +264,7 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioClub-3"
-        data-o-person-activity="Playing Cards Interaction: radioClub-3"
+        data-o-person-activity="Clicked Playing Cards:  radioClub-3"
         name="3"
         value="club"
       />
@@ -273,7 +273,7 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioHeart-3"
-        data-o-person-activity="Playing Cards Interaction: radioHeart-3"
+        data-o-person-activity="Clicked Playing Cards:  radioHeart-3"
         name="3"
         value="heart"
       />
@@ -282,7 +282,7 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioSpade-3"
-        data-o-person-activity="Playing Cards Interaction: radioSpade-3"
+        data-o-person-activity="Clicked Playing Cards:  radioSpade-3"
         name="3"
         value="spade"
       />
@@ -291,7 +291,7 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioDiamond-3"
-        data-o-person-activity="Playing Cards Interaction: radioDiamond-3"
+        data-o-person-activity="Clicked Playing Cards:  radioDiamond-3"
         name="3"
         value="diamond"
       />
@@ -323,7 +323,7 @@ bunny_4.innerHTML = `
         onclick="displayRadioValue('4')"
         type="radio"
         id="radioClub-4"
-        data-o-person-activity="Playing Cards Interaction: radioClub-4"
+        data-o-person-activity="Clicked Playing Cards:  radioClub-4"
         name="4"
         value="club"
       />
@@ -332,7 +332,7 @@ bunny_4.innerHTML = `
         onclick="displayRadioValue('4')"
         type="radio"
         id="radioHeart-4"
-        data-o-person-activity="Playing Cards Interaction: radioHeart-4"
+        data-o-person-activity="Clicked Playing Cards:  radioHeart-4"
         name="4"
         value="heart"
       />
@@ -341,7 +341,7 @@ bunny_4.innerHTML = `
         onclick="displayRadioValue('4')"
         type="radio"
         id="radioSpade-4"
-        data-o-person-activity="Playing Cards Interaction: radioSpade-4"
+        data-o-person-activity="Clicked Playing Cards:  radioSpade-4"
         name="4"
         value="spade"
       />
@@ -350,7 +350,7 @@ bunny_4.innerHTML = `
         onclick="displayRadioValue('4')"
         type="radio"
         id="radioDiamond-4"
-        data-o-person-activity="Playing Cards Interaction: radioDiamond-4"
+        data-o-person-activity="Clicked Playing Cards:  radioDiamond-4"
         name="4"
         value="diamond"
       />
