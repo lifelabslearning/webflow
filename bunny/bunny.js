@@ -30,8 +30,8 @@ const quiz = [
   },
   {
     answer: "club",
-    correct_message: `<p>Correct! "What is that?" is a club. Why? Because someone thinks they've successfully completed a task (i.e., drawn a bunny), but they're so far off the other person can't even tell what they've done. Most folks interpret that as a critique.
-      <br/><br/>But what if I truly don't know what they were trying to do? Should I not give feedback? No! This is where a context statement can make all the difference: "I'd love to give you some feedback on your drawing, could you tell me what you were going for?"" Now the stage is set for those brain-friendly spades and diamonds.</p>`,
+    correct_message: `<p>Correct! "What is that?" is a club. Why? What is that?" is a club. Why? Because if someone thinks they've successfully completed a task (i.e., drawn a bunny), but they're so far off the other person can't even tell what they've done most folks interpret that as a critique.
+      <br/><br/>So what if I truly don't know what they were trying to do? Should I not give feedback? No! This is where a context statement can make all the difference: "I'd love to give you some feedback on your drawing, could you tell me what you were going for?" Now the stage is set for those brain-friendly spades and diamonds.</p>`,
     incorrect_message: `The feedback above is blurry critique. Which other playing card represents this type?</p>`,
   },
 ];
