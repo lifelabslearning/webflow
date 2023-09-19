@@ -180,10 +180,6 @@
 
 .chat-row.me .avatar {
   overflow: hidden;
-  background-color: #222;
-  background-image: url(https://uploads-ssl.webflow.com/63d2ab4…/64028b9…_default_profile_image.png);
-  background-position: 50% 0%;
-  background-size: 50px;
 }
 
 .chat-row.me .avatar img {
