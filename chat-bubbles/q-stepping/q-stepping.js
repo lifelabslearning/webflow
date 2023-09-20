@@ -57,7 +57,7 @@ qstep_manager.innerHTML = `
               class="button w-button prompt-button"
               onclick="play('manager', 'manager-1')"
             >
-              View Kris and Sheila's conversation
+              Play Kris and Sheila's conversation
             </button>
           </div>
         </div>
@@ -155,77 +155,6 @@ qstep_manager.innerHTML = `
               As a manager, Sheila knows what people typically do. However, this
               is an opportunity for Sheila to step into question mode and get
               curious about Kris' perspective first.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div id="manager-2" style="display: none">
-        <div class="chat-row spark message" style="--delay: 0s">
-          <div>
-            <div class="avatar"></div>
-          </div>
-          <div>
-            <span class="name">Spark</span>
-            <p class="receive">
-              Sheila, that feedback was like the smell of coffee. It's
-              promising, but I'm not awake yet. Give it another go!
-            </p>
-          </div>
-        </div>
-
-        <div class="chat-row manager message" style="--delay: 3s">
-          <div>
-            <div class="avatar"></div>
-          </div>
-          <div>
-            <span class="name"
-              >Sheila <span class="title">&#8226; Manager</span></span
-            >
-            <p class="receive pre message" style="--delay: 3s">
-              Got it! I'll try again...
-            </p>
-            <p class="receive message" style="--delay: 4s">
-              <span>
-                Hi&nbsp;<span data-o-member="FirstName"></span>, I have some
-                feedback on our meeting with leadership yesterday. Can I share
-                it with you?</span
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="chat-row me message" style="--delay: 6s">
-          <p class="send">Yes, please!</p>
-          <div>
-            <div class="avatar"></div>
-          </div>
-        </div>
-
-        <div class="chat-row manager message" style="--delay: 8s">
-          <div>
-            <div class="avatar"></div>
-          </div>
-          <div>
-            <span class="name"
-              >Sheila <span class="title">&#8226; Manager</span></span
-            >
-            <p class="receive pre message" style="--delay: 8s">
-              Great! I noticed you passed every time I asked you to share about
-              the project you're working on.
-            </p>
-            <p class="receive message impact" style="--delay: 10s">
-              It's important to speak up because leadership needed to hear your
-              updates to know we're on track and I know you've got great ideas
-              about where to go next.
-            </p>
-          </div>
-        </div>
-        <div class="chat-row prompt message" style="--delay: 14s">
-          <div class="prompt" style="--delay: 14s">
-            <p>
-              What's different about Sheila's second attempt?<br /><br />How
-              much more motivated are you to speak up in the next meeting?
             </p>
           </div>
         </div>
