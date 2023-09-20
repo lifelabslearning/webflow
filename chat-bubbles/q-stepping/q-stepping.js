@@ -28,7 +28,7 @@ const tryAgain = (prompt, id) => {
   p.style.display = "none";
 };
 
-const qstep_manager = document.getElementById("impact_manager");
+const qstep_manager = document.getElementById("qstep_manager");
 
 qstep_manager.innerHTML = `
 <div
