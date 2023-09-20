@@ -110,6 +110,8 @@
 .feedback {
   margin-top: 1rem;
   display: none;
+  text-align: left;
+  font-weight: 400;
 }
 
 .radio:checked ~ .option .feedback {
