@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
@@ -20,6 +19,12 @@
       position: relative;
       border-radius: 1rem;
       padding: 1rem;
+    }
+
+    .chat-row.closing p {
+      text-align: center;
+      font-size: 1.2rem;
+      display: inline-block;
     }
 
     .chat-row p:before,
@@ -47,6 +52,14 @@
     .chat-row .prompt p {
       font-size: 1.2rem;
       max-width: 600px;
+    }
+
+    .closing {
+      background-color: #fcf1d7;
+      margin-top: 1rem;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin: 0px !important;
     }
 
     .receive.message.impact {
@@ -173,7 +186,7 @@
 
     .chat-row.me .send {
       color: #000;
-      background: #fcf1d7;
+      background: #d7fcd8;
       align-self: flex-end;
       margin: 10px 10px 10px 100px;
     }
@@ -181,7 +194,7 @@
     .chat-row.me .send:before {
       right: -7px;
       width: 20px;
-      background-color: #fcf1d7;
+      background-color: #d7fcd8;
       border-bottom-left-radius: 16px 14px;
     }
 
@@ -233,14 +246,7 @@
   </style>
   <body>
     <!-- Sheila Manager -->
-    <div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+    <div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
       <div
         id="main-prompt-manager"
         class="chat-row prompt message"
@@ -344,21 +350,13 @@
           </div>
         </div>
 
-        <div class="chat-row spark message" style="--delay: 24s">
-          <div>
-            <div class="avatar"></div>
-          </div>
-          <div>
-            <span class="name">Spark</span>
-            <p class="receive">
-              Kris asked Sheila: What do people typically do after their first
-              year?
-              <br /><br />
-              As a manager, Sheila knows what people typically do. However, this
-              is an opportunity for Sheila to step into question mode and get
-              curious about Kris' perspective first.
-            </p>
-          </div>
+        <div class="chat-row message closing" style="--delay: 0s">
+          <p>
+            Kris asked Sheila: What do people typically do after their first
+            year? As a manager, Sheila knows what people typically do. However,
+            this is an opportunity for Sheila to step into question mode and get
+            curious about Kris' perspective first.
+          </p>
         </div>
       </div>
     </div>
