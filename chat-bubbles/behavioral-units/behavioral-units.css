@@ -18,6 +18,12 @@ body {
   padding: 1rem;
 }
 
+.chat-row.closing p {
+  text-align: center;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
 .chat-row p:before,
 .chat-row p:after {
   content: "";
@@ -45,6 +51,13 @@ body {
   max-width: 600px;
 }
 
+.closing {
+  background-color: #fcf1d7;
+  margin-top: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .receive.message.impact {
   font-weight: 700;
 }
@@ -60,7 +73,7 @@ body {
 .chat-row {
   display: flex;
   align-items: end;
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .chat-row .avatar {
@@ -169,7 +182,7 @@ body {
 
 .chat-row.me .send {
   color: #000;
-  background: #fcf1d7;
+  background: #d7fcd8;
   align-self: flex-end;
   margin: 10px 10px 10px 100px;
 }
@@ -177,7 +190,7 @@ body {
 .chat-row.me .send:before {
   right: -7px;
   width: 20px;
-  background-color: #fcf1d7;
+  background-color: #d7fcd8;
   border-bottom-left-radius: 16px 14px;
 }
 

@@ -31,14 +31,7 @@ const tryAgain = (prompt, id) => {
 const bu_manager = document.getElementById("bu_manager");
 
 bu_manager.innerHTML = `
-<div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+  <div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
       <div
         id="main-prompt-manager"
         class="chat-row prompt message"
@@ -245,6 +238,13 @@ bu_manager.innerHTML = `
               transition or the new systems?
             </p>
           </div>
+        </div>
+
+        <div class="chat-row message closing" style="--delay: 60s">
+          <p>
+            Did you notice the q-steps, playbacks, and split-tracks in the
+            conversation?
+          </p>
         </div>
       </div>
     </div>

@@ -22,6 +22,12 @@
       padding: 1rem;
     }
 
+    .chat-row.closing p {
+      text-align: center;
+      font-size: 1.2rem;
+      display: inline-block;
+    }
+
     .chat-row p:before,
     .chat-row p:after {
       content: "";
@@ -49,6 +55,13 @@
       max-width: 600px;
     }
 
+    .closing {
+      background-color: #fcf1d7;
+      margin-top: 1rem;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
     .receive.message.impact {
       font-weight: 700;
     }
@@ -64,7 +77,7 @@
     .chat-row {
       display: flex;
       align-items: end;
-      margin: 1rem;
+      padding: 1rem;
     }
 
     .chat-row .avatar {
@@ -173,7 +186,7 @@
 
     .chat-row.me .send {
       color: #000;
-      background: #fcf1d7;
+      background: #d7fcd8;
       align-self: flex-end;
       margin: 10px 10px 10px 100px;
     }
@@ -181,7 +194,7 @@
     .chat-row.me .send:before {
       right: -7px;
       width: 20px;
-      background-color: #fcf1d7;
+      background-color: #d7fcd8;
       border-bottom-left-radius: 16px 14px;
     }
 
@@ -233,14 +246,7 @@
   </style>
   <body>
     <!-- Sheila Manager -->
-    <div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+    <div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
       <div
         id="main-prompt-manager"
         class="chat-row prompt message"
@@ -447,6 +453,13 @@
               transition or the new systems?
             </p>
           </div>
+        </div>
+
+        <div class="chat-row message closing" style="--delay: 60s">
+          <p>
+            Did you notice the q-steps, playbacks, and split-tracks in the
+            conversation?
+          </p>
         </div>
       </div>
     </div>
