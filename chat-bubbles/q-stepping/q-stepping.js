@@ -31,14 +31,7 @@ const tryAgain = (prompt, id) => {
 const qstep_manager = document.getElementById("qstep_manager");
 
 qstep_manager.innerHTML = `
-<div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+<div style="margin-bottom: 2rem; border-radius: 0.5rem; border: 1px solid">
       <div
         id="main-prompt-manager"
         class="chat-row prompt message"
@@ -142,21 +135,13 @@ qstep_manager.innerHTML = `
           </div>
         </div>
 
-        <div class="chat-row spark message" style="--delay: 24s">
-          <div>
-            <div class="avatar"></div>
-          </div>
-          <div>
-            <span class="name">Spark</span>
-            <p class="receive">
-              Kris asked Sheila: What do people typically do after their first
-              year?
-              <br /><br />
-              As a manager, Sheila knows what people typically do. However, this
-              is an opportunity for Sheila to step into question mode and get
-              curious about Kris' perspective first.
-            </p>
-          </div>
+        <div class="chat-row message closing" style="--delay: 0s">
+          <p>
+            Kris asked Sheila: What do people typically do after their first
+            year? As a manager, Sheila knows what people typically do. However,
+            this is an opportunity for Sheila to step into question mode and get
+            curious about Kris' perspective first.
+          </p>
         </div>
       </div>
     </div>
