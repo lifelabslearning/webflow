@@ -135,7 +135,7 @@ qstep_manager.innerHTML = `
           </div>
         </div>
 
-        <div class="chat-row message closing" style="--delay: 0s">
+        <div class="chat-row message closing" style="--delay: 21s">
           <p>
             Kris asked Sheila: What do people typically do after their first
             year? As a manager, Sheila knows what people typically do. However,
