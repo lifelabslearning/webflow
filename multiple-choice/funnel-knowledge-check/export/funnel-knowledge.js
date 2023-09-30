@@ -34,8 +34,7 @@ q1.innerHTML = `
     </svg>
     <span class="answer">Next Steps</span>
     <span class="feedback">
-      Try again- The keyword is goal. A goal is designed to help you
-      identify your desired state.
+      Try again: Next steps are actions towards a goal or desired state.
     </span>
   </span>
 </label>
@@ -69,8 +68,7 @@ q1.innerHTML = `
     <span class="answer">Options</span>
 
     <span class="feedback">
-      Try again-The keyword is goal. A goal is designed to help you
-      identify your desired state.
+      Try again: Options are different ways of approaching or solving a problem.
     </span>
   </span>
 </label>
@@ -103,8 +101,7 @@ q1.innerHTML = `
     </svg>
     <span class="answer">Obstacles</span>
     <span class="feedback">
-      Try again-The keyword is goal. A goal is designed to help you
-      identify your desired state.
+      Try again: An obstacle is something that gets in the way of a desired goal or state.
     </span>
   </span>
 </label>
@@ -137,8 +134,7 @@ q1.innerHTML = `
     </svg>
     <span class="answer">Success</span>
     <span class="feedback">
-      Correct! The keyword is goal. A goal is designed to help you
-      identify your desired state.
+      Correct! The keyword is goal. A goal is designed to help you identify your desired state.
     </span>
   </span>
 </label>
@@ -176,8 +172,7 @@ q2.innerHTML = `
     </svg>
     <span class="answer">Next Steps</span>
     <span class="feedback">
-      Try again- The keyword is concern. A concern is something that gets
-      in the way of your desired goal or state.
+      Try again: Next steps are actions towards a goal or desired state.
     </span>
   </span>
 </label>
@@ -211,7 +206,7 @@ q2.innerHTML = `
     <span class="answer">Options</span>
 
     <span class="feedback">
-      Try again-The keyword is concern. A concern is something that gets in the way of your desired goal or state.
+      Try again: Options are different ways of approaching or solving a problem.
     </span>
   </span>
 </label>
@@ -244,8 +239,7 @@ q2.innerHTML = `
     </svg>
     <span class="answer">Obstacles</span>
     <span class="feedback">
-      Correct! -The keyword is concern. A concern is something that gets in the way of your desired goal or state.
-    </span>
+      Correct! The keyword is concern. A concern is something that gets in the way of your desired goal or state.          </span>
   </span>
 </label>
 <label class="card">
@@ -277,7 +271,7 @@ q2.innerHTML = `
     </svg>
     <span class="answer">Success</span>
     <span class="feedback">
-      Try again-The keyword is concern. A concern is something that gets in the way of your desired goal or state.
+      Try again: Success refers to a goal designed to help you identify your desired state.
     </span>
   </span>
 </label>
@@ -315,13 +309,12 @@ q3.innerHTML = `
     </svg>
     <span class="answer">Next Steps</span>
     <span class="feedback">
-      Try again- The keyword is possibilities. Identifying possibilities
-      helps you thinking of different ways of approaching the problem
+      Try again: Next steps are actions towards a goal or desired state.
     </span>
   </span>
 </label>
 <label class="card">
-  <input name="options-c" class="radio correct" type="radio" />
+  <input name="options-c" class="radio" type="radio" />
   <span class="option">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -350,8 +343,7 @@ q3.innerHTML = `
     <span class="answer">Options</span>
 
     <span class="feedback">
-      Correct! The keyword is possibilities. Identifying possibilities
-      helps you thinking of different ways of approaching the problem
+      Try again: Options are different ways of approaching or solving a problem.
     </span>
   </span>
 </label>
@@ -384,8 +376,7 @@ q3.innerHTML = `
     </svg>
     <span class="answer">Obstacles</span>
     <span class="feedback">
-      Try again- The keyword is possibilities. Identifying possibilities
-      helps you thinking of different ways of approaching the problem
+      Try again: An obstacle is something that gets in the way of a desired goal or state.
     </span>
   </span>
 </label>
@@ -418,8 +409,7 @@ q3.innerHTML = `
     </svg>
     <span class="answer">Success</span>
     <span class="feedback">
-      Try again- The keyword is possibilities. Identifying possibilities
-      helps you thinking of different ways of approaching the problem
+      Try again: Success refers to a goal designed to help you identify your desired state.
     </span>
   </span>
 </label>
@@ -457,8 +447,7 @@ q4.innerHTML = `
     </svg>
     <span class="answer">Next Steps</span>
     <span class="feedback">
-      Correct! The keyword is moving. Identifying next steps helps you
-      determine actions towards a goal or desired state.
+      Correct! The keyword is moving. Identifying next steps helps you determine actions towards a goal or desired state.
     </span>
   </span>
 </label>
@@ -492,8 +481,7 @@ q4.innerHTML = `
     <span class="answer">Options</span>
 
     <span class="feedback">
-      Try again- The keyword is moving. Identifying next steps helps you
-      determine actions towards a goal or desired state.
+      Try again: Options are different ways of approaching or solving a problem.
     </span>
   </span>
 </label>
@@ -526,8 +514,7 @@ q4.innerHTML = `
     </svg>
     <span class="answer">Obstacles</span>
     <span class="feedback">
-      Try again- The keyword is moving. Identifying next steps helps you
-      determine actions towards a goal or desired state.
+      Try again: An obstacle is something that gets in the way of a desired goal or state.
     </span>
   </span>
 </label>
@@ -560,10 +547,9 @@ q4.innerHTML = `
     </svg>
     <span class="answer">Success</span>
     <span class="feedback">
-      Try again- The keyword is moving. Identifying next steps helps you
-      determine actions towards a goal or desired state.
+      Try again: Success refers to a goal designed to help you identify your desired state.
     </span>
   </span>
 </label>
 </div>
-`
+`;
