@@ -4,7 +4,7 @@ const q3 = document.querySelector("#q3");
 const q4 = document.querySelector("#q4");
 
 q1.innerHTML = `
-<div class="grid-funnel-knowledge-check">
+<div class="grid-four-cards">
 <label class="card">
   <input name="options-a" class="radio" type="radio" />
   <span class="option">
@@ -142,7 +142,7 @@ q1.innerHTML = `
 `;
 
 q2.innerHTML = `
-<div class="grid-funnel-knowledge-check">
+<div class="grid-four-cards">
 <label class="card">
   <input name="options-b" class="radio" type="radio" />
   <span class="option">
@@ -279,7 +279,7 @@ q2.innerHTML = `
 `;
 
 q3.innerHTML = `
-<div class="grid-funnel-knowledge-check">
+<div class="grid-four-cards">
 <label class="card">
   <input name="options-c" class="radio" type="radio" />
   <span class="option">
@@ -417,7 +417,7 @@ q3.innerHTML = `
 `;
 
 q4.innerHTML = `
-<div class="grid-funnel-knowledge-check">
+<div class="grid-four-cards">
 <label class="card">
   <input name="options-d" class="radio correct" type="radio" />
   <span class="option">

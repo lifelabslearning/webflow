@@ -11,6 +11,18 @@
     --radio-size: 1.5em;
   }
   /* rename classes to be unique for this project */
+
+  .grid-two-cards {
+    display: grid;
+    grid-gap: var(--card-padding);
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 0;
+
+    @media (min-width: 42em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   
   .grid-four-cards { 
     display: grid;
@@ -21,6 +33,18 @@
   
     @media (min-width: 42em) {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: var(--card-padding);
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 0;
+  
+    @media (min-width: 42em) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   
