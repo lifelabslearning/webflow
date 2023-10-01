@@ -135,7 +135,7 @@ body {
   border-bottom-right-radius: 16px 14px;
 }
 
-.chat-row.manager .avatar {
+.chat-row.manager.open-authentic-theo .avatar {
   background-size: 110%;
   background-position: top;
   background-repeat: no-repeat;
@@ -165,7 +165,7 @@ body {
   margin-bottom: 5px;
 }
 
-.chat-row.me .avatar {
+.chat-row.me.open-authentic-yuki .avatar {
   background-size: 110%;
   background-position: bottom;
   background-repeat: no-repeat;

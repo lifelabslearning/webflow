@@ -57,7 +57,7 @@ bu_manager.innerHTML = `
 </div>
 
 <div id="manager-1" style="display: none">
-  <div class="chat-row manager message" style="--delay: 0s">
+  <div class="chat-row manager open-authentic-theo message" style="--delay: 0s">
     <div>
       <div class="avatar"></div>
     </div>
@@ -74,7 +74,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row me message" style="--delay: 2s">
+  <div class="chat-row me open-authentic-yuki message" style="--delay: 2s">
     <div>
       <span class="name"
         >Yuki <span class="title">&#8226; Senior Leader</span></span
@@ -88,7 +88,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row manager message" style="--delay: 4s">
+  <div class="chat-row manager open-authentic-theo message" style="--delay: 4s">
     <div>
       <div class="avatar"></div>
     </div>
@@ -109,7 +109,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row me message" style="--delay: 8s">
+  <div class="chat-row me open-authentic-yuki message" style="--delay: 8s">
     <div>
       <span class="name"
         >Yuki <span class="title">&#8226; Senior Leader</span></span
@@ -124,7 +124,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row manager message" style="--delay: 12s">
+  <div class="chat-row manager open-authentic-theo message" style="--delay: 12s">
     <div>
       <div class="avatar"></div>
     </div>
@@ -138,7 +138,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row me message" style="--delay: 16s">
+  <div class="chat-row me open-authentic-yuki message" style="--delay: 16s">
     <div>
       <span class="name"
         >Yuki <span class="title">&#8226; employee</span></span
