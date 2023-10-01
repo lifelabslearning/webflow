@@ -56,6 +56,7 @@ body {
   margin-top: 1rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  margin: 0px !important;
 }
 
 .receive.message.impact {
@@ -73,7 +74,7 @@ body {
 .chat-row {
   display: flex;
   align-items: end;
-  padding: 1rem;
+  margin: 1rem;
 }
 
 .chat-row .avatar {
@@ -138,7 +139,7 @@ body {
   background-size: 110%;
   background-position: top;
   background-repeat: no-repeat;
-  background-image: url("https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a79900eca140b920a6968_Sheila.png");
+  background-image: url("https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6518f6624aed4b545ae1db6d_theo.png");
 }
 
 .chat-row .receive,
@@ -168,7 +169,7 @@ body {
   background-size: 110%;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: url(https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a798f7457e8f22b80e50f_Kris.png);
+  background-image: url('https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/651700e09d012ff0866d1229_Yuki.png');
 }
 
 .chat-row.me .avatar img {
