@@ -183,7 +183,7 @@ q3.innerHTML = `
     </svg>
     <span class="answer">Option 1: What support do you need from your manager?</span>
     <span class="feedback">
-      Correct! This open question 
+      Correct! This open question invites the responder to think about their needs and the kind of support they would like to receive.
     </span>
   </span>
 </label>
@@ -216,7 +216,7 @@ q3.innerHTML = `
     </svg>
     <span class="answer">Option 2: Isn’t it best to ask your manager to weigh in?</span>
     <span class="feedback">
-      Try Again: …
+      Try Again: This question reveals the opinion of the person asking the question rather than creating space for a dialogue.
     </span>
   </span>
 </label>
