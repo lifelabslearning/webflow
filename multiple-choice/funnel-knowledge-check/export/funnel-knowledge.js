@@ -314,7 +314,7 @@ q3.innerHTML = `
   </span>
 </label>
 <label class="card">
-  <input name="options-c" class="radio" type="radio" />
+  <input name="options-c" class="radio correct" type="radio" />
   <span class="option">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +343,7 @@ q3.innerHTML = `
     <span class="answer">Options</span>
 
     <span class="feedback">
-      Try again: Options are different ways of approaching or solving a problem.
+      Correct! The key word is possibilities. Options are different ways of approaching or solving a problem.
     </span>
   </span>
 </label>
