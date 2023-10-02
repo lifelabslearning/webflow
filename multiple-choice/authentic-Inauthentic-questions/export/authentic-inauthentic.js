@@ -31,7 +31,7 @@ q1.innerHTML = `
         clip-rule="evenodd"
       />
     </svg>
-    <span class="answer">Option 1: Which task is most urgent for you?</span>
+    <span class="answer">Which task is most urgent for you?</span>
     <span class="feedback">
       Correct! In this case, the speaker doesn’t have a predetermined answer about which task is most urgent.
     </span>
@@ -64,7 +64,7 @@ q1.innerHTML = `
         clip-rule="evenodd"
       />
     </svg>
-    <span class="answer">Option 2: Have you considered working on the report first, then the presentation?</span>
+    <span class="answer">Have you considered working on the report first, then the presentation?</span>
 
     <span class="feedback">
       Try Again: This isn't a question. It’s a suggestion disguised as a question, leading the person being asked to focus on the report first.
@@ -104,7 +104,7 @@ q2.innerHTML = `
       />
     </svg>
     <span class="answer"
-      >Option 1: How well do you think the new process is working?</span
+      >How well do you think the new process is working?</span
     >
     <span class="feedback">
       Correct! This open question is asking for perspective and
@@ -140,7 +140,7 @@ q2.innerHTML = `
       />
     </svg>
     <span class="answer"
-      >Option 2: Don’t you think the new process is much better than the
+      >Don’t you think the new process is much better than the
       previous one?
     </span>
     <span class="feedback">
@@ -181,7 +181,7 @@ q3.innerHTML = `
         clip-rule="evenodd"
       />
     </svg>
-    <span class="answer">Option 1: What support do you need from your manager?</span>
+    <span class="answer">What support do you need from your manager?</span>
     <span class="feedback">
       Correct! This open question invites the responder to think about their needs and the kind of support they would like to receive.
     </span>
@@ -214,7 +214,7 @@ q3.innerHTML = `
         clip-rule="evenodd"
       />
     </svg>
-    <span class="answer">Option 2: Isn’t it best to ask your manager to weigh in?</span>
+    <span class="answer">Isn’t it best to ask your manager to weigh in?</span>
     <span class="feedback">
       Try Again: This question reveals the opinion of the person asking the question rather than creating space for a dialogue.
     </span>
