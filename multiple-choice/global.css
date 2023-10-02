@@ -30,9 +30,21 @@
     margin: 0 auto;
     max-width: 60em;
     padding: 0;
-  
-    @media (min-width: 42em) {
+  }
+
+  @media (min-width: 42em) {
+    .grid-four-cards {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* 736px */
+  @media (max-width: 51.25em) { 
+    .symbol {
+      transform: scale(.7);
+    }
+    .answer{
+      font-size: 1rem !important;
     }
   }
 
