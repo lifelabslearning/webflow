@@ -1,6 +1,6 @@
-const q1 = document.querySelector("#q1");
-const q2 = document.querySelector("#q2");
-const q3 = document.querySelector("#q3");
+const authentic_1 = document.querySelector("#authentic_1");
+const authentic_2 = document.querySelector("#authentic_2");
+const authentic_3 = document.querySelector("#authentic_3");
 
 q1.innerHTML = `
 <div class="grid-two-cards">
