@@ -2,7 +2,7 @@ const authentic_1 = document.querySelector("#authentic_1");
 const authentic_2 = document.querySelector("#authentic_2");
 const authentic_3 = document.querySelector("#authentic_3");
 
-q1.innerHTML = `
+authentic_1.innerHTML = `
 <div class="grid-two-cards">
 <label class="card">
   <input name="options-a" class="radio correct" type="radio" />
@@ -74,7 +74,7 @@ q1.innerHTML = `
 </div>
 `;
 
-q2.innerHTML = `
+authentic_2.innerHTML = `
 <div class="grid-two-cards">
 <label class="card">
   <input name="options-b" class="radio correct" type="radio" />
@@ -152,7 +152,7 @@ q2.innerHTML = `
 </div>
 `;
 
-q3.innerHTML = `
+authentic_3.innerHTML = `
 <div class="grid-two-cards">
 <label class="card">
   <input name="options-c" class="radio correct" type="radio" />
