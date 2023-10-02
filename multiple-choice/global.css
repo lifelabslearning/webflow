@@ -38,12 +38,17 @@
     }
   }
 
-  /* 736px */
-  @media (max-width: 51.25em) { 
-    .symbol {
-      transform: scale(.7);
+  /* 1500px */
+  @media (max-width: 93.75em) {
+    .grid-four-cards {
+      grid-template-columns: repeat(1, 1fr); /* Change the number of columns to 2 for stacking below 1500px */
     }
-    .answer{
+    
+    .symbol {
+      transform: scale(0.7);
+    }
+    
+    .answer {
       font-size: 1rem !important;
     }
   }
