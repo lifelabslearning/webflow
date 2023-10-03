@@ -78,7 +78,7 @@ authentic_2.innerHTML = `
 <div class="grid-two-cards">
 <label class="card">
   <input name="options-b" class="radio" type="radio" />
-  <span class="option">
+  <span class="option two-cards-option">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -115,7 +115,7 @@ authentic_2.innerHTML = `
 </label>
 <label class="card">
   <input name="options-b" class="radio correct" type="radio" />
-  <span class="option">
+  <span class="option two-cards-option">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -156,7 +156,7 @@ authentic_3.innerHTML = `
 <div class="grid-two-cards">
 <label class="card">
   <input name="options-c" class="radio" type="radio" />
-  <span class="option">
+  <span class="option two-cards-option">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -192,7 +192,7 @@ authentic_3.innerHTML = `
 </label>
 <label class="card">
   <input name="options-c" class="radio correct" type="radio" />
-  <span class="option">
+  <span class="option two-cards-option">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
