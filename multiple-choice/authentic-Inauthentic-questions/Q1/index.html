@@ -94,6 +94,9 @@
           }
         }
       }
+      .two-cards-option{
+        padding: 3em;
+      }
 
       .option {
         cursor: pointer;
@@ -102,6 +105,7 @@
         padding: var(--card-padding);
         transition: border-color 0.2s ease-out;
       }
+      
 
       .card:hover {
         border-color: var(--color-dark-gray);
@@ -169,7 +173,7 @@
     <div class="grid-two-cards">
       <label class="card">
         <input name="options-a" class="radio correct" type="radio" />
-        <span class="option">
+        <span class="option two-cards-option">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -202,7 +206,7 @@
       </label>
       <label class="card">
         <input name="options-a" class="radio" type="radio" />
-        <span class="option">
+        <span class="option two-cards-option">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

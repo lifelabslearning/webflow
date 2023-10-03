@@ -127,6 +127,10 @@
     padding: var(--card-padding);
     transition: border-color 0.2s ease-out;
   }
+
+  .two-cards-option{
+    padding: 3em !important
+  }
   
   .card:hover {
     border-color: var(--color-dark-gray);
