@@ -50,7 +50,7 @@ bu_manager.innerHTML = `
         class="button w-button prompt-button"
         onclick="play('manager', 'manager-1')"
       >
-        Play Yuki and Theo's conversation.
+        Play Yuki and Theo's conversation
       </button>
     </div>
   </div>
@@ -108,14 +108,13 @@ bu_manager.innerHTML = `
       </p>
     </div>
   </div>
-
-  <div class="chat-row me open-authentic-yuki message" style="--delay: 8s">
+  
+  <div class="chat-row me open-authentic-yuki message" style="--delay: 6s">
     <div>
       <span class="name"
         >Yuki <span class="title">&#8226; Senior Leader</span></span
       >
-
-      <p class="send message" style="--delay: 8s">
+      <p class="send">
         Interpersonal conflict can be tricky. You're right- it can impact the rest of the team. I've dealt with a couple of these situations myself. So, what are you thinking of doing?
       </p>
     </div>
@@ -124,7 +123,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row manager open-authentic-theo message" style="--delay: 12s">
+  <div class="chat-row manager open-authentic-theo message" style="--delay: 10s">
     <div>
       <div class="avatar"></div>
     </div>
@@ -138,10 +137,10 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row me open-authentic-yuki message" style="--delay: 16s">
+  <div class="chat-row me open-authentic-yuki message" style="--delay: 12s">
     <div>
       <span class="name"
-        >Yuki <span class="title">&#8226; employee</span></span
+        >Yuki <span class="title">&#8226; Senior Leader</span></span
       >
 
       <p class="send message">
@@ -153,7 +152,7 @@ bu_manager.innerHTML = `
     </div>
   </div>
 
-  <div class="chat-row message closing" style="--delay: 23s">
+  <div class="chat-row message closing" style="--delay: 14s">
     <p>
       Yuki has likely dealt with resolving interpersonal conflict with team members and could simply tell Theo what to do. This certainly would be easier for Yuki, but it’s a great opportunity to ask questions to learn more about Theo’s insights on how to help the team members through their conflict instead of imposing a solution.
     </p>
