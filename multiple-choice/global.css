@@ -240,7 +240,7 @@
       }
     }
   
-    /* Media query for screens below 1000px */
+    /* Media query for screens below 1370px */
   @media (max-width: 1370px) {
     .grid-two-cards-long-title {
       grid-template-columns: repeat(1, 1fr);
