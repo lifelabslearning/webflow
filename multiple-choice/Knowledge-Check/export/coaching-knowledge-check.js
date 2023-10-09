@@ -3,7 +3,7 @@ const knowledge_check_b = document.getElementById("knowledge_check_b");
 const knowledge_check_c = document.getElementById("knowledge_check_c");
 
 knowledge_check_a.innerHTML = `
-<div class="grid">
+<div class="grid-two-cards-long-title">
 <label class="card">
   <input name="options-a" class="radio" type="radio" />
   <span class="option">
@@ -112,7 +112,7 @@ knowledge_check_a.innerHTML = `
   `;
 
   knowledge_check_b.innerHTML = `
-  <div class="grid">
+  <div class="grid-two-cards-long-title">
   <label class="card">
     <input name="options-b" class="radio" type="radio" />
     <span class="option">
@@ -221,7 +221,7 @@ knowledge_check_a.innerHTML = `
   `;
 
   knowledge_check_c.innerHTML = `
-  <div class="grid">
+  <div class="grid-two-cards-long-title">
   <label class="card">
     <input name="options-c" class="radio correct" type="radio" />
     <span class="option">
