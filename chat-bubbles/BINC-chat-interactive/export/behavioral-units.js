@@ -60,7 +60,7 @@ bu_manager.innerHTML = `
     <div>
       <div>
         <img
-          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6523832ee3313133286f410c_Kent.jpg"
+          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6525aba727d0de5a2a3261c9_Kent.jpg"
           alt="Masculine-presenting adult with glasses."
           class="avatar"
         />
@@ -88,7 +88,7 @@ bu_manager.innerHTML = `
     <div>
       <div>
         <img
-          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6523832da50676b786920d01_Julie.jpg"
+          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6525aba75dfb036da33b5e5b_Julie.jpg"
           alt="Feminine-presenting adult with glasses."
           class="avatar"
         />
