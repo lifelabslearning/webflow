@@ -105,10 +105,7 @@ quiz_a.innerHTML = `
       </svg>
       <span class="answer">Split-track </span>
       <span class="feedback"
-        >Try Again: Split-tracks are a type of playback that can help bring
-        clarity and focus. Split-tracks start very similar to a playback with
-        you repeating back what you heard and clearly identifying each issue
-        when someone brings up more than one issue.
+        >Try Again: Split-tracks are a type of playback that can help bring clarity and focus. Split-tracks start very similar to a playback with your repeating back what you heard and clearly identifying each issue when someone brings up more than one issue.
       </span>
     </span>
   </label>
@@ -218,10 +215,7 @@ quiz_a.innerHTML = `
       </svg>
       <span class="answer">Split-track </span>
       <span class="feedback"
-        >Try Again: Split-tracks are a type of playback that can help bring
-        clarity and focus. Split-tracks start very similar to a playback with
-        you repeating back what you heard and clearly identifying each issue
-        when someone brings up more than one issue.
+        >Try Again: Split-tracks are a type of playback that can help bring clarity and focus. Split-tracks start very similar to a playback with your repeating back what you heard and clearly identifying each issue when someone brings up more than one issue.
       </span>
     </span>
   </label>
@@ -331,10 +325,7 @@ quiz_a.innerHTML = `
       </svg>
       <span class="answer">Split-track </span>
       <span class="feedback"
-        >Correct! Split-tracks are a type of playback that can help bring
-        clarity and focus. Split-tracks start very similar to a playback with
-        you repeating back what you heard and clearly identifying each issue
-        when someone brings up more than one issue.
+        >Correct! Split-tracks are a type of playback that can help bring clarity and focus. Split-tracks start very similar to a playback with your repeating back what you heard and clearly identifying each issue when someone brings up more than one issue."
       </span>
     </span>
   </label>
