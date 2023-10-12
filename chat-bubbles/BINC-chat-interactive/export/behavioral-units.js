@@ -90,7 +90,7 @@ bu_manager.innerHTML = `
         <img
           src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6525aba75dfb036da33b5e5b_Julie.jpg"
           alt="Feminine-presenting adult with glasses."
-          class="avatar"
+          class="avatar julie"
         />
       </div>
     </div>
