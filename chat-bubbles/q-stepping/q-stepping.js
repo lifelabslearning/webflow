@@ -58,9 +58,11 @@ qstep_manager.innerHTML = `
 
       <div id="manager-1" style="display: none">
         <div class="chat-row manager message" style="--delay: 0s">
-          <div>
-            <div class="avatar"></div>
-          </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a79900eca140b920a6968_Sheila.png"
+            alt="Feminine-presenting adult cartoon character  wearing glasses and hair is in a curly top bun."
+            class="avatar"
+          />
           <div>
             <span class="name"
               >Sheila <span class="title">&#8226; Manager</span></span
@@ -78,15 +80,19 @@ qstep_manager.innerHTML = `
             >
             <p class="send">Hi Sheila!</p>
           </div>
-          <div>
-            <div class="avatar"></div>
-          </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a798f7457e8f22b80e50f_Kris.png"
+            alt="Feminine-presenting adult cartoon character wearing glasses and has short dark hair."
+            class="avatar"
+          />
         </div>
 
         <div class="chat-row manager message" style="--delay: 4s">
-          <div>
-            <div class="avatar"></div>
-          </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a79900eca140b920a6968_Sheila.png"
+            alt="Feminine-presenting adult cartoon character  wearing glasses and hair is in a curly top bun."
+            class="avatar"
+          />
           <div>
             <span class="name"
               >Sheila <span class="title">&#8226; Manager</span></span
@@ -114,15 +120,19 @@ qstep_manager.innerHTML = `
               What do people typically do after their first year here?
             </p>
           </div>
-          <div>
-            <div class="avatar"></div>
-          </div>
+          <img
+          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a798f7457e8f22b80e50f_Kris.png"
+          alt="Feminine-presenting adult cartoon character wearing glasses and has short dark hair."
+          class="avatar"
+        />
         </div>
 
         <div class="chat-row manager message" style="--delay: 18s">
-          <div>
-            <div class="avatar"></div>
-          </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/650a79900eca140b920a6968_Sheila.png"
+            alt="Feminine-presenting adult cartoon character  wearing glasses and hair is in a curly top bun."
+            class="avatar"
+          />
           <div>
             <span class="name"
               >Sheila <span class="title">&#8226; Manager</span></span
