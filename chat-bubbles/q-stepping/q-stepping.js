@@ -147,10 +147,7 @@ qstep_manager.innerHTML = `
 
         <div class="chat-row message closing" style="--delay: 21s">
           <p>
-            Kris asked Sheila: What do people typically do after their first
-            year? As a manager, Sheila knows what people typically do. However,
-            this is an opportunity for Sheila to step into question mode and get
-            curious about Kris' perspective first.
+          Sheila correctly identified a coaching moment. Kris came to her with a challenge about what to do after their first year. As a manager, Sheila knows what people typically do. Instead of stepping straight into telling mode, however, Shelia got curious about Kris' perspective and q-stepped. Great coaching!
           </p>
         </div>
       </div>
