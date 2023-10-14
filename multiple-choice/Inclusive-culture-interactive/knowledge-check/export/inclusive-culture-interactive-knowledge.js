@@ -3,7 +3,7 @@ const inclusive_knowledge_check_b = document.getElementById("inclusive_knowledge
 const inclusive_knowledge_check_c = document.getElementById("inclusive_knowledge_check_c");
 
 inclusive_knowledge_check_a.innerHTML = `
-<div class="grid">
+<div class="grid-two-cards-long-title">
 <label class="card">
   <input name="options-a" class="radio" type="radio" />
   <span class="option">
@@ -108,7 +108,7 @@ inclusive_knowledge_check_a.innerHTML = `
   `;
 
   inclusive_knowledge_check_b.innerHTML = `
-  <div class="grid">
+  <div class="grid-two-cards-long-title">
         <label class="card">
           <input name="options-a" class="radio" type="radio" />
           <span class="option">
@@ -212,7 +212,7 @@ inclusive_knowledge_check_a.innerHTML = `
   `;
 
   inclusive_knowledge_check_c.innerHTML = `
-  <div class="grid">
+  <div class="grid-two-cards-long-title">
       <label class="card">
         <input name="options-a" class="radio" type="radio" />
         <span class="option">
