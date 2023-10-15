@@ -110,7 +110,7 @@ inclusive_knowledge_check_a.innerHTML = `
   inclusive_knowledge_check_b.innerHTML = `
   <div class="grid-two-cards-long-title">
         <label class="card">
-          <input name="options-a" class="radio" type="radio" />
+          <input name="options-b" class="radio" type="radio" />
           <span class="option">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@ inclusive_knowledge_check_a.innerHTML = `
           </span>
         </label>
         <label class="card">
-          <input name="options-a" class="radio" type="radio" />
+          <input name="options-b" class="radio" type="radio" />
           <span class="option">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ inclusive_knowledge_check_a.innerHTML = `
           </span>
         </label>
         <label class="card">
-          <input name="options-a" class="radio correct" type="radio" />
+          <input name="options-b" class="radio correct" type="radio" />
           <span class="option">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@ inclusive_knowledge_check_a.innerHTML = `
   inclusive_knowledge_check_c.innerHTML = `
   <div class="grid-two-cards-long-title">
       <label class="card">
-        <input name="options-a" class="radio" type="radio" />
+        <input name="options-c" class="radio" type="radio" />
         <span class="option">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +249,7 @@ inclusive_knowledge_check_a.innerHTML = `
         </span>
       </label>
       <label class="card">
-        <input name="options-a" class="radio correct" type="radio" />
+        <input name="options-c" class="radio correct" type="radio" />
         <span class="option">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +285,7 @@ inclusive_knowledge_check_a.innerHTML = `
         </span>
       </label>
       <label class="card">
-        <input name="options-a" class="radio" type="radio" />
+        <input name="options-c" class="radio" type="radio" />
         <span class="option">
           <svg
             xmlns="http://www.w3.org/2000/svg"
