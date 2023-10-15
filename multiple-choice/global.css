@@ -179,7 +179,6 @@
     }
   }
   .card-w-picture {
-    border: var(--radio-border-width) solid var(--color-dark-gray);
     border-radius: var(--card-radius);
     background-color: var(--color-yellow);
   }
