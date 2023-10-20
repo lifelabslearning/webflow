@@ -38,6 +38,12 @@
 // 2 cards with picture styling //
 ////////////////////////// */
 
+.card-description{
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: 400;
+}
+
 .grid-two-cards-w-picture {
   display: grid;
   grid-gap: var(--card-padding);
@@ -63,39 +69,15 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  /* margin: 0.5rem 0; */
 }
-.card-w-picture:hover {
+/* .card-w-picture:hover {
   background-color: var(--color-yellow-hover);
-}
+} */
 
 /* //////////////////////////
 // 2 cards with picture styling  //
 ////////////////////////// */
 
-@media (min-width: 42em) {
-  .grid-four-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .grid-two-cards-w-picture {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-  }
-}
-
-/* Media query for medium screens (between 42em and 93.75em) */
-@media (min-width: 42em) and (max-width: 93.75em) {
-  .grid-four-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Media query for smaller screens (below 42em) */
-@media (max-width: 42em) {
-  .grid-four-cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
 .grid-four-cards {
   display: grid;
@@ -257,12 +239,7 @@
   line-height: 1em;
 }
 
-/* Media query for screens with a minimum width of 42em or 672px */
-@media (min-width: 42em) {
-  .grid-four-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+
 
 /* Media query for medium screens (between 672px and 1500px) */
 @media (min-width: 42em) and (max-width: 93.75em) {
@@ -282,5 +259,31 @@
 @media (max-width: 1370px) {
   .grid-two-cards-long-title {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* Media query for screens with a minimum width of 42em or 672px */
+@media (min-width: 42em) {
+  .grid-four-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-two-cards-w-picture {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+/* Media query for smaller screens (below 42em) */
+@media (max-width: 42em) {
+  .grid-four-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 991px (61.94em) and 1150px (71.88em)  */
+@media (min-width: 61.94em) and (max-width: 71.88em) {
+  .grid-two-cards-w-picture {
+    grid-template-columns: repeat(1, 1fr); 
   }
 }
