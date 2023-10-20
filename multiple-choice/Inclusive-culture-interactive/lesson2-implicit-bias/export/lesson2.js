@@ -13,8 +13,7 @@ implicit_bias_a.innerHTML = `
   <span class="option two-cards-option">
     <span class="answer">Age Bias</span>
     <span class="feedback">
-      Age bias is prejudice, stereotypes, and discriminatory behavior
-      against a person based on their age.
+      A hiring panel can exhibit age bias by assuming younger candidates lack experience, or older candidates may not adapt to new technology.
     </span>
   </span>
 </label>
@@ -28,8 +27,7 @@ implicit_bias_a.innerHTML = `
   <span class="option two-cards-option">
     <span class="answer">Halo Effect </span>
     <span class="feedback">
-      Using an observed positive trait of a person to make a favorable
-      judgment or assumption about their overall capabilities.
+      A manager can overestimate a direct report's abilities and assign projects they are not skilled to take on, setting them up to underperform.
     </span>
   </span>
 </label>
@@ -43,8 +41,7 @@ implicit_bias_a.innerHTML = `
   <span class="option two-cards-option">
     <span class="answer">Contrast Effect</span>
     <span class="feedback">
-      The tendency to compare two individuals instead of evaluating them
-      individually and objectively.
+      Comparing an employee's performance to another employee instead of the company standards can negatively impact promotions and pay raises.
     </span>
   </span>
 </label>
