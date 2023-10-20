@@ -281,9 +281,15 @@
   }
 }
 
-/* 991px (61.94em) and 1150px (71.88em)  */
-@media (min-width: 61.94em) and (max-width: 71.88em) {
+/* for screen sizes between 991px (61.94em) and 1230px (76.88em) */
+/* @media (min-width: 61.94em) and (max-width: 76.88em) {
   .grid-two-cards-w-picture {
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(1, 1fr);
+  }
+} */
+/* Media query for screens below 1230px (76.88em) */
+@media (max-width: 76.88em) {
+  .grid-two-cards-w-picture {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
