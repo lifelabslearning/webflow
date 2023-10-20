@@ -57,11 +57,10 @@ blur_statement_1.innerHTML = `
           >messages<span class="quote-body">
             <span class="container"
               ><span class="text" aria-label="Text or word description"
-                >Which message? All messages? A particular topic? The lack of
-                specificity means the recipient not only doesn't know where the
-                problem is, they are also likely to get defensive. <br /><br />
-                <b>To Deblur:</b> "Messages" &#8594; "Email updates on Project
-                X"
+                >Which messages are you referring to? The lack of specificity
+                means the recipient can’t identify where the problem is, and
+                could even lead to defensiveness. <br /><br />
+                <b>To Deblur:</b> specify which messages you're referring to.
               </span></span
             ></span
           ></span
@@ -73,38 +72,37 @@ blur_statement_1.innerHTML = `
           >confusing.<span class="quote-body"
             ><span class="container"
               ><span class="text" aria-label="Text or word description"
-                >What is confusing about them? Are they too short/long?
-                Formatted in a way that's hard to read? Delivered to the wrong
-                people?<br />
-                <br /><b>To Deblur:</b> Being clear here will make it more
-                likely the other person will make a fix that solves the issue.
-                "Confusing" &#8594; "Didn't include a next step"</span
+                >What is confusing about the messages? Being specific here makes
+                it more likely the feedback recipient will make a fix that
+                solves the issue.<br />
+                <br /><b>To Deblur:</b> specify what is confusing about the
+                messages.</span
               ></span
             ></span
           ></span
-        >&nbsp;&nbsp;I'd prefer you to
+        >&nbsp;&nbsp;I'd prefer you to be
         <span
           class="tooltip"
           tabindex="0"
           aria-label="Text or word with tooltip"
-          >be more direct."<span class="quote-body"
-            ><span class="container"
-              ><span class="text" aria-label="Text or word description"
-                >Concepts like "direct" and "indirect" are subjective person to
-                person and culture to culture.<br /><br />
-                <b>To Deblur:</b> If there's something specific you'd like to
-                see, name it. "Be more direct" &#8594; "Include the action
-                items"</span
-              ></span
-            ></span
-          ></span
-        >
+          >more direct
+          <span class="quote-body">
+            <span class="container">
+              <span class="text" aria-label="Text or word description"
+                >Concepts like "direct" and "indirect" vary between people and
+                cultures. If there's something specific you'd like to see, name
+                it!<br /><br />
+                <b>To Deblur:</b> specify exactly what you'd like the messages
+                to include.
+              </span>
+            </span>
+          </span>
+        </span>
+        <span>&nbsp;."</span>
       </p>
       <div>
         <button
           type="button"
-          id="quote-1-button"
-          data-o-person-activity="Clicked Blur Words: quote-1-button"
           class="blur-button button w-button"
           aria-label="Show blur words"
           onclick="showBlurWords('quote-1')"
@@ -138,195 +136,188 @@ blur_statement_1.innerHTML = `
         <span class="tooltip end">on Project X</span>
         are
         <span class="tooltip start">missing</span>
-        <span class="tooltip end">next steps.</span>&nbsp;&nbsp;I'd prefer you
+        <span class="tooltip end">next steps.</span>&nbsp;&nbsp;I'd like you
         to&nbsp;
         <span class="tooltip start">include</span>
         <span class="tooltip middle">the action</span>
         <span class="tooltip middle">items and</span>
-        <span class="tooltip middle">say who</span>
+        <span class="tooltip middle">who</span>
         <span class="tooltip middle">is responsible</span>
-        <span class="tooltip end">for it."</span>
+        <span class="tooltip end">for each</span>
+        ."&nbsp;
       </p>
     </div>
     `;
 
 blur_statement_2.innerHTML = `
-    <div id="quote-2" class="quote">
-    <p class="quote-label">Blurry feedback</p>
-    <p class="blur-hidden quote-body" aria-label="Quote text">
-      "I appreciate how you're always proactive."
-    </p>
-    <p class="blur-visible quote-body" aria-label="Quote text">
-      "I appreciate how you're&nbsp;
-      <span
-        class="tooltip"
-        tabindex="0"
-        aria-label="Text or word with tooltip"
-        >always<span class="quote-body">
-          <span class="container"
-            ><span class="text" aria-label="Text or word description"
-              >It's very rare that anything is 100% true all the time. Because
-              of that, terms like "always" and "never" are a cue for most
-              feedback receivers to dig into their memories to find at least
-              one example where that was NOT true.<br />
-              <br /><b>To Deblur:</b> Even if you notice a pattern of
-              behavior, start by naming recent examples. Then you can mention
-              it's a pattern once you are both aware of what behaviors you're
-              referring to. "Always" &#8594; "Last three times"
-            </span></span
-          ></span
-        ></span
-      >&nbsp;
-      <span
-        class="tooltip"
-        tabindex="0"
-        aria-label="Text or word with tooltip"
-        >proactive."<span class="quote-body"
-          ><span class="container"
-            ><span class="text" aria-label="Text or word description"
-              >Proactive is one of those words that sounds so positive that
-              few people bother to deblur it until it's being used as a
-              critique (ex. "You're not being proactive enough"). Without
-              deblurring it's hard to know what behavior is valuable to
-              repeat.
-              <br />
-              <br /><b>To Deblur:</b> Name the specific action(s) you
-              associated with "proactive". "Proactive" &#8594; "Asked for
-              clarification the last three times you got stuck"</span
-            ></span
-          ></span
-        ></span
-      >
-    </p>
-    <div>
-      <button
-        type="button"
-        class="blur-button button w-button"
-        id="quote-2-button"
-        data-o-person-activity="Clicked Blur Words: quote-2-button"
-        aria-label="Deblur this feedback"
-        onclick="showBlurWords('quote-2')"
-      >
-        Deblur this feedback
-      </button>
-      <p id="instructions-2" class="instructions">
-        Select a blur word to learn more
-        <span style="margin-left: 0.5rem" class="bounce">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            style="height: 1.2rem"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
-            />
-          </svg>
+<div id="quote-2" class="quote">
+<p class="quote-label">Blurry feedback</p>
+<p class="blur-hidden quote-body" aria-label="Quote text">
+  "I appreciate how you're always proactive."
+</p>
+<p class="blur-visible quote-body" aria-label="Quote text">
+  "I appreciate how you're&nbsp;
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+    >always<span class="quote-body">
+      <span class="container">
+        <span class="text" aria-label="Text or word description">
+          It's rare that something is true <i>all the time</i>. Because of
+          that, terms like "always" and "never" are a cue for feedback
+          receivers to think back and identify at least one example where
+          that was not true. Even if you notice a pattern of behavior,
+          start by naming recent examples. Then, you can mention the
+          pattern once you are both aware of what behaviors you're
+          referring to.
+          <br />
+          <br /><b>To Deblur:</b> name 1-3 recent examples.
         </span>
-      </p>
-    </div>
-    <p class="deblur-quote-label">Deblurred feedback</p>
-    <p class="deblur-visible quote-body" aria-label="Quote text">
-      "I appreciate how you&nbsp;
-      <span class="tooltip start">asked for</span>
-      <span class="tooltip middle">clarification</span>
-      <span class="tooltip middle">the last</span>
-      <span class="tooltip middle">three times</span>
-      <span class="tooltip end">you got stuck."</span>
-    </p>
-  </div>
+      </span>
+    </span></span
+  >&nbsp;
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+    >proactive
+    <span class="quote-body">
+      <span class="container">
+        <span class="text" aria-label="Text or word description">
+          Proactive is one of those words that sounds so positive that few
+          people bother to deblur it. Without deblurring, however, it's
+          hard to know what behavior is valuable to repeat.
+          <br />
+          <br /><b>To Deblur:</b> Name the specific action(s) you
+          associated with "proactive".</span
+        >
+      </span>
+    </span>
+  </span>
+  &nbsp;."
+</p>
+<div>
+  <button
+    type="button"
+    class="blur-button button w-button"
+    aria-label="Show blur words"
+    onclick="showBlurWords('quote-2')"
+  >
+    Deblur this feedback
+  </button>
+  <p id="instructions-2" class="instructions">
+    Select a blur word to learn more
+    <span style="margin-left: 0.5rem" class="bounce">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        style="height: 1.2rem"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+        />
+      </svg>
+    </span>
+  </p>
+</div>
+<p class="deblur-quote-label">Deblurred feedback</p>
+<p class="deblur-visible quote-body" aria-label="Quote text">
+  "I appreciate how you&nbsp;
+  <span class="tooltip start">asked for</span>
+  <span class="tooltip middle">clarification</span>
+  the
+  <span class="tooltip middle">last</span>
+  <span class="tooltip middle">three times</span>
+  <span class="tooltip end">you got stuck</span>
+  ."
+</p>
+</div>
     `;
 
 blur_statement_3.innerHTML = `
-    <div id="quote-3" class="quote">
-    <p class="quote-label">Blurry feedback</p>
-    <p class="blur-hidden quote-body" aria-label="Quote text">
-      "We need to be more efficient and productive during our meetings."
-    </p>
-    <p class="blur-visible quote-body" aria-label="Quote text">
-      "We need to
-      <span
-        class="tooltip"
-        tabindex="0"
-        aria-label="Text or word with tooltip"
-        >be more efficient and productive<span class="quote-body">
-          <span class="container"
-            ><span class="text" aria-label="Text or word description"
-              >Many people don't realize how blurry terms like "efficient" and
-              "productive" are because they are often associated with metrics
-              or measurables. However, if you don't share the specifics,
-              you're merely introducing important-sounding blur words into
-              your feedback.<br />
-              <br /><b>To Deblur:</b> Get clear on what you'd like to see.
-              "More efficient and productive" &#8594; "Discuss all the agenda
-              items in 30 minutes"
-            </span></span
-          ></span
+<div id="quote-3" class="quote">
+<p class="quote-label">Blurry feedback</p>
+<p class="blur-hidden quote-body" aria-label="Quote text">
+  "We need to be more efficient and productive during our meetings."
+</p>
+<p class="blur-visible quote-body" aria-label="Quote text">
+  "We need to be
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+    >more efficient and productive<span class="quote-body">
+      <span class="container"
+        ><span class="text" aria-label="Text or word description"
+          >Many people don't realize how blurry terms like "efficient" and "productive" are because they are so widely used. But, if you don't share the specifics, people won’t know what to change.<br />
+          <br /><b>To Deblur:</b> specify what you'd like to see. When possible, name metrics.
+        </span></span
+      ></span
+    ></span
+  >&nbsp;during our
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+  >
+    meetings
+    <span class="quote-body"
+      ><span class="container"
+        ><span class="text" aria-label="Text or word description">
+          This is a tricky one! Since many of us are in lots of meetings every day, and, given how varied meeting types can be, getting clear on which type you're referring to will get you to a solution much faster.
+          <br />
+          <br /><b>To Deblur:</b> Focus the discussion on one issue at a time.</span
         ></span
-      >&nbsp;during our
-      <span
-        class="tooltip"
-        tabindex="0"
-        aria-label="Text or word with tooltip"
-        >meetings."<span class="quote-body"
-          ><span class="container"
-            ><span class="text" aria-label="Text or word description"
-              >Which meeting? Every single instance one or more people meet?
-              Specific types of meetings? Given how varied meeting types can
-              be, getting clear on which type you're referring to will get you
-              to a solution much faster.
-              <br />
-              <br /><b>To Deblur:</b> Focus the discussion on one issue at a
-              time. "Meetings" &#8594; "Daily check-ins"</span
-            ></span
-          ></span
-        ></span
+      ></span
+    ></span
+  >
+  &nbsp;."
+</p>
+<div>
+  <button
+    type="button"
+    class="blur-button button w-button"
+    aria-label="Show blur words"
+    onclick="showBlurWords('quote-3')"
+  >
+    Deblur this feedback
+  </button>
+  <p id="instructions-3" class="instructions">
+    Select a blur word to learn more
+    <span style="margin-left: 0.5rem" class="bounce">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        style="height: 1.2rem"
       >
-    </p>
-    <div>
-      <button
-        type="button"
-        class="blur-button button w-button"
-        id="quote-3-button"
-          data-o-person-activity="Clicked Blur Words: quote-3-button"
-        aria-label="Deblur this feedback"
-        onclick="showBlurWords('quote-3')"
-      >
-        Deblur this feedback
-      </button>
-      <p id="instructions-3" class="instructions">
-        Select a blur word to learn more
-        <span style="margin-left: 0.5rem" class="bounce">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            style="height: 1.2rem"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
-            />
-          </svg>
-        </span>
-      </p>
-    </div>
-    <p class="deblur-quote-label">Deblurred feedback</p>
-    <p class="deblur-visible quote-body" aria-label="Quote text">
-      "We need to&nbsp;
-      <span class="tooltip start">discuss all</span>
-      <span class="tooltip middle">the agenda</span>
-      <span class="tooltip middle">items in</span>
-      <span class="tooltip middle">30 minutes</span>
-      <span class="tooltip middle">during our</span>
-      <span class="tooltip end">daily check-ins." </span>
-    </p>
-  </div>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+        />
+      </svg>
+    </span>
+  </p>
+</div>
+<p class="deblur-quote-label">Deblurred feedback</p>
+<p class="deblur-visible quote-body" aria-label="Quote text">
+  "We need to&nbsp;
+  <span class="tooltip start">discuss all</span>
+  <span class="tooltip middle">the agenda</span>
+  <span class="tooltip middle">items in</span>
+  <span class="tooltip middle">30 minutes</span>
+  during our
+  <span class="tooltip end"> daily check-ins</span>
+  ."
+</p>
+</div>
     `;
