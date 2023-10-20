@@ -43,110 +43,110 @@ const blur_statement_3 = document.getElementById("blur_statement_3");
 
 blur_statement_1.innerHTML = `
 <div id="quote-1" class="quote">
-      <p class="quote-label">Blurry feedback</p>
-      <p class="blur-hidden quote-body" aria-label="Quote text">
-        "Your messages are confusing.&nbsp;&nbsp;I'd prefer you to be more
-        direct."
-      </p>
-      <p class="blur-visible quote-body" aria-label="Quote text">
-        "Your&nbsp;
-        <span
-          class="tooltip"
-          tabindex="0"
-          aria-label="Text or word with tooltip"
-          >messages<span class="quote-body">
-            <span class="container"
-              ><span class="text" aria-label="Text or word description"
-                >Which messages are you referring to? The lack of specificity
-                means the recipient can’t identify where the problem is, and
-                could even lead to defensiveness. <br /><br />
-                <b>To Deblur:</b> specify which messages you're referring to.
-              </span></span
-            ></span
-          ></span
-        >&nbsp;are
-        <span
-          class="tooltip"
-          tabindex="0"
-          aria-label="Text or word with tooltip"
-          >confusing.<span class="quote-body"
-            ><span class="container"
-              ><span class="text" aria-label="Text or word description"
-                >What is confusing about the messages? Being specific here makes
-                it more likely the feedback recipient will make a fix that
-                solves the issue.<br />
-                <br /><b>To Deblur:</b> specify what is confusing about the
-                messages.</span
-              ></span
-            ></span
-          ></span
-        >&nbsp;&nbsp;I'd prefer you to be
-        <span
-          class="tooltip"
-          tabindex="0"
-          aria-label="Text or word with tooltip"
-          >more direct
-          <span class="quote-body">
-            <span class="container">
-              <span class="text" aria-label="Text or word description"
-                >Concepts like "direct" and "indirect" vary between people and
-                cultures. If there's something specific you'd like to see, name
-                it!<br /><br />
-                <b>To Deblur:</b> specify exactly what you'd like the messages
-                to include.
-              </span>
-            </span>
-          </span>
+<p class="quote-label">Blurry feedback</p>
+<p class="blur-hidden quote-body" aria-label="Quote text">
+  "Your messages are confusing.&nbsp;&nbsp;I'd prefer you to be more
+  direct."
+</p>
+<p class="blur-visible quote-body" aria-label="Quote text">
+  "Your&nbsp;
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+    >messages<span class="quote-body">
+      <span class="container"
+        ><span class="text" aria-label="Text or word description"
+          >Which messages are you referring to? The lack of specificity
+          means the recipient can't identify where the problem is, and
+          could even lead to defensiveness. <br /><br />
+          <b>To Deblur:</b> specify which messages you're referring to.
+        </span></span
+      ></span
+    ></span
+  >&nbsp;are
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+    >confusing<span class="quote-body"
+      ><span class="container"
+        ><span class="text" aria-label="Text or word description"
+          >What is confusing about the messages? Being specific here makes
+          it more likely the feedback recipient will make a fix that
+          solves the issue.<br />
+          <br /><b>To Deblur:</b> specify what is confusing about the
+          messages.</span
+        ></span
+      ></span
+    ></span
+  >&nbsp;.&nbsp;I'd prefer you to be
+  <span
+    class="tooltip"
+    tabindex="0"
+    aria-label="Text or word with tooltip"
+    >more direct
+    <span class="quote-body">
+      <span class="container">
+        <span class="text" aria-label="Text or word description"
+          >Concepts like "direct" and "indirect" vary between people and
+          cultures. If there's something specific you'd like to see, name
+          it!<br /><br />
+          <b>To Deblur:</b> specify exactly what you'd like the messages
+          to include.
         </span>
-        <span>&nbsp;."</span>
-      </p>
-      <div>
-        <button
-          type="button"
-          class="blur-button button w-button"
-          aria-label="Show blur words"
-          onclick="showBlurWords('quote-1')"
-        >
-          Deblur this feedback
-        </button>
-        <p id="instructions-1" class="instructions">
-          Select a blur word to learn more
-          <span style="margin-left: 0.5rem" class="bounce">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              style="height: 1.2rem"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
-              />
-            </svg>
-          </span>
-        </p>
-      </div>
-      <p class="deblur-quote-label">Deblurred feedback</p>
-      <p class="deblur-visible quote-body" aria-label="Quote text">
-        "Your&nbsp;
-        <span class="tooltip start">email updates</span>
-        <span class="tooltip end">on Project X</span>
-        are
-        <span class="tooltip start">missing</span>
-        <span class="tooltip end">next steps.</span>&nbsp;&nbsp;I'd like you
-        to&nbsp;
-        <span class="tooltip start">include</span>
-        <span class="tooltip middle">the action</span>
-        <span class="tooltip middle">items and</span>
-        <span class="tooltip middle">who</span>
-        <span class="tooltip middle">is responsible</span>
-        <span class="tooltip end">for each</span>
-        ."&nbsp;
-      </p>
-    </div>
+      </span>
+    </span>
+  </span>
+  <span>&nbsp;."</span>
+</p>
+<div>
+  <button
+    type="button"
+    class="blur-button button w-button"
+    aria-label="Show blur words"
+    onclick="showBlurWords('quote-1')"
+  >
+    Deblur this feedback
+  </button>
+  <p id="instructions-1" class="instructions">
+    Select a blur word to learn more
+    <span style="margin-left: 0.5rem" class="bounce">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        style="height: 1.2rem"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+        />
+      </svg>
+    </span>
+  </p>
+</div>
+<p class="deblur-quote-label">Deblurred feedback</p>
+<p class="deblur-visible quote-body" aria-label="Quote text">
+  "Your&nbsp;
+  <span class="tooltip start">email updates</span>
+  <span class="tooltip end">on Project X</span>
+  are
+  <span class="tooltip start">missing</span>
+  <span class="tooltip end">next steps</span>&nbsp;.&nbsp;I'd like you
+  to&nbsp;
+  <span class="tooltip start">include</span>
+  <span class="tooltip middle">the action</span>
+  <span class="tooltip middle">items and</span>
+  <span class="tooltip middle">who</span>
+  <span class="tooltip middle">is responsible</span>
+  <span class="tooltip end">for each</span>
+  ."&nbsp;
+</p>
+</div>
     `;
 
 blur_statement_2.innerHTML = `
@@ -238,6 +238,7 @@ blur_statement_2.innerHTML = `
   ."
 </p>
 </div>
+
     `;
 
 blur_statement_3.innerHTML = `
