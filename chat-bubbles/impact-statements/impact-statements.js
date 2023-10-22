@@ -74,7 +74,7 @@ impact_manager.innerHTML = `
       >
       <p class="receive">
         <span>
-          Hi&nbsp;<span data-o-member="FirstName"></span>, I have some
+          Hi Vikram, I have some
           feedback on our meeting with leadership yesterday. Can I share
           it with you?</span
         >
@@ -95,7 +95,7 @@ impact_manager.innerHTML = `
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
         loading="lazy"
-        class="avatar"
+        class="avatar vikram"
         alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
       />
     </div>
@@ -107,7 +107,7 @@ impact_manager.innerHTML = `
         <img
           src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
           alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
-          class="avatar"
+          class="avatar farah"
         />
       </div>
     </div>
@@ -165,7 +165,7 @@ impact_manager.innerHTML = `
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
         alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
-        class="avatar"
+        class="avatar farah"
       />
     </div>
     <div>
@@ -177,7 +177,7 @@ impact_manager.innerHTML = `
       </p>
       <p class="receive message" style="--delay: 4s">
         <span>
-          Hi, Vikram&nbsp;<span data-o-member="FirstName"></span>, I have
+          Hi, Vikram, I have
           some feedback on our meeting with leadership yesterday. Can I
           share it with you?
         </span>
@@ -193,7 +193,7 @@ impact_manager.innerHTML = `
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
         alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
-        class="avatar"
+        class="avatar vikram"
       />
   </div>
 
@@ -202,7 +202,7 @@ impact_manager.innerHTML = `
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
         alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
-        class="avatar"
+        class="avatar farah"
       />
     </div>
     <div>
@@ -223,11 +223,9 @@ impact_manager.innerHTML = `
     </div>
   </div>
   <div class="chat-row message closing" style="--delay: 14s">
-    <p>What's different about Farah's second attempt?</p>
-    <p>
-      We're guessing it landed differently because it contains an <b> impact
-        statement</b> - a statement that explains why the feedback matters.
-    </p>
+    <p>What's different about Farah's second attempt?</br>We're guessing it landed differently because it contains an <b> impact
+      statement</b> - a statement that explains why the feedback matters.</p>
+   
   </div>
 </div>
 </div>
