@@ -64,7 +64,7 @@ impact_manager.innerHTML = `
         <img
           src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
           alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
-          class="avatar"
+          class="avatar farah"
         />
       </div>
     </div>
@@ -91,10 +91,11 @@ impact_manager.innerHTML = `
 
 
    
-    <div class="avatar">
+    <div>
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
         loading="lazy"
+        class="avatar"
         alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
       />
     </div>
