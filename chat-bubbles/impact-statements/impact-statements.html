@@ -1,286 +1,20 @@
 <!DOCTYPE html>
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: "Helvetica Neue", Helvetica, sans-serif;
-      font-size: 1rem;
-      font-weight: normal;
-      margin: 50px auto;
-      display: flex;
-      flex-direction: column;
-      background-color: var(--page-background);
-    }
-
-    .chat-row p {
-      display: flex;
-      flex: 1 auto;
-      word-wrap: break-word;
-      line-height: 24px;
-      position: relative;
-      border-radius: 1rem;
-      padding: 1rem;
-    }
-
-    .chat-row p:before,
-    .chat-row p:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      height: 25px;
-    }
-
-    .chat-row .avatar {
-      border-radius: 100%;
-      height: 50px;
-      width: 50px;
-      display: flex;
-      position: relative;
-      z-index: 1;
-    }
-
-    .chat-row .prompt {
-      animation: prompt 0.5s ease 0s forwards;
-      animation-delay: var(--delay);
-    }
-
-    .chat-row .prompt p {
-      font-size: 1.2rem;
-      max-width: 600px;
-    }
-
-    .receive.message.impact {
-      font-weight: 700;
-    }
-
-    .chat-row .prompt-button-wrapper {
-      text-align: center;
-      margin: 1rem 0;
-      display: flex;
-      flex: 1;
-      justify-content: space-around;
-    }
-
-    .chat-row {
-      display: flex;
-      align-items: end;
-      margin: 1rem;
-    }
-
-    .chat-row .avatar {
-      border: 1px solid #000;
-      border-radius: 100%;
-    }
-
-    .chat-row .name {
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-left: 1.7rem;
-      letter-spacing: 0.03rem;
-      margin-bottom: 0.25rem;
-      display: block;
-    }
-
-    .chat-row .title {
-      opacity: 0.6;
-      font-weight: 400;
-    }
-
-    .receive:after {
-      left: -26px;
-      width: 26px;
-      background-color: #fff;
-      border-bottom-right-radius: 10px;
-    }
-
-    .send:after {
-      right: -26px;
-      width: 26px;
-      background-color: #fff;
-      border-bottom-left-radius: 10px;
-    }
-
-    .chat-row.spark .avatar {
-      background-color: #ff2266;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-image: url("https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/63f7eadbf77a52ed7bd4e81f_lifelabs_logo_256.png");
-    }
-
-    .chat-row.spark .receive {
-      background: #f6d5de;
-      color: black;
-      align-self: flex-start;
-      margin: 0px 100px 10px 10px;
-    }
-    .chat-row.spark .receive:before {
-      left: -7px;
-      width: 20px;
-      background-color: #f6d5de;
-      border-bottom-right-radius: 16px 14px;
-    }
-
-    .chat-row.manager .avatar {
-      background-color: #50adbbff;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-image: url("https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/64192fa1212ac5d345ca8ade_franklin.svg");
-    }
-
-    .chat-row.peer .avatar {
-      background-color: #fec84b;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-image: url("https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/64192fa1212ac581e0ca8add_farah.svg");
-    }
-
-    .chat-row.report .avatar {
-      background-color: #12b76a;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-image: url("https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/64192fa15d87ef38eefd4336_fiona.svg");
-    }
-
-    .chat-row .receive,
-    .chat-row .send {
-      max-width: 400px;
-    }
-
-    .chat-row.manager .receive {
-      background: #d5f7fc;
-      color: black;
-      align-self: flex-start;
-      margin: 0px 100px 10px 10px;
-    }
-    .chat-row.manager .receive:before {
-      left: -7px;
-      width: 20px;
-      background-color: #d5f7fc;
-      border-bottom-right-radius: 16px 14px;
-    }
-
-    .chat-row.peer .receive {
-      background: #fcf1d7;
-      color: black;
-      align-self: flex-start;
-      margin: 0px 100px 10px 10px;
-    }
-    .chat-row.peer .receive:before {
-      left: -7px;
-      width: 20px;
-      background-color: #fcf1d7;
-      border-bottom-right-radius: 16px 14px;
-    }
-
-    .chat-row.report .receive {
-      background: #d7fcd8;
-      color: black;
-      align-self: flex-start;
-      margin: 0px 100px 10px 10px;
-    }
-    .chat-row.report .receive:before {
-      left: -7px;
-      width: 20px;
-      background-color: #d7fcd8;
-      border-bottom-right-radius: 16px 14px;
-    }
-
-    .chat-row .receive.pre:before {
-      background-color: transparent;
-    }
-    .chat-row .receive.pre {
-      margin-bottom: 5px;
-    }
-
-    .chat-row.me .avatar {
-      overflow: hidden;
-      background-color: #222;
-      background-image: url(https://uploads-ssl.webflow.com/63d2ab4…/64028b9…_default_profile_image.png);
-      background-position: 50% 0%;
-      background-size: 50px;
-    }
-
-    .chat-row.me .avatar img {
-      width: 100%;
-      height: fit-content;
-    }
-
-    .chat-row.me {
-      justify-content: end;
-    }
-
-    .chat-row.me .send {
-      color: #000;
-      background: #e5e5ea;
-      align-self: flex-end;
-      margin: 10px 10px 10px 100px;
-    }
-
-    .chat-row.me .send:before {
-      right: -7px;
-      width: 20px;
-      background-color: #e5e5ea;
-      border-bottom-left-radius: 16px 14px;
-    }
-
-    .message {
-      transform-origin: 0 100%;
-      transform: scale(0);
-      max-height: 0;
-      overflow: hidden;
-      position: relative;
-      animation: message 0.5s ease 0s forwards;
-      animation-delay: var(--delay);
-    }
-
-    .chat-row.me {
-      transform-origin: 100% 100%;
-    }
-
-    .chat-row.prompt {
-      transform-origin: bottom;
-      margin: 0;
-      justify-content: center;
-    }
-
-    @keyframes message {
-      0% {
-        opacity: 0;
-        max-height: 100vmax;
-        top: 40px;
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1);
-      }
-      90% {
-        transform: scale(1);
-        top: 0px;
-      }
-      100% {
-        transform: scale(1);
-        max-height: 100vmax;
-        overflow: visible;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../global-bubbles.css" />
   <body>
     <!-- Franklin Manager -->
-    <div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+    <div>
       <div
         id="main-prompt-manager"
         class="chat-row prompt message"
         style="--delay: 0s"
       >
         <div class="prompt" style="--delay: 0s">
-          <p>Let's simulate a feedback conversation with your Manager.</p>
+          <p>
+            Here is an example of a feedback conversation between a manager and
+            her direct report.
+          </p>
           <div class="prompt-button-wrapper">
             <button
               id="manager-button"
@@ -288,7 +22,7 @@
               class="button w-button prompt-button"
               onclick="play('manager', 'manager-1')"
             >
-              Speak with Franklin
+              Play Farah and Vikram's conversation
             </button>
           </div>
         </div>
@@ -297,11 +31,17 @@
       <div id="manager-1" style="display: none">
         <div class="chat-row manager message" style="--delay: 0s">
           <div>
-            <div class="avatar"></div>
+            <div>
+              <img
+                src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
+                alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
+                class="avatar"
+              />
+            </div>
           </div>
           <div>
             <span class="name"
-              >Franklin <span class="title">&#8226; Manager</span></span
+              >Farah <span class="title">&#8226; Manager</span></span
             >
             <p class="receive">
               <span>
@@ -314,29 +54,41 @@
         </div>
 
         <div class="chat-row me message" style="--delay: 3s">
-          <p class="send">Yes, please!</p>
+          
+          <div>
+            <span class="name">Vikram <span class="title">&#8226; Direct Report</span></span>
+            <p class="send">Yes, please do!</p>
+          </div>
+
+
+         
           <div class="avatar">
             <img
-              src="https://s3.amazonaws.com/outseta-production/7851/0-Ian-Scott-headshot-300x380_b632e9d3-7798-4d20-b509-c85e83079149.jpeg"
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
               loading="lazy"
               data-o-member="ProfileImageS3Url"
-              alt="profile image"
-              onerror="this.src='https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/63d2ab48da2a2f97be21593c_blank.png'"
+              alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
             />
           </div>
         </div>
 
         <div class="chat-row manager message" style="--delay: 5s">
           <div>
-            <div class="avatar"></div>
+            <div>
+              <img
+                src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
+                alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
+                class="avatar"
+              />
+            </div>
           </div>
           <div>
             <span class="name"
-              >Franklin <span class="title">&#8226; Manager</span></span
+              >Farah <span class="title">&#8226; Manager</span></span
             >
             <p class="receive">
-              Great! I noticed you passed every time I asked you to share about
-              the project you're working on.
+              Great! I noticed you declined to share when I asked you for
+              information about the project you're working on.
             </p>
           </div>
         </div>
@@ -348,9 +100,9 @@
         >
           <div class="prompt">
             <p>
-              How does Franklin's feedback land with you?<br /><br />How
-              motivated are you to speak up more in the next meeting?<br /><br />Not
-              thrilled by their feedback? Let's give Franklin another chance.
+              How does Farah's feedback land with you?<br /><br />How motivated
+              do you think Vikram is to speak up in the next meeting?<br /><br />Let's
+              give Farah another chance.
             </p>
             <div class="prompt-button-wrapper">
               <button
@@ -373,72 +125,83 @@
           <div>
             <span class="name">Spark</span>
             <p class="receive">
-              Franklin, that feedback was like the smell of coffee. It's
-              promising, but I'm not awake yet. Give it another go!
+              Farah, that feedback was like the smell of coffee. It's promising,
+              but I'm not awake yet. Give it another go!
             </p>
           </div>
         </div>
 
         <div class="chat-row manager message" style="--delay: 3s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
+              alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
+              class="avatar"
+            />
           </div>
           <div>
             <span class="name"
-              >Franklin <span class="title">&#8226; Manager</span></span
+              >Farah <span class="title">&#8226; Manager</span></span
             >
             <p class="receive pre message" style="--delay: 3s">
               Got it! I'll try again...
             </p>
             <p class="receive message" style="--delay: 4s">
               <span>
-                Hi&nbsp;<span data-o-member="FirstName"></span>, I have some
-                feedback on our meeting with leadership yesterday. Can I share
-                it with you?</span
-              >
+                Hi, Vikram&nbsp;<span data-o-member="FirstName"></span>, I have
+                some feedback on our meeting with leadership yesterday. Can I
+                share it with you?
+              </span>
             </p>
           </div>
         </div>
 
         <div class="chat-row me message" style="--delay: 6s">
-          <p class="send">Yes, please!</p>
+          <div>
+            <span class="name">Vikram <span class="title">&#8226; Direct Report</span></span>
+            <p class="send">Yes, please do!</p>
+          </div>
           <div class="avatar">
             <img
-              src="https://s3.amazonaws.com/outseta-production/7851/0-Ian-Scott-headshot-300x380_b632e9d3-7798-4d20-b509-c85e83079149.jpeg"
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
               loading="lazy"
               data-o-member="ProfileImageS3Url"
-              alt="profile image"
-              onerror="this.src='https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/63d2ab48da2a2f97be21593c_blank.png'"
+              alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
             />
           </div>
         </div>
 
         <div class="chat-row manager message" style="--delay: 8s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b24297cd72e210f5eb77_Farah.png"
+              alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
+              class="avatar"
+            />
           </div>
           <div>
             <span class="name"
-              >Franklin <span class="title">&#8226; Manager</span></span
+              >Farah <span class="title">&#8226; Manager</span></span
             >
             <p class="receive pre message" style="--delay: 8s">
-              Great! I noticed you passed every time I asked you to share about
-              the project you're working on.
+              Great! I noticed you declined to share when I asked you for
+              information about the project you're working on.
             </p>
             <p class="receive message impact" style="--delay: 10s">
-              It's important to speak up because leadership needed to hear your
-              updates to know we're on track and I know you've got great ideas
-              about where to go next.
+              <b
+                >It's important to speak up because leadership needed to hear
+                your updates to know we're on track, and I know you've got great
+                ideas about where to go next.
+              </b>
             </p>
           </div>
         </div>
-        <div class="chat-row prompt message" style="--delay: 14s">
-          <div class="prompt" style="--delay: 14s">
-            <p>
-              What's different about Franklin's second attempt?<br /><br />How
-              much more motivated are you to speak up in the next meeting?
-            </p>
-          </div>
+        <div class="chat-row message closing" style="--delay: 14s">
+          <p>What's different about Farah's second attempt?</p>
+          <p>
+            We're guessing it landed differently because it contains an <b> impact
+              statement</b> - a statement that explains why the feedback matters.
+          </p>
         </div>
       </div>
     </div>
