@@ -15,7 +15,7 @@ body {
   }
   
   .chat-row p {
-    display: flex;
+    /* display: flex; */
     flex: 1 auto;
     word-wrap: break-word;
     line-height: 24px;
@@ -255,6 +255,11 @@ body {
     width: 45px !important;
     height: 50px !important;
 }
+.aleyna{
+  height: 60px !important;
+  width: 55px !important;
+}
 
 /* ///////////////////////
 ////////////////////// */
+

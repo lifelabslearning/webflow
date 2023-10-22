@@ -45,23 +45,21 @@
             >
             <p class="receive">
               <span>
-                Hi Vikram, I have some
-                feedback on our meeting with leadership yesterday. Can I share
-                it with you?</span
+                Hi Vikram, I have some feedback on our meeting with leadership
+                yesterday. Can I share it with you?</span
               >
             </p>
           </div>
         </div>
 
         <div class="chat-row me message" style="--delay: 3s">
-          
           <div>
-            <span class="name">Vikram <span class="title">&#8226; Direct Report</span></span>
+            <span class="name"
+              >Vikram <span class="title">&#8226; Direct Report</span></span
+            >
             <p class="send">Yes, please do!</p>
           </div>
 
-
-         
           <div>
             <img
               src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
@@ -148,9 +146,8 @@
             </p>
             <p class="receive message" style="--delay: 4s">
               <span>
-                Hi, Vikram, I have
-                some feedback on our meeting with leadership yesterday. Can I
-                share it with you?
+                Hi, Vikram, I have some feedback on our meeting with leadership
+                yesterday. Can I share it with you?
               </span>
             </p>
           </div>
@@ -158,14 +155,16 @@
 
         <div class="chat-row me message" style="--delay: 6s">
           <div>
-            <span class="name">Vikram <span class="title">&#8226; Direct Report</span></span>
+            <span class="name"
+              >Vikram <span class="title">&#8226; Direct Report</span></span
+            >
             <p class="send">Yes, please do!</p>
           </div>
-            <img
-              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
-              alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
-              class="avatar vikram"
-            />
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
+            alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
+            class="avatar vikram"
+          />
         </div>
 
         <div class="chat-row manager message" style="--delay: 8s">
@@ -194,30 +193,29 @@
           </div>
         </div>
         <div class="chat-row message closing" style="--delay: 14s">
-          <p>What's different about Farah's second attempt?</br>We're guessing it landed differently because it contains an <b> impact
-            statement</b> - a statement that explains why the feedback matters.</p>
-         
+          <p>
+            What's different about Farah's second attempt?<br />We're guessing
+            it landed differently because it contains an
+            <b> impact statement</b> - a statement that explains why the
+            feedback matters.
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Farah Peer -->
 
-    <div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+    <div class="chat-box-w-button">
       <div
         id="main-prompt-peer"
         class="chat-row prompt message"
         style="--delay: 0s"
       >
         <div class="prompt" style="--delay: 0s">
-          <p>Let's simulate a feedback conversation with your Peer.</p>
+          <p>
+            Here is an example of a feedback conversation
+            <b>between two peers.</b>
+          </p>
           <div class="prompt-button-wrapper">
             <button
               id="peer-button"
@@ -225,52 +223,65 @@
               class="button w-button prompt-button"
               onclick="play('peer', 'peer-1')"
             >
-              Speak with Farah
+              Play Tracy and Aleyna's conversation
             </button>
           </div>
         </div>
       </div>
 
       <div id="peer-1" style="display: none">
-        <div class="chat-row peer message" style="--delay: 0s">
+        <div class="chat-row manager message" style="--delay: 0s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e0565a382945fccba8f_Tracy.png"
+              alt="Feminine-presenting adult cartoon character wearing glasses and has short, gray hair with blue streaks."
+              class="avatar tracy"
+            />
           </div>
+
           <div>
             <span class="name"
-              >Farah <span class="title">&#8226; Peer</span></span
+              >Tracy <span class="title">&#8226; Peer</span></span
             >
             <p class="receive">
               <span>
-                Hi&nbsp;<span data-o-member="FirstName"></span>, I have some
-                feedback on your presentation from last week. Can I share it
-                with you?</span
+                Hi, Aleyna, I have some feedback on your presentation from last
+                week. Can I share it with you?</span
               >
             </p>
           </div>
         </div>
 
         <div class="chat-row me message" style="--delay: 3s">
-          <p class="send">Yes, please!</p>
-          <div class="avatar">
-            <img
-              src="https://s3.amazonaws.com/outseta-production/7851/0-Ian-Scott-headshot-300x380_b632e9d3-7798-4d20-b509-c85e83079149.jpeg"
-              loading="lazy"
-              alt="profile image"
-            />
+          <div>
+            <span class="name"
+              >Aleyna <span class="title">&#8226; Peer</span></span
+            >
+            <p class="send">Yes, I'd love to hear it!</p>
           </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e04a61fd7828ea75ec7_Aleyna.png"
+            alt="Feminine-presenting adult cartoon character wearing a bright pink headscarf."
+            class="avatar aleyna"
+          />
         </div>
 
-        <div class="chat-row peer message" style="--delay: 5s">
+        <div class="chat-row manager message" style="--delay: 5s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e0565a382945fccba8f_Tracy.png"
+              alt="Feminine-presenting adult cartoon character wearing glasses and has short, gray hair with blue streaks."
+              class="avatar tracy"
+            />
           </div>
           <div>
             <span class="name"
-              >Farah <span class="title">&#8226; Peer</span></span
+              >Tracy <span class="title">&#8226; Peer</span></span
             >
             <p class="receive">
-              Awesome! I liked how there was very little text on each slide.
+              <span>
+                I liked how there was very little text on each slide.</span
+              >
             </p>
           </div>
         </div>
@@ -282,9 +293,9 @@
         >
           <div class="prompt">
             <p>
-              How does Farah's feedback land with you?<br /><br />
-              What did you learn from that feedback?<br /><br />
-              Eager to learn more? Let's give Farah another try.
+              How does Tracy's feedback land with you? If you were Aleyna, what
+              did you learn from that feedback?<br /><br />
+              Eager to learn more? Let's give Tracy another try.
             </p>
             <div class="prompt-button-wrapper">
               <button
@@ -307,73 +318,79 @@
           <div>
             <span class="name">Spark</span>
             <p class="receive">
-              Farah, that feedback was like a broken escalator, still useful,
+              Tracy, that feedback was like a broken escalator, still useful,
               but not as useful as it could be. Try again!
             </p>
           </div>
         </div>
 
-        <div class="chat-row peer message" style="--delay: 3s">
+        <div class="chat-row manager message" style="--delay: 3s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e0565a382945fccba8f_Tracy.png"
+              alt="Feminine-presenting adult cartoon character wearing glasses and has short, gray hair with blue streaks."
+              class="avatar tracy"
+            />
           </div>
           <div>
             <span class="name"
-              >Farah <span class="title">&#8226; Peer</span></span
+              >Tracy <span class="title">&#8226; Peer</span></span
             >
             <p class="receive pre message" style="--delay: 3s">
               Okay, here it goes!
             </p>
             <p class="receive message" style="--delay: 4s">
               <span>
-                Hi&nbsp;<span data-o-member="FirstName"></span>, I have some
-                feedback on your presentation from last week. Can I share it
-                with you?</span
+                Hi, Aleyna, I have some feedback on your presentation from last
+                week. Can I share it with you?</span
               >
             </p>
           </div>
         </div>
 
         <div class="chat-row me message" style="--delay: 6s">
-          <p class="send">Yes, please!</p>
-          <div class="avatar">
-            <img
-              src="https://s3.amazonaws.com/outseta-production/7851/0-Ian-Scott-headshot-300x380_b632e9d3-7798-4d20-b509-c85e83079149.jpeg"
-              loading="lazy"
-              data-o-member="ProfileImageS3Url"
-              alt="profile image"
-              onerror="this.src='https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/63d2ab48da2a2f97be21593c_blank.png'"
-            />
+          <div>
+            <span class="name"
+              >Aleyna <span class="title">&#8226; Peer</span></span
+            >
+            <p class="send">Yes, I'd love to hear it!</p>
           </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e04a61fd7828ea75ec7_Aleyna.png"
+            alt="Feminine-presenting adult cartoon character wearing a bright pink headscarf."
+            class="avatar aleyna"
+          />
         </div>
 
-        <div class="chat-row peer message" style="--delay: 8s">
+        <div class="chat-row manager message" style="--delay: 8s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e0565a382945fccba8f_Tracy.png"
+              alt="Feminine-presenting adult cartoon character wearing glasses and has short, gray hair with blue streaks."
+              class="avatar tracy"
+            />
           </div>
           <div>
             <span class="name"
-              >Farah <span class="title">&#8226; Peer</span></span
+              >Tracy <span class="title">&#8226; Peer</span></span
             >
             <p class="receive pre message" style="--delay: 8s">
               Great! I liked how there was very little text on each slide.
             </p>
             <p class="receive message impact" style="--delay: 10s">
-              As someone with dyslexia, it made it easier for me to absorb the
+              Since I have dyslexia, it made it easier for me to absorb the
               information.
             </p>
           </div>
         </div>
-        <div class="chat-row prompt message" style="--delay: 14s">
-          <div class="prompt" style="--delay: 14s">
+        <div class="chat-row message closing" style="--delay: 14s">
+          <div style="--delay: 14s">
             <p>
-              We're guessing that feedback landed differently. It's because it
-              contains an impact statement - a statement that explains why the
-              feedback matters. <br />
+              How was Tracy's second attempt more helpful for Aleyna?
               <br />
-              This impact statement is strong because it also includes an
-              element of learning for the feedback receiver — they now know how
-              to make their presentations more inclusive to folks with dyslexia.
+              Tracy's impact statement explains why "very little text on each
+              slide" is important. Now, Aleyna knows how to make her future
+              presentations more inclusive for people with dyslexia.
             </p>
           </div>
         </div>
@@ -382,21 +399,17 @@
 
     <!-- Fiona Direct Report -->
 
-    <div
-      style="
-        margin-bottom: 2rem;
-        border-radius: 0.5rem;
-        border: 1px solid;
-        padding: 2rem;
-      "
-    >
+    <div class="chat-box-w-button">
       <div
         id="main-prompt-report"
         class="chat-row prompt message"
         style="--delay: 0s"
       >
         <div class="prompt" style="--delay: 0s">
-          <p>Let's simulate a feedback conversation with your Direct Report.</p>
+          <p>
+            Here is an example of a feedback conversation
+            <b>between a direct report and his manager.</b>
+          </p>
           <div class="prompt-button-wrapper">
             <button
               id="report-button"
@@ -404,54 +417,56 @@
               class="button w-button prompt-button"
               onclick="play('report','report-1')"
             >
-              Speak with Fiona
+              Play Felipe and Tia's conversation
             </button>
           </div>
         </div>
       </div>
 
       <div id="report-1" style="display: none">
-        <div class="chat-row report message" style="--delay: 0s">
+        <div class="chat-row manager message" style="--delay: 0s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e044539ef48415718df_Felipe.png"
+              alt="Masculine-presenting adult cartoon character with short, blonde hair sitting in a wheelchair."
+              class="avatar felipe"/>
           </div>
           <div>
-            <span class="name"
-              >Fiona <span class="title">&#8226; Direct Report</span></span
-            >
+            <span class="name">Felipe <span class="title">&#8226; Direct Report</span></span>
             <p class="receive">
               <span>
-                Hi&nbsp;<span data-o-member="FirstName"></span>, I'd like to
-                talk to you about our one-on-ones. Can I share my thoughts?
+                Hi, Tia, I'd like to talk to you about our one-on-ones. Can I
+                share my thoughts?
               </span>
             </p>
           </div>
         </div>
 
         <div class="chat-row me message" style="--delay: 3s">
-          <p class="send">Yes, please!</p>
-          <div class="avatar">
-            <img
-              src="https://s3.amazonaws.com/outseta-production/7851/0-Ian-Scott-headshot-300x380_b632e9d3-7798-4d20-b509-c85e83079149.jpeg"
-              loading="lazy"
-              data-o-member="ProfileImageS3Url"
-              alt="profile image"
-              onerror="this.src='https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/63d2ab48da2a2f97be21593c_blank.png'"
-            />
+          <div>
+            <span class="name">Tia <span class="title">&#8226; Manager</span></span>
+            <p class="send">Absolutely!</p>
           </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e043ca73a37602eb50e_Tia.png"
+            alt="Feminine-presenting adult cartoon character with dark hair in pigtails."
+            class="avatar tia"
+          />
         </div>
 
-        <div class="chat-row report message" style="--delay: 5s">
+        <div class="chat-row manager message" style="--delay: 5s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e044539ef48415718df_Felipe.png"
+              alt="Masculine-presenting adult cartoon character with short, blonde hair sitting in a wheelchair."
+              class="avatar felipe"/>
           </div>
           <div>
-            <span class="name"
-              >Fiona <span class="title">&#8226; Direct Report</span></span
-            >
+            <span class="name">Felipe <span class="title">&#8226; Direct Report</span></span>
             <p class="receive">
-              I noticed that you've been around 10 minutes late to our last 3
-              one-on-ones.
+              <span>
+                I noticed that you've been around 10 minutes late to our last 3 one-on-ones.
+              </span>
             </p>
           </div>
         </div>
@@ -463,9 +478,8 @@
         >
           <div class="prompt">
             <p>
-              How does Fiona's feedback land with you?<br /><br />
-              Are you motivated to be on time?<br /><br />
-              If not, let's give Fiona another try.
+              How does Felipe's feedback land with you? If you were Tia, would you be motivated to be on time?<br /><br />
+              If not, let's give Felipe another try.
             </p>
             <div class="prompt-button-wrapper">
               <button
@@ -488,71 +502,66 @@
           <div>
             <span class="name">Spark</span>
             <p class="receive">
-              Fiona, that feedback was like having a closed umbrella in the
-              rain. It's handy, but I'm still getting wet. Try again.
+              Felipe, that feedback was like having a closed umbrella in the rain. It's handy, but I'm still getting wet. Try again.
             </p>
           </div>
         </div>
 
-        <div class="chat-row report message" style="--delay: 3s">
+        <div class="chat-row manager message" style="--delay: 3s">
           <div>
-            <div class="avatar"></div>
+            <img
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e044539ef48415718df_Felipe.png"
+              alt="Masculine-presenting adult cartoon character with short, blonde hair sitting in a wheelchair."
+              class="avatar felipe"/>
           </div>
           <div>
-            <span class="name"
-              >Fiona <span class="title">&#8226; Direct Report</span></span
-            >
+            <span class="name">Felipe <span class="title">&#8226; Direct Report</span></span>
             <p class="receive pre message" style="--delay: 3s">
               Got it! Here we go...
             </p>
             <p class="receive message" style="--delay: 4s">
               <span>
-                Hi&nbsp;<span data-o-member="FirstName"></span>, I'd like to
-                talk to you about our one-on-ones. Can I share my thoughts?
+                Hi, Tia, I'd like to talk to you about our one-on-ones. Can I
+                share my thoughts?
               </span>
             </p>
           </div>
         </div>
 
         <div class="chat-row me message" style="--delay: 6s">
-          <p class="send">Yes, please!</p>
-          <div class="avatar">
+          <div>
+            <span class="name">Tia <span class="title">&#8226; Manager</span></span>
+            <p class="send">Absolutely!</p>
+          </div>
+          <img
+            src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e043ca73a37602eb50e_Tia.png"
+            alt="Feminine-presenting adult cartoon character with dark hair in pigtails."
+            class="avatar tia"
+          />
+        </div>
+
+        <div class="chat-row manager message" style="--delay: 8s">
+          <div>
             <img
-              src="https://s3.amazonaws.com/outseta-production/7851/0-Ian-Scott-headshot-300x380_b632e9d3-7798-4d20-b509-c85e83079149.jpeg"
-              loading="lazy"
-              data-o-member="ProfileImageS3Url"
-              alt="profile image"
-              onerror="this.src='https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/63d2ab48da2a2f97be21593c_blank.png'"
-            />
+              src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65355e044539ef48415718df_Felipe.png"
+              alt="Masculine-presenting adult cartoon character with short, blonde hair sitting in a wheelchair."
+              class="avatar felipe"/>
+          </div>
+          <div>
+            <span class="name">Felipe <span class="title">&#8226; Direct Report</span></span>
+            <p class="receive pre message" style="--delay: 8s">
+              I noticed that you've been around 10 minutes late to our last 3 one-on-ones.
+            </p>
+            <p class="receive message impact" style="--delay: 10s">
+              <b>I'm bringing it up because I'm worried you don't find our one-on-ones to be a good use of time.</b>
+            </p>
           </div>
         </div>
 
-        <div class="chat-row report message" style="--delay: 8s">
-          <div>
-            <div class="avatar"></div>
-          </div>
-          <div>
-            <span class="name"
-              >Fiona <span class="title">&#8226; Direct Report</span></span
-            >
-            <p class="receive pre message" style="--delay: 8s">
-              I noticed that you've been at least 10 minutes late to our last
-              three one-on-ones.
-            </p>
-            <p class="receive message impact" style="--delay: 10s">
-              I'm bringing it up because I'm wondering if we should move them to
-              a different day when you have fewer meetings.
-            </p>
-          </div>
-        </div>
-        <div class="chat-row prompt message" style="--delay: 14s">
-          <div class="prompt" style="--delay: 14s">
+        <div class="chat-row message closing" style="--delay: 14s">
+          <div style="--delay: 14s">
             <p>
-              If this feedback feels different, it's because it contains an
-              impact statement that explains why the feedback matters.<br /><br />
-              This impact statement is strong because it clarifies how the
-              feedback-giver feels about the issue - not upset, just eager to
-              problem-solve.
+              This impact statement is strong because Felipe is sharing his perception of what's going on and why. Now, Tia can problem-solve if there is an underlying issue. And if she's just busy that day, maybe they can find a new time slot for their one-on-ones.
             </p>
           </div>
         </div>
