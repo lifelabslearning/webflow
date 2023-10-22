@@ -33,7 +33,7 @@ const impact_peer = document.getElementById("impact_peer");
 const impact_report = document.getElementById("impact_report");
 
 impact_manager.innerHTML = `
-<div>
+<div class="chat-box-w-button">
 <div
   id="main-prompt-manager"
   class="chat-row prompt message"
@@ -95,7 +95,6 @@ impact_manager.innerHTML = `
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
         loading="lazy"
-        data-o-member="ProfileImageS3Url"
         alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
       />
     </div>
@@ -190,14 +189,11 @@ impact_manager.innerHTML = `
       <span class="name">Vikram <span class="title">&#8226; Direct Report</span></span>
       <p class="send">Yes, please do!</p>
     </div>
-    <div class="avatar">
       <img
         src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6534b242dab6affbb1a8c5d8_Vikram.png"
-        loading="lazy"
-        data-o-member="ProfileImageS3Url"
         alt="Masculine-presenting adult cartoon character with dark hair and a mustache and beard."
+        class="avatar"
       />
-    </div>
   </div>
 
   <div class="chat-row manager message" style="--delay: 8s">
