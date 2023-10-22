@@ -7,6 +7,13 @@ body {
     flex-direction: column;
     background-color: var(--page-background);
   }
+
+  .chat-box-w-button{
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    padding: 2rem;
+  }
   
   .chat-row p {
     display: flex;
