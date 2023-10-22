@@ -252,8 +252,8 @@ body {
 ////////////////////// */
 
 .farah, .vikram {
-    width: 45px;
-    height: 50px;
+    width: 45px !important;
+    height: 50px !important;
 }
 
 /* ///////////////////////
