@@ -1,4 +1,6 @@
 const implicit_bias_a = document.getElementById("implicit_bias_a");
+const implicit_bias_b = document.getElementById("implicit_bias_b");
+const implicit_bias_c = document.getElementById("implicit_bias_c");
 
 implicit_bias_a.innerHTML = `
 <div class="grid-two-cards-w-picture">
@@ -18,35 +20,46 @@ implicit_bias_a.innerHTML = `
     </p>
   </span>
 </div>
-<img
-  src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6528e6231c309ba460860efc_halo-effect.jpg"
-  class="left-image"
-  alt="Three adult professionals seated at a table in front of a gesturing masculine-presenting individual."
-/>
-<div class="card-w-picture">
-  <span class="two-cards-option">
-    <span class="answer">Halo Effect </span>
-    <p class="card-description">
-      A manager can overestimate a direct report's abilities and assign
-      projects they are not skilled to take on, setting them up to
-      underperform.
-    </p>
-  </span>
 </div>
+`;
+
+implicit_bias_b.innerHTML = `
+<div class="grid-two-cards-w-picture">
+
 <img
-  src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6528e6239c34008379c5b5da_contrast-effect.jpg"
-  class="left-image"
-  alt="Seated feminine-presenting adult reviewing papers in both hands in a home office setting."
+src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6528e6231c309ba460860efc_halo-effect.jpg"
+class="left-image"
+alt="Three adult professionals seated at a table in front of a gesturing masculine-presenting individual."
 />
 <div class="card-w-picture">
-  <span class="two-cards-option">
-    <span class="answer">Contrast Effect</span>
-    <p class="card-description">
-      Comparing an employee's performance to another employee instead of
-      the company standards can negatively impact promotions and pay
-      raises.
-    </p>
-  </span>
+<span class="two-cards-option">
+  <span class="answer">Halo Effect </span>
+  <p class="card-description">
+    A manager can overestimate a direct report's abilities and assign
+    projects they are not skilled to take on, setting them up to
+    underperform.
+  </p>
+</span>
+</div>
+</div>
+`;
+implicit_bias_c.innerHTML = `
+<div class="grid-two-cards-w-picture">
+
+<img
+src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/6528e6239c34008379c5b5da_contrast-effect.jpg"
+class="left-image"
+alt="Seated feminine-presenting adult reviewing papers in both hands in a home office setting."
+/>
+<div class="card-w-picture">
+<span class="two-cards-option">
+  <span class="answer">Contrast Effect</span>
+  <p class="card-description">
+    Comparing an employee's performance to another employee instead of
+    the company standards can negatively impact promotions and pay
+    raises.
+  </p>
+</span>
 </div>
 </div>
 `;
