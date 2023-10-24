@@ -253,8 +253,9 @@ body {
 ////////////////////// */
 
 .farah {
-  width: 43px !important;
-  height: 48px !important;
+  width: 39px !important;
+  height: 44px !important;
+  scale: 1.2 !important;
 }
 
 .vikram {
@@ -262,8 +263,9 @@ body {
     height: 50px !important;
 }
 .aleyna{
-  height: 53px !important;
-  width: 46px !important;
+  height: 46px !important;
+  width: 39px !important;
+  scale: 1.2 !important
 }
 
 /* ///////////////////////
