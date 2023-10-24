@@ -60,7 +60,6 @@ const bunny_0 = document.getElementById("bunny_0");
 const bunny_1 = document.getElementById("bunny_1");
 const bunny_2 = document.getElementById("bunny_2");
 const bunny_3 = document.getElementById("bunny_3");
-const bunny_4 = document.getElementById("bunny_4");
 
 bunny_0.innerHTML = `
 <div class="bunny-container">
@@ -73,7 +72,7 @@ bunny_0.innerHTML = `
     <img
       style="margin-top: -150px; margin-bottom: -150px; max-height: 500px"
       src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23fbeb22e916bd5d6bc_bunny_1.svg"
-      alt="Detailed drawing of a bunny rabbit"
+      alt="A line drawing of an animal with a round face, a dot for an eye, 2 ears that stand up, 4 feet, and a cotton-tail."
     />
   </div>
 
@@ -84,7 +83,6 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioClub-1"
-        data-o-person-activity="Clicked Playing Cards:  radioClub-1"
         name="1"
         value="club"
       />
@@ -93,7 +91,6 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioHeart-1"
-        data-o-person-activity="Clicked Playing Cards:  radioHeart-1"
         name="1"
         value="heart"
       />
@@ -102,7 +99,6 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioSpade-1"
-        data-o-person-activity="Clicked Playing Cards:  radioSpade-1"
         name="1"
         value="spade"
       />
@@ -111,7 +107,6 @@ bunny_0.innerHTML = `
         onclick="displayRadioValue('1')"
         type="radio"
         id="radioDiamond-1"
-        data-o-person-activity="Clicked Playing Cards:  radioDiamond-1"
         name="1"
         value="diamond"
       />
@@ -131,7 +126,7 @@ bunny_1.innerHTML = `
     <img
       style="max-height: 220px"
       src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f56170003bac142f1_bunny_3.svg"
-      alt="Messy drawing of a bunny rabbit"
+      alt="Line drawing of animal with long face, 5 whiskers, different size eye circles, 2 long upright ears, circle tail, 1 triangle back leg, 2 small front legs."
     />
   </div>
 
@@ -142,7 +137,6 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioClub-0"
-        data-o-person-activity="Clicked Playing Cards:  radioClub-0"
         name="0"
         value="club"
       />
@@ -151,7 +145,6 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioHeart-0"
-        data-o-person-activity="Clicked Playing Cards:  radioHeart-0"
         name="0"
         value="heart"
       />
@@ -160,7 +153,6 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioSpade-0"
-        data-o-person-activity="Clicked Playing Cards:  radioSpade-0"
         name="0"
         value="spade"
       />
@@ -170,7 +162,6 @@ bunny_1.innerHTML = `
         onclick="displayRadioValue('0')"
         type="radio"
         id="radioDiamond-0"
-        data-o-person-activity="Clicked Playing Cards:  radioDiamond-0"
         name="0"
         value="diamond"
       />
@@ -193,7 +184,7 @@ bunny_2.innerHTML = `
     <img
       style="max-width: 250px"
       src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f84373f230c616f0d_bunny_2.svg"
-      alt="Detailed drawing of a bunny rabbit"
+      alt="A line drawing of an animal with a round face, 2 floppy ears, 2 big eyes, a triangle nose, 2 whiskers on each side, a circular body, 2 arms, and 2 legs."
     />
   </div>
 
@@ -204,7 +195,6 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioClub-2"
-        data-o-person-activity="Clicked Playing Cards:  radioClub-2"
         name="2"
         value="club"
       />
@@ -213,7 +203,6 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioHeart-2"
-        data-o-person-activity="Clicked Playing Cards:  radioHeart-2"
         name="2"
         value="heart"
       />
@@ -222,7 +211,6 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioSpade-2"
-        data-o-person-activity="Clicked Playing Cards:  radioSpade-2"
         name="2"
         value="spade"
       />
@@ -231,7 +219,6 @@ bunny_2.innerHTML = `
         onclick="displayRadioValue('2')"
         type="radio"
         id="radioDiamond-2"
-        data-o-person-activity="Clicked Playing Cards:  radioDiamond-2"
         name="2"
         value="diamond"
       />
@@ -254,7 +241,7 @@ bunny_3.innerHTML = `
     <img
       style="max-width: 240px"
       src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f2e2b166e170cd71c_bunny_4.svg"
-      alt="Detailed drawing of a bunny rabbit"
+      alt="A line drawing of an animal on all fours with 1 long ear standing up, 1 long ear flopping over, 2 dots for eyes, a triangle nose, and a cotton tail."
     />
   </div>
   <fieldset id="3" class="radio-group">
@@ -264,7 +251,6 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioClub-3"
-        data-o-person-activity="Clicked Playing Cards:  radioClub-3"
         name="3"
         value="club"
       />
@@ -273,7 +259,6 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioHeart-3"
-        data-o-person-activity="Clicked Playing Cards:  radioHeart-3"
         name="3"
         value="heart"
       />
@@ -282,7 +267,6 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioSpade-3"
-        data-o-person-activity="Clicked Playing Cards:  radioSpade-3"
         name="3"
         value="spade"
       />
@@ -291,7 +275,6 @@ bunny_3.innerHTML = `
         onclick="displayRadioValue('3')"
         type="radio"
         id="radioDiamond-3"
-        data-o-person-activity="Clicked Playing Cards:  radioDiamond-3"
         name="3"
         value="diamond"
       />
@@ -302,61 +285,4 @@ bunny_3.innerHTML = `
 </div>
   `;
 
-bunny_4.innerHTML = `
-<div class="bunny-container">
-  <div class="bunny-feedback">
-    <div style="display: flex; align-items: center; justify-content: center">
-      <p class="feedback" style="display: flex">
-        "What&nbsp;<i>is</i>&nbsp;that?"
-      </p>
-    </div>
-    <img
-      style="max-width: 240px"
-      src="https://uploads-ssl.webflow.com/63d2ab48da2a2f57c52158d4/640ba23f65cb7273805a5b0d_bunny_5.svg"
-      alt="Detailed drawing of a bunny rabbit"
-    />
-  </div>
-  <fieldset id="4" class="radio-group">
-    <p class="quiz-question">What type of feedback is this?</p>
-    <div class="card-row">
-      <input
-        onclick="displayRadioValue('4')"
-        type="radio"
-        id="radioClub-4"
-        data-o-person-activity="Clicked Playing Cards:  radioClub-4"
-        name="4"
-        value="club"
-      />
-      <label for="radioClub-4"><span>&#9827;</span>Club</label>
-      <input
-        onclick="displayRadioValue('4')"
-        type="radio"
-        id="radioHeart-4"
-        data-o-person-activity="Clicked Playing Cards:  radioHeart-4"
-        name="4"
-        value="heart"
-      />
-      <label for="radioHeart-4"><span>&#9829;</span>Heart</label>
-      <input
-        onclick="displayRadioValue('4')"
-        type="radio"
-        id="radioSpade-4"
-        data-o-person-activity="Clicked Playing Cards:  radioSpade-4"
-        name="4"
-        value="spade"
-      />
-      <label for="radioSpade-4"><span>&#9824;</span>Spade</label>
-      <input
-        onclick="displayRadioValue('4')"
-        type="radio"
-        id="radioDiamond-4"
-        data-o-person-activity="Clicked Playing Cards:  radioDiamond-4"
-        name="4"
-        value="diamond"
-      />
-      <label for="radioDiamond-4"><span>&#9830;</span>Diamond</label>
-    </div>
-  </fieldset>
-  <div class="result" id="result-4"></div>
-</div>
-  `;
+
