@@ -50,12 +50,14 @@ const displayRadioValue = (id) => {
         label.classList.add("incorrect");     
         const quizAnswer = quiz[id].answer
         const eleValue = ele[i].value
-        if (quizAnswer === 'heart' && eleValue === 'club'){
+        if (quizAnswer === 'heart' && eleValue === 'club' && id === '3'){
           document.getElementById("result-" + id).innerHTML = `<p>A club is blurry critique. The feedback above is blurry praise. Which other playing card represents this kind of feedback?</p>`
-        } else if (quizAnswer === 'spade' && eleValue === 'diamond'){
-          document.getElementById("result-" + id).innerHTML = `<p>A club is blurry critique. The feedback above is blurry praise. Which other playing card represents this type?</p>`
+        } 
+        else if (quizAnswer === 'spade' && eleValue === 'diamond' && id === '2'){
+          document.getElementById("result-" + id).innerHTML = `<p>A diamond is specific praise. The feedback above is specific critique. Which other playing card represents this type?</p>`
 
-        } else{
+        } 
+        else{
           document.getElementById("result-" + id).innerHTML =
           card_desc[ele[i].value] + " " + quiz[id].incorrect_message;
         }       
