@@ -7,9 +7,8 @@ const card_desc = {
 const quiz = [
   {
     answer: "club",
-    correct_message: `<p>Correct! "That bunny is a little messy" is a club because it's likely a critique (we think?), and it's blurry. We don't know what makes the bunny messy or even if messy is a good or bad thing. We also know from working with 400,000 managers that when feedback is this vague, most people assume it's negative.
-      <br/><br/>What would make this feedback more useful? Deblurring, or converting from blurry to specific feedback.
-      <br/><br/>To convert it to a spade: "The lines connecting the ear, eyes, and nose makes the face look messy."</p>`,
+    correct_message: `<p>Correct! "That bunny is messy" is a club because it's likely a critique (we think?), and it's blurry. We don't know what makes the bunny messy or even if messy is a good or bad thing. We also know that when feedback is vague, most people assume it's negative.
+      <br/><br/>What would make this feedback more useful? Deblurring, or converting from blurry to specific feedback. For example: "The lines connecting the ears, eyes, and nose makes the face look messy."`,
     incorrect_message: `The feedback above is blurry critique. Which other playing card represents this kind of feedback?</p>`,
   },
   {
@@ -19,19 +18,18 @@ const quiz = [
   },
   {
     answer: "spade",
-    correct_message: `<p>Correct! "Because I can't see a tail, I'm not sure if this is a bunny or a long-eared dog" is a spade. Though it still might be tough to hear a critique (we're all human), this specific critique gives you all the information you need to improve your drawing for next time.</p>`,
-    incorrect_message: `The feedback above is specific critique. Which other playing card represents this type?</p>`,
+    correct_message: `<p>Correct! "Because I can't see a tail, I'm not sure if this is a bunny or a long-eared dog" is a spade. Though it still might be tough to hear a critique, this specific piece of feedback gives you the information you need to improve your drawing for next time.</p>`,
+    incorrect_message: `The feedback above is specific critique. Which other playing card represents this kind of feedback?</p>`,
   },
   {
     answer: "heart",
-    correct_message: `<p>Correct! "That is the cutest bunny I have ever seen. I can't think of anything more adorable" is a heart. Don't let the length fool you, there is no information that would help you understand why this person loves your bunny so much. 
-      <br/><br/>To convert it to a diamond: something as simple as "The folded ear is extra adorable" would allow the same amount of enthusiasm while also boosting the learning.</p>`,
+    correct_message: `<p>Correct! "That is the cutest bunny I have ever seen. I can't think of anything more adorable" is a heart. Don't let the length fool you, there is no information that would help you understand <i>why</i> this person loves your bunny so much.</p><p>What would make this feedback more useful? Deblurring, or converting from blurry to specific feedback. For example: "The folded ear is extra adorable" would allow the same amount of enthusiasm while also boosting the learning.</p>`,
     incorrect_message: `The feedback above is blurry praise. Which other playing card represents this type?</p>`,
   },
   {
     answer: "club",
-    correct_message: `<p>Correct! "What is that?" is a club. Why? Because if someone thinks they've successfully completed a task (i.e., drawn a bunny), but they're so far off the other person can't even tell what they've done most folks interpret that as a critique.
-      <br/><br/>So what if I truly don't know what they were trying to do? Should I not give feedback? No! This is where a context statement can make all the difference: "I'd love to give you some feedback on your drawing, could you tell me what you were going for?" Now the stage is set for those brain-friendly spades and diamonds.</p>`,
+    correct_message: `<p>Correct! "What is that?" is a club. Why? Because someone thinks they've successfully completed a task (i.e., drawn a bunny), but they're so far off the other person can't even tell what they've done. Most folks interpret that as a critique.
+      <br/><br/>But what if I truly don't know what they were trying to do? Should I not give feedback? No! This is where a context statement can make all the difference: "I'd love to give you some feedback on your drawing, could you tell me what you were going for?"" Now the stage is set for those brain-friendly spades and diamonds.</p>`,
     incorrect_message: `The feedback above is blurry critique. Which other playing card represents this type?</p>`,
   },
 ];
@@ -43,14 +41,24 @@ const displayRadioValue = (id) => {
     label.classList.remove("correct");
     label.classList.remove("incorrect");
     if (ele[i].checked) {
+
       if (quiz[id].answer == ele[i].value) {
         label.classList.add("correct");
         document.getElementById("result-" + id).innerHTML =
           quiz[id].correct_message;
       } else {
-        label.classList.add("incorrect");
-        document.getElementById("result-" + id).innerHTML =
+        label.classList.add("incorrect");     
+        const quizAnswer = quiz[id].answer
+        const eleValue = ele[i].value
+        if (quizAnswer === 'heart' && eleValue === 'club'){
+          document.getElementById("result-" + id).innerHTML = `<p>A club is blurry critique. The feedback above is blurry praise. Which other playing card represents this kind of feedback?</p>`
+        } else if (quizAnswer === 'spade' && eleValue === 'diamond'){
+          document.getElementById("result-" + id).innerHTML = `<p>A club is blurry critique. The feedback above is blurry praise. Which other playing card represents this type?</p>`
+
+        } else{
+          document.getElementById("result-" + id).innerHTML =
           card_desc[ele[i].value] + " " + quiz[id].incorrect_message;
+        }       
       }
     }
   }
