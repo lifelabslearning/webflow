@@ -61,7 +61,7 @@ impact_manager.innerHTML = `
     <div>
       <div>
         <img
-          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/653882f4a52fc3492265e47b_farah1.png"
+          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65394c83ba2cb6218a55aced_farah3.png"
           alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
           class="avatar farah"
         />
@@ -102,7 +102,7 @@ impact_manager.innerHTML = `
     <div>
       <div>
         <img
-          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/653882f4a52fc3492265e47b_farah1.png"
+          src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65394c83ba2cb6218a55aced_farah3.png"
           alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
           class="avatar farah"
         />
@@ -160,7 +160,7 @@ impact_manager.innerHTML = `
   <div class="chat-row chat-row-w-padding manager message" style="--delay: 3s">
     <div>
       <img
-        src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/653882f4a52fc3492265e47b_farah1.png"
+        src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65394c83ba2cb6218a55aced_farah3.png"
         alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
         class="avatar farah"
       />
@@ -198,7 +198,7 @@ impact_manager.innerHTML = `
   <div class="chat-row chat-row-w-padding manager message" style="--delay: 8s">
     <div>
       <img
-        src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/653882f4a52fc3492265e47b_farah1.png"
+        src="https://uploads-ssl.webflow.com/649e0760c15db7cfb8794a93/65394c83ba2cb6218a55aced_farah3.png"
         alt="Feminine-presenting adult cartoon character with long dark locs in a ponytail and dangling earrings."
         class="avatar farah"
       />
