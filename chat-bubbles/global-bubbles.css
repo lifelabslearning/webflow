@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: normal;
@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--page-background);
-  }
+  } */
 
   .chat-box-w-button{
     margin-bottom: 2rem;
@@ -84,7 +84,7 @@ body {
     align-items: end;
     margin: 1rem;
   }
-  
+
   .chat-row .name {
     font-size: 0.9rem;
     font-weight: 500;
@@ -252,21 +252,26 @@ body {
 // IMPACT STATEMENTS //
 ////////////////////// */
 
-.farah {
+.chat-row-w-padding{
+  padding: 2em;
+}
+
+
+/* .farah {
   width: 39px !important;
   height: 44px !important;
-  scale: 1.2 !important;
-}
+  scale: 1.2 !important
+} */
 
 .vikram {
     width: 45px !important;
     height: 50px !important;
 }
-.aleyna{
-  height: 46px !important;
+/* .aleyna{ */
+  /* height: 46px !important;
   width: 39px !important;
-  scale: 1.2 !important
-}
+  scale: 1.2 !important */
+/* } */
 
 /* ///////////////////////
 ////////////////////// */
