@@ -253,6 +253,10 @@
 ////////////////////// */
 
 .chat-row-w-padding{
+  padding: 0px 2em;
+}
+
+.card-container-w-padding{
   padding: 2em;
 }
 

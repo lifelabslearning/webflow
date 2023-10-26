@@ -36,7 +36,7 @@ impact_manager.innerHTML = `
 <div class="chat-box-w-button">
 <div
   id="main-prompt-manager"
-  class="chat-row chat-row-w-padding prompt message"
+  class="chat-row card-container-w-padding prompt message"
   style="--delay: 0s"
 >
   <div class="prompt" style="--delay: 0s">
