@@ -236,7 +236,7 @@ impact_peer.innerHTML = `
 <div class="chat-box-w-button">
 <div
   id="main-prompt-peer"
-  class="chat-row chat-row-w-padding prompt message"
+  class="chat-row card-container-w-padding prompt message"
   style="--delay: 0s"
 >
   <div class="prompt" style="--delay: 0s">
@@ -430,7 +430,7 @@ impact_report.innerHTML = `
 <div class="chat-box-w-button">
       <div
         id="main-prompt-report"
-        class="chat-row chat-row-w-padding prompt message"
+        class="chat-row card-container-w-padding prompt message"
         style="--delay: 0s"
       >
         <div class="prompt" style="--delay: 0s">
