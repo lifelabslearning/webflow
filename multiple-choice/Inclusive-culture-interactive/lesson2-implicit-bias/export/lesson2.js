@@ -35,9 +35,7 @@ alt="Three adult professionals seated at a table in front of a gesturing masculi
 <span class="two-cards-option">
   <span class="answer">Halo Effect </span>
   <p class="card-description">
-    A manager can overestimate a direct report's abilities and assign
-    projects they are not skilled to take on, setting them up to
-    underperform.
+  A manager knows their direct report has an advanced degree, overestimates their abilities, and assigns projects they are not skilled to take on, setting them up to underperform.
   </p>
 </span>
 </div>
