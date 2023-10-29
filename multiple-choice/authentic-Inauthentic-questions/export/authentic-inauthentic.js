@@ -108,8 +108,7 @@ authentic_2.innerHTML = `
       one?
     </span>
     <span class="feedback">
-      Try Again: This is a leading question that already presumes the new
-      system is better than the old one, so there’s no real curiosity.
+      Try Again: This is a leading question that presumes the new system is better than the old one, so there’s no real curiosity.
     </span>
   </span>
 </label>
